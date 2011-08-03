@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Perfil da conta</h1>
+<strong>Bem vindo, {{ nome|capfirst }}!</strong>
+<br /><br />
+<fieldset class="minha_conta">
+	<legend>Historico de compra</legend>
+	
+		
+		
+		</a><br />
+
+
+</fieldset>
+<br />
+<fieldset class="minha_conta">
+	<legend>Configurações</legend>
+	<ul>
+	<li><a href="{% url django.contrib.auth.views.password_change %}">Mudar a senha</a></li>
+	<li><a href="{% url django.contrib.auth.views.password_reset %}">Esqueceu a senha?</a></li>
+	</ul>
+</fieldset>
+<form method="post" action=".">{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Registrar" />
+	</form>
+{% endblock %}

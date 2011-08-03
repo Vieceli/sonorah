@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+{% block conteudo %}
+<div id="conteudo" class="conteudo">
+	<form method="post" action=".">{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Registrar" />
+	</form>
+<div id="conteudo" class="conteudo">
+{% endblock %}

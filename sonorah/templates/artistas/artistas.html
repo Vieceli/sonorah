@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block titulo %}Artistas{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+
+<div id="conteudo" class="conteudo">
+		
+	<div id="artista_lista" class="artista_lista">
+		<h1>Artistas recentes</h1>
+		{% for artista in artistas %}
+				<ul>
+				<a href="/artistas/{{ artista.slug }}">
+					<img src="/media/{{ artista.miniatura }}"  class="bn" width="60" height="60" align="left"/>
+					<h3>{{ artista.titulo }}</h3>
+					<small>{{ artista.criado_em }}</small>
+					{{ artista.resumo|safe }}			
+				</a>	
+				</ul>
+				
+			{% endfor %}
+	</div>
+</div>	
+{% endblock conteudo %}	

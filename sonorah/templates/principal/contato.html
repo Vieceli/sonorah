@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block titulo %}Noticia - {{ noticia.titulo }}{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+<div id="conteudo" class="conteudo">
+	<div id="contato" class="contato">
+       	<form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
+		    {% for field in contato_form %}
+		        <div class="fieldWrapper">
+		            {{ field.errors }}
+		            {{ field.label_tag }}: {{ field }}
+		        </div>
+		    {% endfor %}
+			<p><input type="hidden" value="contato" name="contato"/></p>
+		    <p><input type="submit" value="Enviar" /></p>
+		</form>
+ 	</div>
+</div>	
+{% endblock conteudo %}	

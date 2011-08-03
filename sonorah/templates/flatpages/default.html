@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %} {{ block.super }} - {{ flatpages.title  }} {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+
+<div id="conteudo" class="conteudo">
+
+	<h1> {{ flatpage.title }} </h1>
+	
+	{{ flatpage.content }}
+
+</div>	
+{% endblock conteudo %}	

@@ -1,0 +1,238 @@
+.cabecalho{
+	position:relative;
+	display:inline;
+	float:left;
+	width:100%;
+	height:30px;
+	vertical-align:top;
+	background-color:#000;
+	padding-left:30%;
+	
+}
+.cabecalho_inferior{
+	position:relative;
+	display:inline;
+	margin-top:30px;
+
+	
+}
+.fundo{
+	background-color:#131315;
+	width:100%;
+	float:left;
+}
+.atendimento_online {
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+
+.area_do_cliente{
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+compartilhe{
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+.facebook{
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+
+.twitter{
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+
+.addtoany {
+	position:relative;
+	display:inline;
+	float:left;
+	vertical-align:top;
+}
+
+.player{
+	position:relative;
+	display:inline;
+	float:right;
+}
+.logo{
+	position:relative;
+	display:inline;
+	z-index:1;
+}
+.animacao{
+	position:relative;
+	margin-top:100px;
+	
+}
+.barra_animacao_superior	{
+	position:relative;
+
+}
+.barra_animacao_transparente	{
+	position:relative;
+
+}
+
+#image{
+border:0px #666 solid;
+height:480px;
+width:640px;
+z-index:0;
+}
+
+/*.btn_animacao{
+	position:relative;
+	left:500px;
+}*/
+
+.thumb1{
+position:absolute;
+margin-left:-400px;
+margin-top:400px;
+}
+.thumb2{
+position:absolute;
+margin-left:-380px;
+margin-top:400px;
+}
+.thumb3{
+position:absolute;
+margin-left:-360px;
+margin-top:400px;
+}
+
+
+.topo{
+	position:absolute;
+	margin-top:100px;
+	background-color: blue;
+	
+}
+.sombra_topo{
+	border:0px #666 solid;
+	height:480px;
+	width:640px;
+	z-index:0;
+	margin-left:20%;
+	margin-top: -120px;	
+}
+.corte{
+	position: absolute;
+	border:0px #666 solid;
+	z-index:0;
+	margin-left:20%;
+	margin-top: -153px;	
+}
+/*BARRA ENDERECO*/
+.barra_endereco_superior{
+	position:absolute;
+/*	margin-top:-495px;	*/
+	margin-top:-495px;
+	margin-left:-205px;
+
+	
+}
+.barra_endereco{
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -350px;
+}
+.home{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: -20px;
+	
+}
+
+.endereco{
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: -20px;	
+}
+
+
+/*
+131315
+
+.atendimento_online {
+	position:absolute;
+	left:636px;
+	top:9px;
+	width:164px;
+	height:29px;
+}
+
+.area_do_cliente{
+	position:absolute;
+	left:800px;
+	top:9px;
+	width:141px;
+	height:29px;
+}
+compartilhe{
+	position:absolute;
+	left:1039px;
+	top:9px;
+	width:35px;
+	height:29px;
+}
+.facebook{
+	position:absolute;
+	left:1039px;
+	top:9px;
+	width:35px;
+	height:29px;
+}
+
+.twitter{
+	position:absolute;
+	left:1074px;
+	top:9px;
+	width:32px;
+	height:29px;
+}
+
+.addtoany {
+	position:absolute;
+	left:1106px;
+	top:9px;
+	width:33px;
+	height:29px;
+}
+
+.player{
+	position:absolute;
+	left:1139px;
+	top:9px;
+	width:242px;
+	height:29px;
+}
+.logo{
+	position:absolute;
+	left:420px;
+	top:46px;
+	width:216px;
+	height:101px;
+}
+
+menu{
+	position:absolute;
+	left:636px;
+	top:46px;
+	width:745px;
+	height:101px;
+}*/

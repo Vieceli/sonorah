@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block titulo %}Noticia - {{ noticia.titulo }}{{ n{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+
+<div id="conteudo" class="conteudo">
+		
+	<div id="noticia" class="noticia">
+		<h1><img src="/media/{{ noticia.miniatura }}"  class="bn" width="60" height="60" align="left"/>  {{ noticia.titulo }}</h1>
+		<h3> {{ noticia.subtitulo }}</h3>
+		<small> {{ noticia.criado_em }}</small>
+		<p class="noticia_texto" id="noticia_texto"> {{ noticia.texto|safe }} </p>
+		<p class="noticia_texto" id="noticia_texto"> {{ noticia.resumo|safe }}</p>
+	</div>
+	<div id="video_empresa" class="video_empresa">
+			
+	</div>
+	</div>
+	<div id="agende_visita" class="agende_visita">
+		Clique aqui para agendar uma visita
+	</div>
+</div>	
+{% endblock conteudo %}	

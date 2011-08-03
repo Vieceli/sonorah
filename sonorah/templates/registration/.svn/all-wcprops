@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/cuponclipper001/!svn/ver/18/cuponclipper001/cuponclipper001/templates/registration
+END
+password_change_done.html
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/cuponclipper001/!svn/ver/14/cuponclipper001/cuponclipper001/templates/registration/password_change_done.html
+END
+registro.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/cuponclipper001/!svn/ver/23/cuponclipper001/cuponclipper001/templates/registration/registro.html
+END
+minha_conta.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/cuponclipper001/!svn/ver/18/cuponclipper001/cuponclipper001/templates/registration/minha_conta.html
+END
+registrado.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/cuponclipper001/!svn/ver/6/cuponclipper001/cuponclipper001/templates/registration/registrado.html
+END
+login_old.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/cuponclipper001/!svn/ver/26/cuponclipper001/cuponclipper001/templates/registration/login_old.html
+END
+password_reset_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/cuponclipper001/!svn/ver/14/cuponclipper001/cuponclipper001/templates/registration/password_reset_form.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/cuponclipper001/!svn/ver/27/cuponclipper001/cuponclipper001/templates/registration/login.html
+END
+password_change_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/cuponclipper001/!svn/ver/14/cuponclipper001/cuponclipper001/templates/registration/password_change_form.html
+END
+entrar.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/cuponclipper001/!svn/ver/6/cuponclipper001/cuponclipper001/templates/registration/entrar.html
+END

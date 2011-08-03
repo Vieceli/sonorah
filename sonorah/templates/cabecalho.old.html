@@ -1,0 +1,51 @@
+{% load i18n %}
+
+<div id="cabecalho">
+		{% if usuario.username %}
+			<p>Bem Vindo {{ usuario.username  }}!</p>
+			<a href="{% url sair %}" >Sair</a>
+		{% else %}
+			{% include "registration/entrar_inicial.html" %}
+		{% endif %}
+	
+			<div class="buscar-slider" style="display: none; overflow:hidden;">
+			    <form>
+			      Buscar Formulario
+			    </form>          
+			</div>
+		
+		</div>
+		
+	<div id="logo" class="logo">
+    	<a href="/"><img src="/media/images/logo.jpg" /></a>
+    </div>
+    <div id="menu" class="menu">
+	    	
+	    	<span id="item_menu" class="item_menu">
+    			<a href="/empresa">Empresa</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    			<a href="/portfolio">Portfolio</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/artistas">Artistas</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/noticias">Noticias</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/parceiros">Parceiros</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/contato">Contato</a>
+    		</span> |
+		    <div id="busca" >
+		    <!--
+				<form id="search-form" method="get" action="">{% csrf_token %} 
+					{{ form_busca }}
+					<input type="submit" value="Buscar" />
+				</form>
+			-->
+			</div>
+	</div>
+</div>
