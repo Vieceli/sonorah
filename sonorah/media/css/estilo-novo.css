@@ -118,7 +118,7 @@ h2.noticias_home_titulo{
 
 }
 .botoes_noticias a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 	
@@ -168,7 +168,7 @@ h2.twitter_titulo{
 	margin-left:-465px;
 }
 .botoes_twitter a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 	
@@ -338,7 +338,7 @@ div.presenca{ display: none; }
 	display: inline-block;
 }
 .portfolio_lista a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 }
@@ -360,6 +360,31 @@ div.presenca{ display: none; }
 	margin-top: 30px;	
 	width: 1200px;
 	display: inline-block;
+}
+
+/*ARTISTAS*/
+.artista_lista p{
+	font-family:"Franklin Gothic Heavy";
+	font-size:12pt;
+	color:#666;
+}
+.artista_lista{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:320px;
+	margin-top: 30px;	
+	width: 1200px;
+	display: inline-block;
+	
+}
+
+.rede_social_artista{
+	position: relative;
+	float: right;
+	right: 260px;
+	top: -30px;
 }
 /*NOTICIAS*/
 .noticias_box{
@@ -413,9 +438,8 @@ div.presenca{ display: none; }
 }
 
 h1.noticia_titulo{
-
-		color:6d6d6d;
-		padding-top:230px;
+	#color:6d6d6d;
+	padding-top:230px;
 }
 
 .noticia_subtitulo{
@@ -438,7 +462,7 @@ h1.noticia_titulo{
 	padding-left: 312px;
 }
 .imprimir_noticia a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 

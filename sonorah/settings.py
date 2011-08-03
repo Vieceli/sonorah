@@ -115,9 +115,8 @@ INSTALLED_APPS = (
     'noticias',
     'principal',
     'photologue',
-    
-    
-    )
+    'parceiros',
+)
 
 AUTHENTICATION_BACKENDS = (
     # this is the default backend, don't forget to include it!

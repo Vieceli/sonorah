@@ -7,6 +7,7 @@ from parceiros.models import Contratante, Compositor, Radialista, Parceiro
 from django.forms.models import ModelForm
 
 class ContratantesForm(ModelForm):
+        #nome = forms.CharField(label='Seu Nome',required=True,initial="Seu Nome",help_text='Digite seu nome corretamente', error_messages={'required': 'Por Favor coloque seu Nome'})
     class Meta:
         model = Contratante
 

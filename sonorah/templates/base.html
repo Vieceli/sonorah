@@ -115,11 +115,25 @@
           $('h2.presenca').click(function(){
       		$(this).parent().find('div.presenca').slideToggle("slow");
       		});
-          
+      		
+          $("#tabs").bind('tabsselect',function(event, ui) {
+            	window.location.href=ui.tab;
+			 });
+		{% if opcao == "contratante" %}
+			$('#tabs').tabs('select', 3);
+			
+		{% endif %}
+		  $("#tabs").tabs({
+		  	 });
+          /*
           $("#tabs").tabs({
-              
-          });
-  
+               select: function(event, ui) {
+               		var valido = true;
+               		alert(ui.toString())
+			        return valido;
+			    }
+          });*/
+
         });
   
       

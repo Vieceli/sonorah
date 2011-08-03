@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}Noticia - {{ noticia.titulo }}{% endblock %}
+{% block titulo %}Parceiro - {{ noticia.titulo }}{% endblock %}
 
 {% block extralinks %}
 	{{ block.super }}
@@ -17,21 +17,16 @@
 
 {% block extrajs %}
 	{{ block.super }}
+	
+	
 
 {% endblock extrajs %}
 
 
 {% block conteudo %}
-<!--
-contato_form = ContatoForm()
-contratante_form = ContratantesForm()
-compositor_form = CompositoresForm()
-artista_form = ArtistaForm()
-radialista_form = RadialistaForm()
-parceiro_form = ParceiroForm()
--->
-<div id="conteudo" class="conteudo">
-		<div id="texto_parceiro" class="texto_parceiro">A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias. Se voc&ecirc; acredita que pode somar for&ccedil;as conosco, entre em contato e nos diga como podemos nos tornar parceiros. Caso seja voc&ecirc; seja um radialista, compositor ou contratante, por favor, utilize as abas espec&iacute;ficas abaixo. </div>
+
+<div id="texto_parceiro" class="texto_parceiro">A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias. Se voc&ecirc; acredita que pode somar for&ccedil;as conosco, entre em contato e nos diga como podemos nos tornar parceiros. Caso seja voc&ecirc; seja um radialista, compositor ou contratante, por favor, utilize as abas espec&iacute;ficas abaixo. </div>
+	
 	<div id="tabs">
 	    <ul>
 	        <li><a href="#parceiro"><span>Parceiro</span></a></li>
@@ -39,57 +34,65 @@ parceiro_form = ParceiroForm()
 			<li><a href="#radialista"><span>Radialista</span></a></li>
 			<li><a href="#contratante"><span>Contratante</span></a></li>
 	    </ul>
-    <div id="parceiro">
-        <form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
+	    
+    <div id="parceiro" class="parceiro">
+        <form enctype="multipart/form-data" action="{% url parceiros %}#parceiro" method="post">{% csrf_token %} 
 		    {% for field in parceiro_form %}
 		        <div class="fieldWrapper">
 		            {{ field.errors }}
 		            {{ field.label_tag }}: {{ field }}
 		        </div>
 		    {% endfor %}
-			<p><input type="hidden" value="parceiro" name="parceiro"/></p>
-		    <p><input type="submit" value="Enviar" /></p>
+		    {% if opcao == "contratante" %}
+			teste
+			
+			{% endif %}
+			<p><input type="submit" value="Enviar" name="parceiro"/></p>
 		</form>
     </div>
-    
-    <div id="compositor">
-       <form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
-		    {% for field in compositor_form %}
-		        <div class="fieldWrapper">
-		            {{ field.errors }}
-		            {{ field.label_tag }}: {{ field }}
-		        </div>
-		    {% endfor %}
-			<p><input type="hidden" value="compositor" name="compositor"/></p>
-		    <p><input type="submit" value="Enviar" /></p>
+    <div id="compositor" class="compositor">
+		<form enctype="multipart/form-data" action="{% url parceiros %}#compositor" method="post">
+			{% csrf_token %}
+			{% for field in compositor_form %}
+			<div class="fieldWrapper">
+				{{ field.errors }}
+				{{ field.label_tag }}: {{ field }}
+			</div>
+			{% endfor %}
+			<p>
+				<input type="submit" value="Enviar" name="compositor"/>
+			</p>
 		</form>
-    </div>
-    <div id="radialista">
-       	<form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
-		    {% for field in radialista_form %}
-		        <div class="fieldWrapper">
-		            {{ field.errors }}
-		            {{ field.label_tag }}: {{ field }}
-		        </div>
-		    {% endfor %}
-			<p><input type="hidden" value="radialista" name="radialista"/></p>
-		    <p><input type="submit" value="Enviar" /></p>
+	</div>
+	<div id="radialista" class="radialista">
+		<form enctype="multipart/form-data" action="{% url parceiros %}#parceiros" method="post">
+			{% csrf_token %}
+			{% for field in radialista_form %}
+			<div class="fieldWrapper">
+				{{ field.errors }}
+				{{ field.label_tag }}: {{ field }}
+			</div>
+			{% endfor %}
+			<p>
+				<input type="submit" value="Enviar" name="radialista"/>
+			</p>
 		</form>
-    </div>
-    <div id="contratante">
-        <form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
-		    {% for field in contratante_form %}
-		        <div class="fieldWrapper">
-		            {{ field.errors }}
-		            {{ field.label_tag }}: {{ field }}
-		        </div>
-		    {% endfor %}
-			<p><input type="hidden" value="contratante" name="contratante"/></p>
-		    <p><input type="submit" value="Enviar" /></p>
+	</div>
+	<div id="contratante" class="contratante">
+		<form enctype="multipart/form-data" action="{% url parceiros %}#parceiros" method="post">
+			{% csrf_token %}
+			{% for field in contratante_form %}
+			<div class="fieldWrapper">
+				{{ field.errors }}
+				{{ field.label_tag }}: {{ field }}
+			</div>
+			{% endfor %}
+			<p>
+				<input type="submit" value="Enviar" name="contratante"/>
+			</p>
 		</form>
-    </div>
+	</div>
     
 </div>
 
-</div>	
 {% endblock conteudo %}	

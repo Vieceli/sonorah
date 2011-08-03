@@ -1,5 +1,6 @@
+
 # Create your views here.
-from sonora_portal001.contas.forms import FormularioRegistro, LoginForm
+from contas.forms import FormularioRegistro, LoginForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.views import login, logout
