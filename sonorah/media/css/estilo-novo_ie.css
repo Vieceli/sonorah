@@ -118,7 +118,7 @@ h2.noticias_home_titulo{
 
 }
 .botoes_noticias a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 	
@@ -168,7 +168,7 @@ h2.twitter_titulo{
 	margin-left:-465px;
 }
 .botoes_twitter a{
-	font:"Franklin Gothic Heavy";
+	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
 	
@@ -339,7 +339,7 @@ width: 100%;
 
 h1.noticia_titulo{
 
-		color:6d6d6d;
+		color:#6d6d6d;
 		padding-top:230px;
 }
 
@@ -377,6 +377,17 @@ div#sharebtn a {
 	text-decoration:none;
 	background-image:none;
 	background-color:transparent;
+}
+.enviar{
+	background: url(/media/images/enviar.png) 20% 20% no-repeat;
+	margin-top:0px;
+	margin-left: 700px;
+	padding-right:100px;
+	padding-bottom:50px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1em;
+	
 }
 
 	

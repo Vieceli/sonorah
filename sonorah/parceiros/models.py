@@ -30,6 +30,25 @@ class Parceiro(models.Model):
     
     def __unicode__(self):
         return self.nome
+    
+class Compositor(models.Model):
+    class Meta:
+        db_table = 'compositores'
+        verbose_name = _('Compositor')
+        verbose_name_plural = _('Compositores')
+        
+    nome            = models.CharField("Nome do Compositor",max_length=40,
+                              help_text=u'nome do Compositor',default='Lorem Ipsum')
+    arquivo         = models.FileField(upload_to='compositor_arquivo', max_length=20, blank=True)
+    email           = models.EmailField()
+    telefone        = models.CharField(u"Telefone",max_length=400,
+                            help_text=u'Telefone',default='123456789')
+    mensagem        = models.TextField()
+    criado_em           = models.DateTimeField(auto_now_add=True)
+    atualizado_em       = models.DateTimeField(auto_now=True)
+    
+    def __unicode__(self):
+        return self.nome
 
 class Radialista(models.Model):
     class Meta:
@@ -73,24 +92,7 @@ class Radialista(models.Model):
     def __unicode__(self):
         return self.nome_radio
     
-class Compositor(models.Model):
-    class Meta:
-        db_table = 'compositores'
-        verbose_name = _('Compositor')
-        verbose_name_plural = _('Compositores')
-        
-    nome            = models.CharField("Nome do Compositor",max_length=40,
-                              help_text=u'nome do Compositor',default='Lorem Ipsum')
-    arquivo         = models.FileField(upload_to='compositor_arquivo', max_length=20, blank=True)
-    email           = models.EmailField()
-    telefone        = models.CharField(u"Telefone",max_length=400,
-                            help_text=u'Telefone',default='123456789')
-    mensagem        = models.TextField()
-    criado_em           = models.DateTimeField(auto_now_add=True)
-    atualizado_em       = models.DateTimeField(auto_now=True)
-    
-    def __unicode__(self):
-        return self.nome
+
     
 class Contratante(models.Model):
     class Meta:

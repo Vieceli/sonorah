@@ -7,27 +7,14 @@
  *
  * http://docs.jquery.com/UI/Theming/API
  */
-.parceiro_aba{
-	margin-left: 60px;	
-	
-}
-.compositor_aba{
-margin-left: 60px;
-}
-.radialista_aba{
-margin-left: 60px;	
-}
 
-.contratante_aba{
-	margin-left: 60px;		
-}
 /* Component containers
 ----------------------------------*/
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 1em; }
+/*ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 1em; }*/
 
 .ui-widget { font-family: "Franklin Gothic Medium"; font-size: 13px;}
-.ui-widget-content { color: #333333; }
-.box_forms{ background: #19191a; } 
+.ui-widget-content { color: #333333; z-index: 4;}
+/*.box_forms{ background: #ffffff; }*/ 
 .ui-widget-content a { color: #333333; }
 .ui-widget-header {color: #ffffff;  left: 30px;}/*cabeca das abas*/
 .ui-widget-header a { color: #ff0000; }
@@ -44,7 +31,7 @@ margin-left: 60px;
 
 
 
-.ui-tabs { position: relative; zoom: 1; width: 940px; 	left:320px; z-index: 3; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs { position: relative; zoom: 1; width: 940px; z-index: 4; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 .ui-tabs .ui-tabs-nav { margin-left: 90px; }
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; 
 							border-bottom: 0 !important; padding: 0; white-space: nowrap; }
@@ -173,9 +160,8 @@ margin-left: 60px;
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
 
 /* Icons
-----------------------------------*/
-
-/* states and images */
+----------------------------------
+/* states and images 
 .ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png); }
 .ui-widget-content .ui-icon {background-image: url(images/ui-icons_222222_256x240.png); }
 .ui-widget-header .ui-icon {background-image: url(images/ui-icons_ffffff_256x240.png); }
@@ -184,8 +170,8 @@ margin-left: 60px;
 .ui-state-active .ui-icon {background-image: url(images/ui-icons_ef8c08_256x240.png); }
 .ui-state-highlight .ui-icon {background-image: url(images/ui-icons_228ef1_256x240.png); }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_ffd27a_256x240.png); }
-
-/* positioning */
+*/
+/* positioning 
 .ui-icon-carat-1-n { background-position: 0 0; }
 .ui-icon-carat-1-ne { background-position: -16px 0; }
 .ui-icon-carat-1-e { background-position: -32px 0; }
@@ -322,7 +308,7 @@ margin-left: 60px;
 .ui-icon-seek-prev { background-position: -48px -160px; }
 .ui-icon-seek-end { background-position: -64px -160px; }
 .ui-icon-seek-start { background-position: -80px -160px; }
-/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead 
 .ui-icon-seek-first { background-position: -80px -160px; }
 .ui-icon-stop { background-position: -96px -160px; }
 .ui-icon-eject { background-position: -112px -160px; }
@@ -362,11 +348,11 @@ margin-left: 60px;
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
 
-
+*/
 /* Misc visuals
 ----------------------------------*/
 
-/* Corner radius 
+ /*
 .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
 .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
@@ -383,7 +369,8 @@ margin-left: 60px;
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Resizable#theming
- */
+
+
 .ui-resizable { position: relative;}
 .ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block; }
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
@@ -402,7 +389,7 @@ margin-left: 60px;
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Selectable#theming
- */
+
 .ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
 /*
  * jQuery UI Accordion 1.8.14
@@ -412,8 +399,8 @@ margin-left: 60px;
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Accordion#theming
- */
-/* IE/Win - Fix animation bug - #4615 */
+
+/* IE/Win - Fix animation bug - #4615 
 .ui-accordion { width: 100%; }
 .ui-accordion .ui-accordion-header { cursor: pointer; position: relative; margin-top: 1px; zoom: 1; }
 .ui-accordion .ui-accordion-li-fix { display: inline; }
@@ -431,7 +418,7 @@ margin-left: 60px;
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Autocomplete#theming
- */
+
 .ui-autocomplete { position: absolute; cursor: default; }	
 
 /* workarounds */
