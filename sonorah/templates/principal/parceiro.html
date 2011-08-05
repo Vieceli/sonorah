@@ -24,75 +24,89 @@
 
 
 {% block conteudo %}
-
-<div id="texto_parceiro" class="texto_parceiro">A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias. Se voc&ecirc; acredita que pode somar for&ccedil;as conosco, entre em contato e nos diga como podemos nos tornar parceiros. Caso seja voc&ecirc; seja um radialista, compositor ou contratante, por favor, utilize as abas espec&iacute;ficas abaixo. </div>
-	
-	<div id="tabs">
-	    <ul>
-	        <li><a href="#parceiro"><span>Parceiro</span></a></li>
-	        <li><a href="#compositor"><span>Compositor</span></a></li>
-			<li><a href="#radialista"><span>Radialista</span></a></li>
-			<li><a href="#contratante"><span>Contratante</span></a></li>
-	    </ul>
-	    
-    <div id="parceiro" class="parceiro">
-        <form enctype="multipart/form-data" action="{% url parceiros %}#parceiro" method="post">{% csrf_token %} 
-		    {% for field in parceiro_form %}
-		        <div class="fieldWrapper">
-		            {{ field.errors }}
-		            {{ field.label_tag }}: {{ field }}
-		        </div>
-		    {% endfor %}
-		    {% if opcao == "contratante" %}
-			teste
-			
-			{% endif %}
-			<p><input type="submit" value="Enviar" name="parceiro"/></p>
-		</form>
-    </div>
-    <div id="compositor" class="compositor">
-		<form enctype="multipart/form-data" action="{% url parceiros %}#compositor" method="post">
-			{% csrf_token %}
-			{% for field in compositor_form %}
-			<div class="fieldWrapper">
-				{{ field.errors }}
-				{{ field.label_tag }}: {{ field }}
-			</div>
-			{% endfor %}
-			<p>
-				<input type="submit" value="Enviar" name="compositor"/>
-			</p>
-		</form>
-	</div>
-	<div id="radialista" class="radialista">
-		<form enctype="multipart/form-data" action="{% url parceiros %}#parceiros" method="post">
-			{% csrf_token %}
-			{% for field in radialista_form %}
-			<div class="fieldWrapper">
-				{{ field.errors }}
-				{{ field.label_tag }}: {{ field }}
-			</div>
-			{% endfor %}
-			<p>
-				<input type="submit" value="Enviar" name="radialista"/>
-			</p>
-		</form>
-	</div>
-	<div id="contratante" class="contratante">
-		<form enctype="multipart/form-data" action="{% url parceiros %}#parceiros" method="post">
-			{% csrf_token %}
-			{% for field in contratante_form %}
-			<div class="fieldWrapper">
-				{{ field.errors }}
-				{{ field.label_tag }}: {{ field }}
-			</div>
-			{% endfor %}
-			<p>
-				<input type="submit" value="Enviar" name="contratante"/>
-			</p>
-		</form>
-	</div>
+<div id="topo" class="topo">
+ 	{% block topo %}
+           {% include "includes/topo.html" %}
+    {% endblock topo %}
+</div>
     
+<div id="texto_parceiro" class="texto_parceiro">
+		<p>
+			A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias. 
+			Se voc&ecirc; acredita que pode somar for&ccedil;as conosco, entre em contato e nos diga como podemos nos tornar parceiros. 
+			Caso seja voc&ecirc; seja um radialista, compositor ou contratante, por favor, utilize as abas espec&iacute;ficas abaixo.
+		</p>
+	 </div>
+	 <div id="efeito_fundo_parceiro" class="efeito_fundo_parceiro">
+	 	
+	 	<img src="/media/images/efeito_fundo_parceiros.png" >
+	 </div>
+<div id="formularios_parceiros" class="formularios_parceiros">
+		<div id="tabs">
+		    <ul>
+		        <li><a class="parceiro_aba" href="#parceiro"><span>Parceiro</span></a></li>
+		        <li><a class="compositor_aba" href="#compositor"><span>Compositor</span></a></li>
+				<li><a class="radialista_aba" href="#radialista"><span>Radialista</span></a></li>
+				<li><a class="contratante_aba" href="#contratante"><span>Contratante</span></a></li>
+		    </ul>
+
+	    <div id="box_forms" class="box_forms">
+		    <div id="parceiro" class="parceiro">
+		        <form enctype="multipart/form-data" action="{% url parceiros %}#parceiro" method="post">{% csrf_token %} 
+				    {% for field in parceiro_form %}
+				        <div class="fieldWrapper">
+				            {{ field.errors }}
+				            {{ field.label_tag }}: {{ field }}
+				        </div>
+				    {% endfor %}
+
+					<p><input type="submit" value="Enviar" name="parceiro"/></p>
+				</form>
+		    </div>
+		    <div id="compositor" class="compositor">
+				<form enctype="multipart/form-data" action="{% url parceiros %}#compositor" method="post">
+					{% csrf_token %}
+					{% for field in compositor_form %}
+					<div class="fieldWrapper">
+						{{ field.errors }}
+						{{ field.label_tag }}: {{ field }}
+					</div>
+					{% endfor %}
+					<p>
+						<input type="submit" value="Enviar" name="compositor"/>
+					</p>
+				</form>
+			</div>
+			<div id="radialista" class="radialista">
+				<form enctype="multipart/form-data" action="{% url parceiros %}#radialista" method="post">
+					{% csrf_token %}
+					{% for field in radialista_form %}
+					<div class="fieldWrapper">
+						{{ field.errors }}
+						{{ field.label_tag }}: {{ field }}
+					</div>
+					{% endfor %}
+					<p>
+						<input type="submit" value="Enviar" name="radialista"/>
+					</p>
+				</form>
+			</div>
+			<div id="contratante" class="contratante">
+				<form enctype="multipart/form-data" action="{% url parceiros %}#contratante" method="post">
+					{% csrf_token %}
+					{% for field in contratante_form %}
+					<div class="fieldWrapper">
+						{{ field.errors }}
+						{{ field.label_tag }}: {{ field }}
+					</div>
+					{% endfor %}
+					<p>
+						<input type="submit" value="Enviar" name="contratante"/>
+					</p>
+				</form>
+			</div>
+	    </div>
+		</div>
 </div>
 
 {% endblock conteudo %}	

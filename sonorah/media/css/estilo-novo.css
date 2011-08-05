@@ -408,17 +408,7 @@ div.presenca{ display: none; }
 	padding-right: 100px;
 	padding-top: 30px;
 }
-.texto_parceiro{
-	font-family:"Franklin Gothic Book";
-	font-size: 18px;
-	text-indent: 40px;
-	color:#6d6d6d;
-	position: absolute;
-	margin-left: 180px;
-	margin-top: 50px;	
-	width: 1000px;
-	text-align: justify;
-}
+
 .noticia_link{
 	color:#6d6d6d;
 }
@@ -490,5 +480,78 @@ div#sharebtn a {
 	background-image:none;
 	background-color:transparent;
 }
+/*PARCEIROS*/
+.texto_parceiro{
+	position: relative;	
+	float:left;
+	left:320px;
+	top:30px;
+	font-family:"Franklin Gothic Book";
+	font-size: 18px;
+	text-indent: 40px;
+	color:#6d6d6d;
+	text-align: justify;
+	width: 940px;
+}
+.efeito_fundo_parceiro{
+	position:relative;
+	float:left;
+	left:320px;
+	top:50px;
+	height:5px;
+	z-index: 0;
+	/*opacity:0.4;filter:alpha(opacity=40);*/
+}
+.formularios_parceiros{
+	position: relative;
+	float: left;
+	top: 80px;
+	z-index: 5;
+	/*width:*/ 		
+}
+
+.compositor{
+	margin-bottom: 150px;
+}
+.parceiro{
+	margin-bottom: 150px;
+}
+.radialista{
+	margin-bottom: 150px;
+}
+.contratante{
+	margin-bottom: 150px;
+}
+/*FORMULARIOS PARCEIRO*/
+
+.fieldWrapper{
+	position: relative;
+	float: left;
+	display: block;
+	
+}
+label
+{
+position:relative;
+width: 4em;
+float: left;
+margin-right: 0.5em;
+}
+
+input
+{
+color: #781351;
+background: #fee3ad;
+border: 1px solid #781351
+}
+
+.submit input
+{
+color: #000;
+background: #ffa20f;
+border: 2px outset #d7b9c9
+} 
+
+
 
 	

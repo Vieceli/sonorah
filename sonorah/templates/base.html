@@ -119,10 +119,6 @@
           $("#tabs").bind('tabsselect',function(event, ui) {
             	window.location.href=ui.tab;
 			 });
-		{% if opcao == "contratante" %}
-			$('#tabs').tabs('select', 3);
-			
-		{% endif %}
 		  $("#tabs").tabs({
 		  	 });
           /*
