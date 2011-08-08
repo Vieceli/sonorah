@@ -8,7 +8,8 @@ from django.forms.formsets import formset_factory
 
 def parceiros(request,template_name):
     usuario=request.user
-    
+    url=str(request.get_full_path())
+    pagina=url[1:-1]
 #    if request.method == 'GET':
 #        GET = request.GET  
 #        if GET.has_key('a'):  
@@ -32,8 +33,7 @@ def parceiros(request,template_name):
         parceiro_form = ParceiroForm(request.POST)
         
         if POST.has_key('contratante'):
-            print "POST['contratante']"
-            
+            print "POST['contratante']"       
             if contratante_form.is_valid(): 
                 contratante_form.save()
                 return HttpResponseRedirect('/Obrigado/')

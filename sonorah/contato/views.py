@@ -7,7 +7,8 @@ from contato.forms import ContatoForm
 
 def contato(request,template_name):
     usuario=request.user
-    url=request.get_full_path
+    url=str(request.get_full_path())
+    pagina=url[1:-1]
     
 #    if request.method == 'GET':
 #        GET = request.GET  

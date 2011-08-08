@@ -12,6 +12,7 @@
 
 {% block extrascripts %}
 	{{ block.super }}
+	
 {% endblock %}
 
 
@@ -22,18 +23,56 @@
 
 
 {% block conteudo %}
-<div id="conteudo" class="conteudo">
-	<div id="contato" class="contato">
-       	<form enctype="multipart/form-data" action="." method="post">{% csrf_token %} 
-		    {% for field in contato_form %}
-		        <div class="fieldWrapper">
-		            {{ field.errors }}
-		            {{ field.label_tag }}: {{ field }}
-		        </div>
-		    {% endfor %}
-			<p><input type="hidden" value="contato" name="contato"/></p>
-		    <p><input type="submit" value="Enviar" /></p>
+<div id="topo" class="topo">
+	{% block topo %}
+	{% include "includes/topo.html" %}
+	{% endblock topo %}
+</div>
+<div id="contato" class="contato">
+	<form enctype="multipart/form-data" action="." method="post">
+			{% csrf_token %}
+			<div class="fieldWrapper">
+				{{ contato_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
+				{{ contato_form.nome }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.email.errors }} <label for="id_email" class="id_email">*E-Mail: </label>
+				{{ contato_form.email }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+				{{ contato_form.telefone }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+				{{ contato_form.arquivo }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+				<div id="mensagem_contato" class="mensagem_contato">
+					{{ contato_form.mensagem }}
+				</div>
+			</div>
+			<input type="submit" value="Enviar"  class="enviar_contato"/>
 		</form>
- 	</div>
-</div>	
+	<div id="efeito_enviar_contato" class="efeito_enviar_contato">
+		<img src="/media/images/parceiros_efeito_enviar.png"/>
+	</div>
+	
+</div>
+<div id="detalhe_direito_contato" class="detalhe_direito_contato">
+	<img src="/media/images/detalhe_direito_contato.png"/>
+</div>
+<div id="contato_direito" class="contato_direito">
+	<p>Rua 89, Nº540 Setor Sul.</p>
+	<p>Goiânia - GO | CEP: 74093-140</p>
+    <p><img src="/media/images/telefone_contato.png"/> (62) 3281-0311</p>
+    <p><img src="/media/images/email_contato.png"/>contato@sonorah.com</p>
+    
+    <div id="mapa_google" class="mapa_google">
+    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=380x310&maptype=roadmap&sensor=true" />    
+    </div>
+</div>
+
+
 {% endblock conteudo %}	

@@ -236,18 +236,19 @@ h2.links_home_titulo{
 
 /*rodape*/
 .sep_rodape{
-
-position:relative;
-bottom:0px;
-background-image: url(/images/home/sep_rodape.png);
-background-repeat:repeat-y;
-left:-400px;
-width: 100%;
-	
+	position:relative;
+	bottom:-59px;
+	height:10px;
+	background-image: url(/images/home/sep_rodape.png);
+	background-color: #131315;
+	background-repeat:repeat-y;
+	left:400px;
+	width: 900px;
 }
 .rodape{
 	position:relative;
 	clear:both;
+	bottom:-60px;
 	width:100%;
 	height:150px;
 	background-color:#000;
@@ -500,9 +501,9 @@ div#sharebtn a {
 	top:50px;
 	height:5px;
 	z-index: 0;
-	/*opacity:0.4;filter:alpha(opacity=40);*/
+	opacity:0.4;filter:alpha(opacity=40);
+	background-color: #19191a;
 }
-
 .formularios_parceiros{
 	position: relative;
 	float: left;
@@ -511,57 +512,56 @@ div#sharebtn a {
 	left: 320px;	
 }
 .parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
-/*
-.fundo_form_parceiro{
-	background: #19191a;
-	height: 360px;
-	margin-top: -16px;
-	width: 940px;
-	margin-left: -20px;
-}
-.fundo_form_outros{
-	background: #19191a;
-	margin-top: -30px;
-	width: 940px;
-	margin-left: -20px;
-}
-*/
-.efeito_enviar{
-	position: relative;
-	clear: both;
-	bottom:39px;
-	right:265px;
-	float: right;
-	width: 500px;
-}
+
+/*conteudo dos forms*/
 .parceiro{
-	margin-bottom: 150px;
-	height: 300px;
+	/*background-color:#19191a;*/
+	position: relative;
+	float:left;
 	background-color: #fff;
-	z-index: 3;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 80px;
 }
-
 .compositor{
-	margin-bottom: 150px;
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
 }
-
 .radialista{
-	margin-bottom: 150px;
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
 }
 .contratante{
-	margin-bottom: 150px;
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
 }
-
 label
 {
 	/*texto antes do input*/
 	font-family:"Franklin Gothic Book";
 	margin-top: 14px;
-	font-size: 18px;
+	font-size: 16px;
 	position:relative;
-	width: 4em;
+	width: 7em;
 	float: left;
 	margin-right: 0.5em;
+	padding-left:30px;
 	color:#6d6d6d; 
 }
 
@@ -571,8 +571,9 @@ input
 	color: #19191a;
 	background: #000;
 	height: 42px;
-	width:311px;
-	margin-left: 50px;
+	/*width:311px;*/
+	width:280px;
+	margin-left: 0px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
@@ -582,36 +583,41 @@ textarea{
 	border:0px;
 	color: #19191a;
 	background: #000;
-	width: 311px;
+	width: 280px;
 	height: 105px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
 	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
-
-.submit input
-{
-color: #fff;
-/*background-image: url("/media/images/enviar.png");*/
-/*border: 2px outset #d7b9c9*/
+.submit input{
+	color: #fff;
+	background: #ffffff;
+	/*background-image: url("/media/images/enviar.png");*/
+	/*border: 2px outset #d7b9c9*/
 } 
 .enviar{
 	position: relative;
 	clear: both;
-	bottom:-30px;
-	right:-70px;
 	float: right;
-	
+	bottom:-60px;
 	background: url(/media/images/enviar.png) 20% 20% no-repeat;
-	/*margin-top:32px;
-	margin-left: 700px;*/
-	padding-right:100px;
-	padding-bottom:50px;
+	right: -25px;
+	/*margin-left: 700px;*/
+	padding-right:90px;
+	padding-bottom:60px;
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
-	font-size: 1em;
+	font-size: 1.5em;
 	
+}
+.efeito_enviar{
+	position: relative;
+	clear: both;
+	float: right;
+	bottom:80px;
+	right:-55px;
+	width: 500px;
 }
 
 .fieldWrapper{
@@ -623,24 +629,119 @@ color: #fff;
 	margin-bottom: 10px;
 	color: #ff5a00;
 }
+
+/*FORMULARIOS PARCEIRO*/
 .parceiro_direita{
 	position: relative;
-	background: #19191a;
 	float: left;
-	left: 20px;
+	left: 0px;
 }
 .parceiro_esquerda{
 	position: relative;
-	background: #19191a;
 	float: right;
-	right: 20px;
+	right: 80px;
 }
-
-/*FORMULARIOS PARCEIRO*/
-
 .mensagem_parceiro{
-	margin-left:130px;
+	margin-left:125px;
 	left: 90px;
+	padding-left: 25px;
 }
 /*FORMULARIOS COMPOSITOR*/
+.compositor_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+}
+.compositor_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_compositor{
+	margin-left:125px;
+	left: 90px;
+	padding-left: 25px;
+}
+/*FORMULARIOS Radialista*/
+.radialista_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+}
+.radialista_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_radialista{
+	padding-left: 25px;
+	margin-left:125px;
+	left: 90px;
+}
+/*FORMULARIOS Contratante*/
+.contratante_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+}
+.contratante_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_contratante{
+	padding-left: 25px;
+	margin-left:125px;
+	left: 90px;
+}
 
+/*CONTATO
+ */
+.contato{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:290px;
+/*	margin-top: -330px;	*/
+	width: 450px;
+	display: inline-block;
+	top:30px;
+	/*height: 400px;*/
+}
+.efeito_enviar_contato{
+	position: relative;
+	clear: both;
+	float: left;
+	bottom:50px;
+	left:55px;
+	width: 500px;
+}
+.enviar_contato{
+	position: relative;
+	clear: both;
+	float: left;
+	bottom:0px;
+	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
+	left: 245px;
+	padding-right:90px;
+	padding-bottom:60px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+}
+.detalhe_direito_contato{
+	position: relative;
+	float: left;
+	top: -80px;
+	/*left:50px;*/
+	/*background-color: #fff;*/
+}
+.contato_direito{
+	position: relative;
+	float: left;
+	top: 30px;
+	left: 50px;
+}
