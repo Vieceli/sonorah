@@ -1,0 +1,61 @@
+{% load i18n %}
+
+<div id="cabecalho">
+
+	<div id="cidades" class="cidades" >
+			<div class="cidades-slider" style="display: none; overflow:hidden;">
+				<ul>
+				  	{% for cidade in cidades_disponiveis %}
+				   		<li><a href="{% url cidade_index cidade_slug=cidade.slug %}">{{ cidade.cidade }}</a></li>
+				    {% endfor %}
+			    </ul>
+					
+			</div>
+			<div id="cidades-link" class="cidades-link" >
+					<a href="" class="cidade-slider-link" id="cidade-slider-link"> Clipper em outras cidades </a>
+			</div>
+			<div class="buscar-slider" style="display: none; overflow:hidden;">
+			    <form>
+			      Buscar Formulario
+			    </form>          
+			</div>
+		
+		</div>
+		
+	<div id="logo" class="logo">
+    	
+    </div>
+    <div id="menu" class="menu">
+	    
+			<span id="item_menu" class="item_menu">
+				<a href="/">Inicio</a>
+			</span> |
+    		<span id="item_menu" class="item_menu">
+    			<a href="/anuncie">Anuncie conosco</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/clientes">Clientes de sucesso</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/agende">Agende uma visita</a>
+    		</span> |
+		    <div id="busca" >
+				<form id="search-form" method="get" action=".">{% csrf_token %} 
+					{{ form_busca }}
+					<input type="submit" value="Buscar" />
+				</form>
+			</div>
+	</div>
+	
+	{% if email_cadastrado %}
+		EMail cadastrado
+	{% else %}
+		<div id="email" >
+				<form id="email-form" method="GET" action=".">{% csrf_token %} 
+					{{ form_email }}
+					<input type="submit" value="Cadastrar" />
+				</form>
+			</div>
+			
+	{% endif %}
+	</div>

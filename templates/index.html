@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block titulo %}Noticias - {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+          {% block animacao %}
+              {% include "includes/animacao.html" %}
+          {% endblock animacao %}
+      
+	
+	<div id="noticia_lista_inicial" class="noticia_lista_inicial">
+		<h2 id="noticias_home_titulo" class="noticias_home_titulo">Noticias</h2>
+             
+        <div id="separador_noticia_topo" class="separador_noticia_topo">
+        	<img src="/media/images/home/separador.png" />
+        </div>
+			
+		<div id="noticias_home_box" class="noticias_home_box">
+		     {% for noticia in noticias %}
+		    	<div id="item_home_noticia" class="item_home_noticia">
+		       
+		            <a class="noticia_home_link" href="/noticias/{{ noticia.slug }}">
+		                <img src="/media/{{ noticia.miniatura }}"  class="bn" width="146" height="67" align="left"/>
+                        <div id="texto_noticia_home" class="texto_noticia_home">
+                            <small>{{ noticia.criado_em|date:"d M"|upper }}</small>
+                            <p>{{ noticia.titulo }}</p>
+                        </div>
+                        
+		            </a>	
+		        </div>
+                <div id="separador" class="separador">
+                 		<img src="/media/images/home/separador.png" />
+                 </div>
+		       {% endfor %}
+		</div>
+		
+        <div id="botoes_noticias" class="botoes_noticias">
+    
+	        <a href="/noticias/"> <img src="/media/images/home/mais_noticias.gif" align="bottom"/> Mais Noticias </a>
+            <a href="/rss"><img src="/media/images/home/rss.gif"  align="bottom"/> Assine o RSS</a>
+            <a href="/email"><img src="/media/images/home/email.gif"  align="bottom"/> Receba Noticias por E-mail</a>
+        </div>
+	</div>
+	
+ 	
+    
+	<div id="twitter" class="twitter">
+		<h2 id="twitter_titulo" class="twitter_titulo">Sonorah no Twitter</h2>
+     </div>
+      <div id="separador_twitter_topo" class="separador_twitter_topo">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+     <div id="twitter_box" class="twitter_box">
+       	<script>
+		
+		  new TWTR.Widget({
+			  version: 2,
+			  type: 'profile',
+			  rpp: 5,
+			  interval: 6000,
+			  width: 400,
+			  height: 200,
+			  theme: {
+				shell: {
+				  background: '#131315',
+				  color: '#ffffff'
+				},
+				tweets: {
+				  background: '#131315',
+				  color: '#ffffff',
+				  links: '#ff8c00'
+				}
+			  },
+			  features: {
+				scrollbar: true,
+				loop: true,
+				live: true,
+				hashtags: false,
+				timestamp: false,
+				avatars: true,
+				behavior: 'default'
+			  }
+			}).render().setUser('veiodruida').start();
+
+		</script>
+        
+	</div>
+     <div id="separador_twitter_fim" class="separador_twitter_fim">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+     
+    <div id="botoes_twitter" class="botoes_twitter">
+         <a href="/twitter/"> <img src="/media/images/home/twitter.gif"  align="bottom"/> Siga-nos no Twitter</a>
+          <a href="/facebook/"><img src="/media/images/home/facebook.gif"  align="bottom"/> Curta no facebook</a>
+    </div>
+    
+    <div id="link_lista_inicial" class="link_lista_inicial">
+		<h2 id="links_home_titulo" class="links_home_titulo">Links</h2>
+              
+              <div id="separador_noticia_topo" class="separador_noticia_topo">
+              	<img src="/media/images/home/separador.png" />
+              </div>
+              
+              <div id="links_home_box" class="links_home_box">
+			     {% for link in links %}
+			    	<div id="item_home_link" class="item_home_link">
+			        
+			           <a href="{{ link.url }}">
+			                <img src="/media/{{ link.miniatura }}"   class="bn" width="146" height="67" align="left"/>
+			                <div id="texto_noticia_home" class="texto_noticia_home">
+	                            <small>{{ link.criado_em|date:"d M"|upper }}</small>
+				                <p>{{ link.titulo }}</p>
+                            </div>
+			            </a>	
+			        </div>
+                    <div id="separador" class="separador">
+                    	<img src="/media/images/home/separador.png" />
+                     </div>
+			        {% endfor %}
+			</div>
+	</div>
+     
+    
+    
+    <div id="separador_youtube_topo" class="separador_youtube_topo">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+    <div id="youtube" class="youtube">
+    	<img src="/media/images/home/youtube.gif" />
+    	
+    </div>
+
+
+ 
+{% endblock conteudo %}
+
+ 

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/cuponclipper001/!svn/ver/20/cuponclipper001/cuponclipper001/templates
+END
+cabecalho.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/cuponclipper001/!svn/ver/27/cuponclipper001/cuponclipper001/templates/cabecalho.html
+END
+listar_cupons_busca.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/cuponclipper001/!svn/ver/27/cuponclipper001/cuponclipper001/templates/listar_cupons_busca.html
+END
+500.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/cuponclipper001/!svn/ver/4/cuponclipper001/cuponclipper001/templates/500.html
+END
+listar_cupons.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/cuponclipper001/!svn/ver/27/cuponclipper001/cuponclipper001/templates/listar_cupons.html
+END
+404.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/cuponclipper001/!svn/ver/4/cuponclipper001/cuponclipper001/templates/404.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/cuponclipper001/!svn/ver/27/cuponclipper001/cuponclipper001/templates/index.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/cuponclipper001/!svn/ver/23/cuponclipper001/cuponclipper001/templates/base.html
+END
+rodape.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/cuponclipper001/!svn/ver/4/cuponclipper001/cuponclipper001/templates/rodape.html
+END

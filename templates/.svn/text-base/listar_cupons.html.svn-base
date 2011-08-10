@@ -1,0 +1,18 @@
+<!-- listagem dos cupons pela cidade pagina inicial -->
+<div id="cupon_lista" class="cupon_lista">
+		<h1>Cupons disponiveis para {{ cidade_cliente }}</h1>
+		{% for cupom in cupons %}
+			<div id="cupon_lista_imagem" class="cupon_lista_imagem">
+				<a href="{{ cupom.get_absolute_url }}">
+					<img src="/media/{{ cupom.miniatura }}"  class="bn" width="60" height="60"/>			
+				</a>
+			</div>
+			<div id="cupon_lista_info" class="cupon_lista_info">
+				<a href="{{ cupom.nome  }}">
+					Disponivel: {{ cupom.num_disponivel }}<br />	
+					Porcentagem: {{ cupom.porcentagem_vendido }}	<br />	
+					Desconto: {{ cupom.desconto }}%
+				</a>
+			</div>
+		{% endfor %}
+	</div>

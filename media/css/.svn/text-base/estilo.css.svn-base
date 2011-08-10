@@ -1,0 +1,155 @@
+body{
+	margin:0;
+	color:#000;
+	font:12px Arial, Helvetica, sans-serif;
+	background:#4d4d4d;
+	min-width:1000px;
+}
+img{border-style:none;}
+a{
+	text-decoration:none;
+	color:#0881d5;
+}
+a:hover{text-decoration:underline;}
+
+#conteiner{
+	width: 50%;
+	left: 25%;
+	float: left;
+	position: relative
+	}
+#conteudo{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	float:left;
+	background-color: orange;
+	/* padding:0 0 49px; */
+}
+#principal{
+	width:100%;
+	overflow:hidden;
+	padding:0 0 17px;
+	background:#d9ebf0 url(../images/bg-main.jpg) no-repeat 50% 153px;
+	display:table;
+}
+#cabecalho{
+	width:100%;
+	background-color: silver;
+	display: inline;
+	float: left;
+}
+#logo{
+	width: 20%;
+	background-color: teal;
+	position: relative;
+	float: left;
+	height: 50px;
+	}
+#cidades{
+	width:100%;
+	background-color: aqua;
+	
+	}
+#menu{
+	height: 50px;
+	float: right;
+	width: 80%;
+	background-color: threedlightshadow;
+	}
+
+#item_menu{
+	
+	}
+.cidade-link{
+	
+	}
+	
+.cidade-slider-link{
+	
+	}
+.buscar-link{
+	
+	}
+	
+.buscar-slider-link{
+	
+	}
+.cidade-slider li {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  width:129px;
+  color: #555;
+  font-size:1.2em;
+
+  list-style-type: none;
+
+  white-space:nowrap;
+
+  list-style-image:none;
+  list-style-position:outside;
+}
+
+.cidade-slider  a {
+  display:block;
+  float:left;
+  padding:10px 0 10px 30px;
+  width:129px;
+
+  border-style:none dashed dashed none;
+  font-size:1.2em;
+	
+  border-color: #999;
+  color: #fff;
+	
+  list-style-type: none;
+	
+   white-space:nowrap;
+	
+   list-style-image:none;
+   list-style-position:outside;
+}
+
+#empresa{
+	width: 100%;
+	text-indent: 5px;
+	background-color: yellow;
+	float: left;
+	position: relative;
+	height: 200px;
+	}
+#video_empresa{
+	width: 50%;
+	text-indent: 5px;
+	background-color: black;
+	float: right;
+	position: relative;
+	height: 100%;
+	}
+#agende_visita{
+	width: 100%;
+	text-indent: 5px;
+	
+	float: right;
+	position: relative;
+	height: 80px;
+	
+}
+#edicao_atual{
+	float: left;
+	position: relative;
+	width: 100%;
+	
+	}
+#revista_edicao{
+	display: table;
+	border-style:solid;
+	
+	}
+#rodape{
+	background-color: lime;
+	position: relative;
+	clear: both;
+	width: 100%;
+	}

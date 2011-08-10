@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+	{% block titulo %}Registrado{% endblock %}
+	{% block cabeca %}Registrado{% endblock %}
+	{% block conteudo %}
+	Obrigado por se registrar efetue
+	<a href="/accounts/login/">login</a> ou volte para
+	<a href="/">pagina principal</a>.
+{% endblock %}

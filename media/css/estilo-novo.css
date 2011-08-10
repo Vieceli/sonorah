@@ -1,0 +1,776 @@
+/*valores padrão*/
+html,body{
+	height:100%;
+}
+/** html .conteiner {height: 100%;}*/
+body{
+	margin:0;
+	color:#6d6d6d;
+	font:16px "Franklin Gothic Book", "Franklin Gothic Heavy", "Franklin Gothic Medium";
+	background:#131315;
+	font-weight:300;
+	list-style: none;
+}
+	
+img{border-style:none;}
+
+a{
+	text-decoration:none;
+	color:#ff5a00;
+}
+a:hover{text-decoration:underline;}
+
+li{
+	list-style: none;
+	list-style-position: inside;
+	display: table;
+}
+p{
+font-family:"Franklin Gothic Book";
+	font-size:18px;
+	
+}
+h1{
+font-family:"Franklin Gothic Heavy";
+font-size:24px;	
+}
+h3{
+	font-size:16px;	
+}
+/*Conteiners*/
+
+.conteiner{
+	width:100%;
+	position:relative;  /*Contexto de posicionamento */
+	margin:0 auto;
+	text-align:left;
+	min-height:100%;
+	background-color:#131315;
+
+}
+
+
+
+.conteudo{
+	margin-left:70px;
+	float:left;
+	padding-top:10px;
+	text-align:justify;
+	background-color:#131315;
+	width:1600px;
+}
+/*Caixa de noticias*/
+.noticias_home_box{
+	position:  relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-top:6px;
+	width: 500px;
+	display: inline-block;
+}
+.item_home_noticia{
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 460px;
+}
+.item_home_noticia:hover{
+	background-color: #333;
+}
+h2.noticias_home_titulo{
+	background-color:#FF5A00;
+	width:120px;
+	padding-left:20px;
+	color:#000;
+	font-size:18pt;	
+	font-family: "Franklin Gothic Heavy";
+}
+.separador_noticia_topo{
+	position:relative;
+	float:left;
+	margin-top:2px;
+	height:2px;
+	
+}
+.texto_noticia_home{
+	padding-left:165px;
+}
+.noticia_lista_inicial{
+		margin-left:380px;
+		position:relative;
+		float:left;
+		width:500px;				
+}
+
+.separador{
+	position:relative;
+	float:left;
+	height:4px;
+
+	margin-top:1px;
+}
+.botoes_noticias{
+	position:relative;
+	float:left;
+
+}
+.botoes_noticias a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+	
+}
+
+/*twitter*/
+.separador_twitter_topo{
+	position:relative;
+	float:left;
+	margin-top:3px;
+	height:2px;
+
+}
+.twitter{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	width: 500px;
+	display: inline-block;
+}
+h2.twitter_titulo{
+	background-color:#FF5A00;
+	width:250px;
+	color:#000;
+	font-size:18pt;	
+	font-family: "Franklin Gothic Heavy";
+}
+.twitter_box{
+	position: relative;
+	float:left;
+	margin-top:3px;
+	margin-left:-10px;
+
+}
+#twtr-widget-1{
+/*margin-top:50px;*/
+}
+.separador_twitter_fim{
+	position:relative;
+	float:left;
+}
+
+.botoes_twitter{
+	position:relative;
+	float:left;
+	margin-left:-465px;
+}
+.botoes_twitter a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+	
+}
+
+
+/*Caixa de links*/
+.link_lista_inicial{
+/*		margin-left:-500px;*/
+		position:relative;
+		float:left;
+		width:500px;		
+		margin-left:380px;
+}
+h2.links_home_titulo{
+	width:120px;
+	padding-left:20px;
+	color:#000;
+	font-size:18pt;	
+	font-family: "Franklin Gothic Heavy";
+	background-color:#FF5A00;
+	
+}
+
+.links_home_box{
+	position:  relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-top:6px;
+	
+	width: 500px;
+	display: inline-block;
+}
+.item_home_link{
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 460px;
+}
+
+
+.item_home_link:hover{
+	background-color: #333;
+}
+
+/*Youtube*/
+.separador_youtube_topo{
+	position:relative;
+	/*margin-left:750px;	*/
+	
+	float:left;
+	height:2px;
+}
+
+.youtube{
+	/*margin-left:750px;*/
+	margin-top:20px;
+	position:relative;
+	float:left;
+}
+
+
+/*rodape*/
+.sep_rodape{
+	position:relative;
+	bottom:-59px;
+	height:10px;
+	background-image: url(/images/home/sep_rodape.png);
+	background-color: #131315;
+	background-repeat:repeat-y;
+	left:400px;
+	width: 900px;
+}
+.rodape{
+	position:relative;
+	clear:both;
+	bottom:-60px;
+	width:100%;
+	height:150px;
+	background-color:#000;
+}
+
+.rodape_texto_direito{
+	font-family: "Franklin Gothic Medium";
+	font-size:14px;
+	width:150px;
+	text-align:justify;
+	position:relative;
+	float:left;
+	padding-left:561px;
+	padding-top:40px;
+}
+.links_rodape{
+	position:relative;
+	float:left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:40px;
+}
+.rodape_texto_esquerdo{
+	font-family: "Franklin Gothic Medium";
+	font-size:14px;
+	width:150px;
+	text-align:justify;
+	position:relative;
+	float:left;
+	padding-top:40px;
+	
+}
+
+.logo_direitos{
+	position:relative;
+	float:left;
+	padding-left:15px;
+	padding-top:40px;
+}
+
+/*EMPRESA*/
+.empresa{
+	position:relative;
+	float:left;
+	left:312px;
+	top: 30px;
+	width:920px;
+}
+.empresa p{
+font-family: "Franklin Gothic Book";font-size:14px;text-indent:20px;
+}
+
+.servicos{
+		font-family: "Franklin Gothic Demi";font-size:8px;text-indent:20px;
+		padding-bottom:60px;
+}
+.separador_empresa{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+h2.assesoria_img{ cursor: pointer; }
+div.assesoria_img{ display: none; }
+h2.assesoria_imp{ cursor: pointer; }
+div.assesoria_imp{ display: none; }
+h2.producao_m{ cursor: pointer; }
+div.producao_m{ display: none; }
+h2.producao_a{ cursor: pointer; }
+div.producao_a{ display: none; }
+h2.estrategia{ cursor: pointer; }
+div.estrategia{ display: none; }
+h2.fono{ cursor: pointer; }
+div.fono{ display: none; }
+h2.tecnicas{ cursor: pointer; }
+div.tecnicas{ display: none; }
+h2.presenca{ cursor: pointer; }
+div.presenca{ display: none; }
+
+/*PORTFOLIO LISTA*/
+
+.portfolio_lista{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:320px;
+	margin-top: 30px;	
+	width: 1200px;
+	display: inline-block;
+}
+.portfolio_lista a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+}
+.separador_portfolio{
+	position:relative;
+	float:left;
+	padding-top:20px;
+	padding-bottom:20px;	
+}
+
+/* PORTFOLIO ATIVO*/
+
+.portfolio{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:320px;
+	margin-top: 30px;	
+	width: 1200px;
+	display: inline-block;
+}
+
+/*ARTISTAS*/
+.artista_lista p{
+	font-family:"Franklin Gothic Heavy";
+	font-size:12pt;
+	color:#666;
+}
+.artista_lista{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:320px;
+	margin-top: 30px;	
+	width: 1200px;
+	display: inline-block;
+	
+}
+
+.rede_social_artista{
+	position: relative;
+	float: right;
+	right: 260px;
+	top: -30px;
+}
+/*NOTICIAS*/
+.noticias_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:220px;
+/*	margin-top: -330px;	*/
+	width: 1200px;
+	display: inline-block;
+}
+.item_noticia{
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	position: relative;
+	float: left;
+	width: 300px;
+	display: inline-block;
+	padding-left: 92px;
+	padding-right: 100px;
+	padding-top: 30px;
+}
+
+.noticia_link{
+	color:#6d6d6d;
+}
+
+
+/*PAGINA DA NOTICIA*/
+.noticia{
+	position:relative;
+	float:left;
+	left:312px;
+	top: 30px;
+	width:920px;
+}
+.noticia_criado_em{
+
+	
+}
+
+h1.noticia_titulo{
+	#color:6d6d6d;
+	padding-top:230px;
+}
+
+.noticia_subtitulo{
+	padding-top:10px;
+	font-family:"Franklin Gothic Medium";
+}
+.noticia_texto{
+	padding-top:20px;	
+	}
+.separador_noticia{
+	position:relative;
+	float:left;
+	bottom:-10px;	
+	width:920px;
+}
+.rede_social_noticia{
+	position: relative;
+	clear: both;
+	padding-top: 60px;
+	padding-left: 312px;
+}
+.imprimir_noticia a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+
+}
+.imprimir_noticia{
+	position: relative;
+	float: right;
+	right: 75%;
+	top: -25px;
+	
+}
+div#sharebtn {
+	font-family:"Franklin Gothic Book";
+	font-size:12px;
+	border:1px solid #999;
+	padding:4px 4px 2px 2px;
+	width:52px; height:16px;
+	text-align:center;
+	background-image:url(https://app.tabpress.com/xfbml-tags/_img/sharebtn_bg2.gif);
+}
+
+div#sharebtn a {
+	color:#111;
+	text-decoration:none;
+	background-image:none;
+	background-color:transparent;
+}
+/*PARCEIROS*/
+.texto_parceiro{
+	position: relative;	
+	float:left;
+	left:320px;
+	top:30px;
+	font-family:"Franklin Gothic Book";
+	font-size: 18px;
+	text-indent: 40px;
+	color:#6d6d6d;
+	text-align: justify;
+	width: 940px;
+}
+.efeito_fundo_parceiro{
+	position:relative;
+	float:left;
+	left:320px;
+	top:50px;
+	height:5px;
+	z-index: 0;
+	opacity:0.4;filter:alpha(opacity=40);
+	background-color: #19191a;
+}
+.formularios_parceiros{
+	position: relative;
+	float: left;
+	top: 80px;	
+	z-index: 3;
+	left: 320px;	
+}
+.parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
+
+/*conteudo dos forms*/
+.parceiro{
+	/*background-color:#19191a;*/
+	position: relative;
+	float:left;
+	background-color: #fff;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 80px;
+}
+.compositor{
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
+}
+.radialista{
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
+}
+.contratante{
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left: -20px;
+	margin-bottom: 75px;
+}
+label
+{
+	/*texto antes do input*/
+	font-family:"Franklin Gothic Book";
+	margin-top: 14px;
+	font-size: 16px;
+	position:relative;
+	width: 7em;
+	float: left;
+	margin-right: 0.5em;
+	padding-left:30px;
+	color:#6d6d6d; 
+}
+
+input
+{
+	border:0px;
+	color: #19191a;
+	background: #000;
+	height: 42px;
+	/*width:311px;*/
+	width:280px;
+	margin-left: 0px;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; 
+}
+textarea{
+	border:0px;
+	color: #19191a;
+	background: #000;
+	width: 280px;
+	height: 105px;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+}
+.submit input{
+	color: #fff;
+	background: #ffffff;
+	/*background-image: url("/media/images/enviar.png");*/
+	/*border: 2px outset #d7b9c9*/
+}
+
+.enviar{
+	position: relative;
+	clear: both;
+	float: right;
+	bottom:-60px;
+	background: url(/media/images/enviar.png) 20% 20% no-repeat;
+	right: -25px;
+	/*margin-left: 700px;*/
+	padding-right:90px;
+	padding-bottom:60px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+	
+}
+.efeito_enviar{
+	position: relative;
+	clear: both;
+	float: right;
+	bottom:80px;
+	right:-55px;
+	width: 500px;
+}
+
+.fieldWrapper{
+	margin-top: 15px;
+/*espaco entre os campos*/	
+}
+.errorlist{
+	margin-left: 130px;
+	margin-bottom: 10px;
+	color: #ff5a00;
+}
+
+/*FORMULARIOS PARCEIRO*/
+.parceiro_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+}
+.parceiro_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_parceiro{
+	margin-left:125px;
+	left: 90px;
+	padding-left: 25px;
+}
+/*FORMULARIOS COMPOSITOR*/
+.compositor_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+}
+.compositor_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_compositor{
+	margin-left:125px;
+	left: 90px;
+	padding-left: 25px;
+}
+/*FORMULARIOS Radialista*/
+.radialista_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+}
+.radialista_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_radialista{
+	padding-left: 25px;
+	margin-left:125px;
+	left: 90px;
+}
+/*FORMULARIOS Contratante*/
+.contratante_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+}
+.contratante_esquerda{
+	position: relative;
+	float: right;
+	right: 80px;
+}
+.mensagem_contratante{
+	padding-left: 25px;
+	margin-left:125px;
+	left: 90px;
+}
+
+/*CONTATO
+ */
+.contato{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:290px;
+/*	margin-top: -330px;	*/
+	width: 450px;
+	display: inline-block;
+	top:30px;
+	/*height: 400px;*/
+}
+.efeito_enviar_contato{
+	position: relative;
+	clear: both;
+	float: left;
+	bottom:50px;
+	left:55px;
+	width: 500px;
+}
+.enviar_contato{
+	position: relative;
+	clear: both;
+	float: left;
+	bottom:0px;
+	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
+	left: 245px;
+	padding-right:90px;
+	padding-bottom:60px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+}
+.detalhe_direito_contato{
+	position: relative;
+	float: left;
+	top: -80px;
+	/*left:50px;*/
+	/*background-color: #fff;*/
+}
+.contato_direito{
+	position: relative;
+	float: left;
+	top: 45px;
+	left: 50px;
+}
+.mapa_google{
+	position: relative;
+	float: left;
+	top: 20px;
+}
+.id_arquivo {
+	
+}
+/*
+.id_arquivo {
+	position:absolute;
+	top:0;
+	right:0;
+	opacity:0;
+	-moz-opacity:0;
+	z-index:2; 
+	width:270px;
+}
+/*url(/media/images/enviar.png) 20% 20% no-repeat;
+form .fakeupload {
+	background:url(/media/images/buscar_arquivo_fundo.png) no-repeat 20% 20%;
+	background-color: red;
+}
+form .fakeupload input {
+	width:280px;
+}
+*/
+
