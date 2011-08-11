@@ -18,6 +18,7 @@ a{
 	text-decoration:none;
 	color:#ff5a00;
 }
+
 a:hover{text-decoration:underline;}
 
 li{
@@ -25,6 +26,7 @@ li{
 	list-style-position: inside;
 	display: table;
 }
+
 p{
 font-family:"Franklin Gothic Book";
 	font-size:18px;
@@ -52,12 +54,12 @@ h3{
 
 
 .conteudo{
-	margin-left:70px;
+	
 	float:left;
 	padding-top:10px;
 	text-align:justify;
 	background-color:#131315;
-	width:1600px;
+	width:100%;
 }
 /*Caixa de noticias*/
 .noticias_home_box{
@@ -579,7 +581,7 @@ input
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
 	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; 
 }
-textarea{
+textarea {
 	border:0px;
 	color: #19191a;
 	background: #000;
