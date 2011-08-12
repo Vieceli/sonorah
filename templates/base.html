@@ -68,9 +68,11 @@
 	        	{% block js_ready %}	        
 		        {% endblock js_ready %}
 		        
+		        /*tentativa 1 de mudar o fundo*/
 	    		$("li.portfolio_menu").click(muda_fundo);
 					
 					/*("body").removeClass('bg0').addClass("bg1");*/
+				/*tentativa 2 de mudar o fundo*/
 				$("li.artistas_menu").click( function(){
 					$("body").css({
 		   						'background-color','#fff',
@@ -80,9 +82,11 @@
 								'backgroundImage', 'url(/media/images/banner_meio_paginas.png)'
 							});
 				});
+				/*tentativa 3 de mudar o fundo*/
 				$("li.noticias_menu").click( function(){ $
 					("body").removeClass('bg0').addClass("bg1");
 				});
+				
 				$("li.parceiros_menu").click( function(){ $
 					("body").removeClass('bg0').addClass("bg1");
 				});
@@ -120,13 +124,22 @@
 		            	window.location.href=ui.tab;
 					});
 	
+ 			/*$("#tabs").tabs({
+		  	 
+		  		});
+      			*/
+		          $("#tabs").bind('tabsselect',function(event, ui) {
+		            	window.location.href=ui.tab;
+					});
+		
+		          
 		         $("#tabs").tabs({
 		               select: function(event, ui) {
 		               		var valido = true;
 					        return valido;
 					    }
 		          });
-
+          /*SELECIONA aba do parceiro pelo menu teste*/
 				$('a#contratante').click(function (){
 					$tabs.tabs('select', 2);
 					alert('teste')
@@ -146,15 +159,15 @@
 	      <div id="conteiner" class="conteiner">    	
 	      	  <div id="topo_geral" class="topo_geral">
 	      	  	  {% block cabecalho_inferior %}
-		  			{% include "includes/cabecalho_inferior.html" %}
+		  				{% include "includes/cabecalho_inferior.html" %}
 		  		  {% endblock cabecalho_inferior %}
 		          {% block animacao %}
-		        	 {% include "includes/animacao.html" %}
+		        	 	{% include "includes/animacao.html" %}
 		   		  {% endblock animacao %}
 		   	 </div>
 		     <div id="conteudo" class="conteudo">         
-		           {% block conteudo %}{% endblock %}
-		      </div>  	       
+		          {% block conteudo %}{% endblock %}
+		     </div>  	       
 	      </div>
       {% block rodape %}
 			{% include "includes/rodape.html" %}
