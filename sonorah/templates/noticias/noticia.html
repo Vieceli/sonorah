@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block titulo %}Noticia - {{ noticia.titulo }}{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+ 
+			             
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+<div id="topo" class="topo">
+ 	{% block topo %}
+           {% include "includes/topo.html" %}
+    {% endblock topo %}
+</div>
+    
+	<div id="noticia" class="noticia">
+		<img src="/media/{{ noticia.miniatura }}"  class="bn" width="460" height="209" align="left"/> 
+        
+        <h1 id="noticia_titulo" class="noticia_titulo">
+        	<small>{{ noticia.criado_em|date:"d M"|upper }} - </small> 
+         	{{ noticia.titulo }}
+        </h1>
+		<h3 id="noticia_subtitulo" class="noticia_subtitulo" > {{ noticia.subtitulo }}</h3>
+		
+		<p class="noticia_texto" id="noticia_texto"> {{ noticia.texto|safe }}
+		loco aloco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a   loco aloco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a loco a
+		</p>
+	<div id="separador_noticia" class="separador_noticia">
+           <img src="/media/images/separador_noticia.png" />
+     </div>
+	</div>
+	
+	
+    <div id="rede_social_noticia" class="rede_social_noticia">
+    	<!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_preferred_4"></a>
+        <a class="addthis_button_compact"></a>
+        <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e31ab3411c86d0f"></script>
+        <!-- AddThis Button END -->
+        <div id="imprimir_noticia" class="imprimir_noticia">
+        	<a href="#" onclick="window.print();return false;"><img src="/media/images/imprimir.png" align="bottom"/> Imprimir</a> 
+        </div>
+     </div>
+  </div>  
+{% endblock conteudo %}	

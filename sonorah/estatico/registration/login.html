@@ -1,0 +1,32 @@
+<div id="effect" class="ui-widget-content ui-corner-all">
+
+	{% if form_login.errors %}
+		<ul class="errorlist">
+			<li>Usuario ou senha invalidos</li>
+		</ul>
+		<br />
+	{% endif %}
+	{{ user }}
+	{{ state }}
+	<form method="post" action="{% url login %}" id="loginform">{% csrf_token %}
+	<table summary="Login" id="login_table">
+		<caption>Login</caption>
+		<tr>
+		    <td>{{ form_login.email.label_tag }}:</td>
+		    <td>{{ form_login.email }}</td>
+		</tr>
+		<tr>
+		    <td>{{ form_login.senha.label_tag }}:</td>
+		    <td>{{ form_login.senha }}</td>
+		</tr>
+		<input type="hidden" name="next" value="{{ NEXT }}" />
+		<tr>
+			<td colspan="2" class="right">
+				<input type="submit" value="login" id="loginButton"/>
+			</td>
+		</tr>
+	</table>
+	
+	</form>
+	
+</div>

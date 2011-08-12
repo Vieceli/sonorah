@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block titulo %}Parceiro - {{ noticia.titulo }}{% endblock %}
+
+{% block extralinks %}
+{{ block.super }}
+
+{% endblock %}
+{% block extracss %}
+{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+{{ block.super }}
+{% endblock %}
+
+{% block extrajs %}
+{{ block.super }}
+
+{% endblock extrajs %}
+
+{% block conteudo %}
+<div id="topo" class="topo">
+	{% block topo %}
+	{% include "includes/topo.html" %}
+	{% endblock topo %}
+</div>
+<div id="texto_parceiro" class="texto_parceiro">
+	<p>
+		A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias.
+		Se voc&ecirc; acredita que pode somar for&ccedil;as conosco, entre em contato e nos diga como podemos nos tornar parceiros.
+		Caso seja voc&ecirc; seja um radialista, compositor ou contratante, por favor, utilize as abas espec&iacute;ficas abaixo.
+	</p>
+</div>
+<div id="efeito_fundo_parceiro" class="efeito_fundo_parceiro">
+	<img src="/media/images/efeito_fundo_parceiros.png" >
+</div>
+<div id="formularios_parceiros" class="formularios_parceiros">
+	<div id="tabs">
+		<ul>
+			<li>
+				<a class="parceiro_aba" href="#parceiro"><span>Parceiro</span></a>
+			</li>
+			<li>
+				<a class="compositor_aba" href="#compositor"><span>Compositor</span></a>
+			</li>
+			<li>
+				<a class="radialista_aba" href="#radialista"><span>Radialista</span></a>
+			</li>
+			<li>
+				<a class="contratante_aba" href="#contratante"><span>Contratante</span></a>
+			</li>
+		</ul>
+		<div id="parceiro" class="parceiro">
+			<div id="parceiro_conteudo" class="parceiro_conteudo">
+				<form enctype="multipart/form-data" action="{% url parceiros %}#parceiro" method="post">
+					{% csrf_token %}
+					{{ parceiro_form.non_field_errors }}
+					<div id="parceiro_direita" class="parceiro_direita">
+						<div class="fieldWrapper">
+							{{ parceiro_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
+							{{ parceiro_form.nome }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.empresa.errors }} <label for="id_empresa" class="id_empresa">*Empresa: </label>
+							{{ parceiro_form.empresa }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
+							{{ parceiro_form.site }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
+							{{ parceiro_form.email }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.endereco.errors }} <label for="id_endereco" class="id_endereco">*Endereço: </label>
+							{{ parceiro_form.endereco }}
+						</div>
+					</div>
+					<div id="parceiro_esquerda" class="parceiro_esquerda">
+						<div class="fieldWrapper">
+							{{ parceiro_form.cidade.errors }} <label for="id_cidade" class="id_cidade">*Cidade: </label>
+							{{ parceiro_form.cidade }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.estado.errors }} <label for="id_estado" class="id_estado">*Estado: </label>
+							{{ parceiro_form.estado }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+							{{ parceiro_form.telefone }}
+						</div>
+						<div class="fieldWrapper">
+							{{ parceiro_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+							<div id="mensagem_parceiro" class="mensagem_parceiro">
+								{{ parceiro_form.mensagem }}
+							</div>
+						</div>
+					</div>
+					
+						<input type="submit" value="Enviar" name="parceiro" class="enviar"/>
+					
+			</div>
+			</form>
+		</div>
+		<div id="compositor" class="compositor">
+			<form enctype="multipart/form-data" action="{% url parceiros %}#compositor" method="post">
+				{% csrf_token %}
+				{{ compositor_form.non_field_errors }}
+				<div id="compositor_direita" class="compositor_direita">
+					<div class="fieldWrapper">
+						{{ compositor_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
+						{{ compositor_form.nome }}
+					</div>
+					<div class="fieldWrapper">
+						{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+						{{ compositor_form.arquivo }}
+					</div>
+					<div class="fieldWrapper">
+						{{ compositor_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
+						{{ compositor_form.email }}
+					</div>
+				</div>
+				<div id="compositor_esquerda" class="compositor_direita">
+					<div class="fieldWrapper">
+						{{ compositor_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+						{{ compositor_form.telefone }}
+					</div>
+					<div class="fieldWrapper">
+						{{ compositor_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+						<div id="mensagem_parceiro" class="mensagem_parceiro">
+							{{ compositor_form.mensagem }}
+						</div>
+					</div>
+				</div>
+				<input type="submit" value="Enviar" name="compositor"  class="enviar"/>
+			</form>
+		</div>
+		<div id="radialista" class="radialista">
+			<form enctype="multipart/form-data" action="{% url parceiros %}#radialista" method="post">
+				{% csrf_token %}
+				{{ contratante_form.non_field_errors }}
+				<div id="radialista_direita" class="radialista_direita">
+					<div class="fieldWrapper">
+						{{ radialista_form.nome_radio.errors }} <label for="id_nome_radio" class="id_nome_radio">*Nome da radio: </label>
+						{{ radialista_form.nome_radio }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.frequencia.errors }} <label for="id_frequencia" class="id_frequencia">*Frequencia: </label>
+						{{ radialista_form.frequencia }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.slogan.errors }} <label for="id_slogan" class="id_slogan">*Slogan: </label>
+						{{ radialista_form.slogan }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.programador.errors }} <label for="id_programador" class="id_programador">*Programador: </label>
+						{{ radialista_form.programador }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.direcao.errors }} <label for="id_direcao" class="id_direcao">*Direcao: </label>
+						{{ radialista_form.direcao }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
+						{{ radialista_form.email }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+						{{ radialista_form.telefone }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.endereco.errors }} <label for="id_endereco" class="id_endereco">*Endereco: </label>
+						{{ radialista_form.endereco }}
+					</div>
+				</div>
+				<div id="radialista_esquerda" class="radialista_esquerda">
+					<div class="fieldWrapper">
+						{{ radialista_form.cidade.errors }} <label for="id_cidade" class="id_cidade">*Cidade: </label>
+						{{ radialista_form.cidade }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.estado.errors }} <label for="id_estado" class="id_estado">*Estado: </label>
+						{{ radialista_form.estado }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">Anexo: </label>
+						{{ radialista_form.anexo }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
+						{{ radialista_form.site }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.facebook.errors }} <label for="id_facebook" class="id_facebook">Facebook: </label>
+						{{ radialista_form.facebook }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.twitter.errors }} <label for="id_twitter" class="id_twitter">Twitter: </label>
+						{{ radialista_form.twitter }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.youtube.errors }} <label for="id_youtube" class="id_youtube">Youtube: </label>
+						{{ radialista_form.youtube }}
+					</div>
+					<div class="fieldWrapper">
+						{{ radialista_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+						<div id="mensagem_radialista" class="mensagem_radialista">
+							{{ radialista_form.mensagem }}
+						</div>
+					</div>
+				</div>
+				
+					<input type="submit" value="Enviar" name="radialista"  class="enviar"/>
+			
+			</form>
+		</div>
+		<div id="contratante" class="contratante">
+			<form enctype="multipart/form-data" action="{% url parceiros %}#contratante" method="post">
+				{% csrf_token %}
+				{{ contratante_form.non_field_errors }}
+				<div id="contratante_direita" class="contratante_direita">
+					<div class="fieldWrapper">
+						{{ contratante_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
+						{{ contratante_form.nome }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.empresa.errors }} <label for="id_empresa" class="id_empresa">*Empresa: </label>
+						{{ contratante_form.empresa }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
+						{{ contratante_form.site }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
+						{{ contratante_form.email }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.endereco.errors }} <label for="id_endereco" class="id_endereco">*Endereco: </label>
+						{{ contratante_form.endereco }}
+					</div>
+				</div>
+				<div id="contratante_esquerda" class="contratante_esquerda">
+					<div class="fieldWrapper">
+						{{ contratante_form.cidade.errors }} <label for="id_cidade" class="id_cidade">*Cidade: </label>
+						{{ contratante_form.cidade }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.estado.errors }} <label for="id_estado" class="id_estado">*Estado: </label>
+						{{ contratante_form.estado }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+						{{ contratante_form.telefone }}
+					</div>
+					<div class="fieldWrapper">
+						{{ contratante_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+						<div id="mensagem_contratante" class="mensagem_contratante">
+							{{ contratante_form.mensagem }}
+						</div>
+					</div>
+				</div>
+			
+					<input type="submit" value="Enviar" name="contratante" />
+			
+			</form>
+		</div>
+		<div id="efeito_enviar" class="efeito_enviar">
+			<img src="/media/images/parceiros_efeito_enviar.png"/>
+		</div>
+	</div><!--fechamento das tabs -->
+</div><!--formularios_parceiros -->
+{% endblock conteudo %} 

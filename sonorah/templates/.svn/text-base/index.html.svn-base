@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicial - {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+{% block conteudo %}
+<div id="conteudo" class="conteudo">
+		{% if usuario.username %}
+			<p>Bem Vindo {{ usuario.username  }}!</p>
+		{% else %}
+			<p>Bem vindo! 
+			Você precisa efetuar <a href="/conta/login/">login</a>
+			Para fazer compras.</p>
+		{% endif %}
+		
+	<div id="cupon_destaque" class="cupon_destaque">
+		<h1>Cupons em destaque {{ cidade_cliente }}</h1>
+		{% for cd in destaque %}
+			<div id="cupon_destaque_imagem" class="cupon_destaque_imagem">
+				<a href="{{ cd.nome  }}">
+					<img src="/media/{{ cd.miniatura }}"  class="bn" width="60" height="60"/>			
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+
+		<div id="resultados">
+			<!-- Aqui vai aparecer o resultado da busca do usuario -->
+			{% if resultados %}
+				{% include "listar_cupons_busca.html" %}
+			{% else %}<!-- listagem dos cupons pela cidade -->
+				{% include "listar_cupons.html" %}
+			{% endif %}
+		</div>
+	
+	
+	<hr width="100%" color="black" size="2">
+	-	
+	<div id="empresa" class="empresa">
+		Texto da empresa
+		<div id="video_empresa" class="video_empresa">
+			Video da empresa
+		</div>
+	</div>
+	<div id="agende_visita" class="agende_visita">
+		Clique aqui para agendar uma visita
+	</div>
+</div>	
+{% endblock conteudo %}	

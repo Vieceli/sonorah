@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<div id="rodape">
+   	<span id="item_menu" class="item_menu">
+				<a href="/">Inicio</a>
+			</span> |
+    		<span id="item_menu" class="item_menu">
+    			<a href="/anuncie">Anuncie conosco</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/clientes">Clientes de sucesso</a>
+    		</span> |
+    		<span id="item_menu" class="item_menu">
+    				<a href="/agende">Agende uma visita</a>
+    		</span> |
+</div>
+

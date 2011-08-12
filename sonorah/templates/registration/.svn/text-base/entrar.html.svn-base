@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+	{% block titulo %}Entrar{% endblock %}
+	{% block cabeca %}Entrar{% endblock %}
+	{% block conteudo %}
+		{% if form.errors %}
+			<p>Usuario ou senha inexistentes</p>
+		{% endif %}
+		<form method="post" action=".">{% csrf_token %}
+			<table class="form">
+  				{{ form }}
+
+	  			<tr>
+	  			 <th>&nbsp;</th>
+				 <td>
+				<input type="hidden" name="next" value="/" />
+				<input type="submit" value="login" /></td>
+				</tr>
+			</table>
+			
+		</form>
+	{% endblock %}
+
+
