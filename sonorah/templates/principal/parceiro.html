@@ -14,10 +14,18 @@
 {{ block.super }}
 {% endblock %}
 
+{% block js_ready %}
+ {{ block.super }} 
+ 
+    	
+{% endblock %}
+    	
+
 {% block extrajs %}
 {{ block.super }}
 
 {% endblock extrajs %}
+
 
 {% block conteudo %}
 <div id="topo" class="topo">

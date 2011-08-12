@@ -21,6 +21,8 @@ urlpatterns = patterns('',
                     
      #includes
     (r'^$', include('principal.urls')),
+    
+   # (r'^/get_upload_progress^$', 'contato.views.get_upload_progress'),
     (r'^empresa/', include('empresa.urls')),
     (r'^portfolio/', include('portfolio.urls')),
     (r'^noticias/', include('noticias.urls')),

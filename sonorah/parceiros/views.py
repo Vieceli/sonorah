@@ -10,23 +10,10 @@ def parceiros(request,template_name):
     usuario=request.user
     url=str(request.get_full_path())
     pagina=url[1:-1]
-#    if request.method == 'GET':
-#        GET = request.GET  
-#        if GET.has_key('a'):  
-#            form = ArtistaForm(request.GET'  
-# 
-#    contratante_form_set = formset_factory(ContratantesForm)
-#    compositor_form_set  = formset_factory(CompositoresForm)
-#    radialista_form_set  = formset_factory(RadialistaForm)
-#    parceiro_form_set    = formset_factory(ParceiroForm)
     valido=True
+    
     if request.method == 'POST': 
         POST=request.POST
-#        contratante_form_set = ContratantesForm(POST, request.FILES, prefix="contratante")
-#        book_formset = BookFormSet(request.POST, request.FILES, prefix='books')
-#        print POST
-#        if POST['compositor']:
-#            print "olaa compositor"
         contratante_form = ContratantesForm(request.POST)
         compositor_form = CompositoresForm(request.POST)
         radialista_form = RadialistaForm(request.POST)
@@ -76,3 +63,18 @@ def parceiros(request,template_name):
         parceiro_form = ParceiroForm() 
 
     return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+#        contratante_form_set = ContratantesForm(POST, request.FILES, prefix="contratante")
+#        book_formset = BookFormSet(request.POST, request.FILES, prefix='books')
+#        print POST
+#        if POST['compositor']:
+#            print "olaa compositor"
+#    if request.method == 'GET':
+#        GET = request.GET  
+#        if GET.has_key('a'):  
+#            form = ArtistaForm(request.GET'  
+# 
+#    contratante_form_set = formset_factory(ContratantesForm)
+#    compositor_form_set  = formset_factory(CompositoresForm)
+#    radialista_form_set  = formset_factory(RadialistaForm)
+#    parceiro_form_set    = formset_factory(ParceiroForm)

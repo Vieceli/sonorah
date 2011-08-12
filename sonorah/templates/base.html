@@ -13,11 +13,10 @@
       <meta name="verify-v1" content="l4Z4jgwG5X58psxFkH3eILv9ua3nJKYrq5zGFZC0xj0=" />
       {% block metadata %}
       {% endblock metadata %}
-  
   	  <link href="/media/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css"/>
       <link href="/media/css/thickbox.css" rel="stylesheet" type="text/css"/>
       <link rel="stylesheet" href="print.css" type="text/css" media="print" /> 
-<!--      <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />-->
+<!--  <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />-->
       <link type="text/css" rel="stylesheet" href="/media/css/estilo-novo.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/dropdown.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/cabecalho.css" />
@@ -26,138 +25,140 @@
       <link type="text/css" rel="stylesheet" href="/media/css/dropdown_ie.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/estilo_novo_ie.css" />
       <![endif]-->
-      
-  
-  
       {% block extralinks %}
       {% endblock extralinks %}
       <style type="text/css">
           {% block extracss %}
           {% endblock extracss %}
       </style>
-      
-  
-      <script type="text/javascript" src="/media/js/jquery-1.5.1.min.js" charset="utf-8"></script>
+     <script type="text/javascript" src="/media/js/jquery-1.5.1.min.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/jquery-ui-1.8.14.custom.min.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/jquery.form.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/jquery.progressbar.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/jquery.timers-1.2.js.txt" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/cuponClipper.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/thickbox.js" charset="utf-8"></script>
       <script src="/media/js/widget-twetter.js" charset="utf-8"  type="text/javascript"></script>
-     
-      
-	
-       
-      {% block extrascripts %}
+	  {% block extrascripts %}
       {% endblock extrascripts %}
-      
-   
-      <script language="javascript">
-	     
-      
-          function mouseOver1()
-          {
-          document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"
-          }
-          function mouseOut1()
-          {
-          document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"
-          }
-           function mouseOver2()
-          {
-          document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"
-          }
-          function mouseOut2()
-          {
-          document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"
-          }
-           function mouseOver3()
-          {
-          document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"
-          }
-          function mouseOut3()
-          {
-          document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"
-          }
-		  
-       
-        $(document).ready(function()
-        {
-    
-          $(".image").click(function() {
-              var image = $(this).attr("rel");
-              $('#image').hide();
-              $('#image').fadeIn(1500);
-              $('#image').html('<img src="' + image + '"/>');
-  
-          return false;
-          });
-          
-          $('h2.assesoria_img').click(function(){
-      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
-      	});
-          $('h2.assesoria_imp').click(function(){
-        		$(this).parent().find('div.assesoria_imp').slideToggle("slow");
-        	});
-          $('h2.producao_m').click(function(){
-        		$(this).parent().find('div.producao_m').slideToggle("slow");
-        	});
-          $('h2.producao_a').click(function(){
-        		$(this).parent().find('div.producao_a').slideToggle("slow");
-        	});
-          $('h2.estrategia').click(function(){
-      		$(this).parent().find('div.estrategia').slideToggle("slow");
-      	});
-          $('h2.fono').click(function(){
-        		$(this).parent().find('div.fono').slideToggle("slow");
-        	});
-          $('h2.tecnicas').click(function(){
-        		$(this).parent().find('div.tecnicas').slideToggle("slow");
-        	});
-          $('h2.presenca').click(function(){
-      		$(this).parent().find('div.presenca').slideToggle("slow");
-      		});
-      		
-          $("#tabs").bind('tabsselect',function(event, ui) {
-            	window.location.href=ui.tab;
-			 });
-		  $("#tabs").tabs({
-		  	 });
-          /*
-          $("#tabs").tabs({
-               select: function(event, ui) {
-               		var valido = true;
-               		alert(ui.toString())
-			        return valido;
-			    }
-          });*/
+     <script language="javascript">
+     
+     		function muda_fundo(){
+		   		$("body").css({
+		   						'background-color','#131315',
+								'background-repeat', 'no-repeat',
+								/*background-position: center center;*/
+								'background-position', 'center 119.5px',
+								'background-image', 'url(/media/images/banner_meio_paginas.png)'
+							});
+		   };
+          function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
+          function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
+          function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
+          function mouseOut2(){document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"}
+          function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
+          function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
+		
+	      {% block extrajs %}
+	      
+	      {% endblock extrajs %}
+	      
+	        $(document).ready(function()
+	        {
+	        	{% block js_ready %}	        
+		        {% endblock js_ready %}
+		        
+	    		$("li.portfolio_menu").click(muda_fundo);
+					
+					/*("body").removeClass('bg0').addClass("bg1");*/
+				$("li.artistas_menu").click( function(){
+					$("body").css({
+		   						'background-color','#fff',
+								'background-repeat', 'no-repeat',
+								/*background-position: center center;*/
+								'background-position', 'center 119.5px',
+								'backgroundImage', 'url(/media/images/banner_meio_paginas.png)'
+							});
+				});
+				$("li.noticias_menu").click( function(){ $
+					("body").removeClass('bg0').addClass("bg1");
+				});
+				$("li.parceiros_menu").click( function(){ $
+					("body").removeClass('bg0').addClass("bg1");
+				});
+				$("li.contato_menu").click( function(){ $
+					("body").removeClass('bg0').addClass("bg1");
+				});
+				  
+		    	
+		          $('h2.assesoria_img').click(function(){
+		      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
+		      		});
+		          $('h2.assesoria_imp').click(function(){
+		        		$(this).parent().find('div.assesoria_imp').slideToggle("slow");
+		        	});
+		          $('h2.producao_m').click(function(){
+		        		$(this).parent().find('div.producao_m').slideToggle("slow");
+		        	});
+		          $('h2.producao_a').click(function(){
+		        		$(this).parent().find('div.producao_a').slideToggle("slow");
+		        	});
+		          $('h2.estrategia').click(function(){
+		      		$(this).parent().find('div.estrategia').slideToggle("slow");
+		      	});
+		          $('h2.fono').click(function(){
+		        		$(this).parent().find('div.fono').slideToggle("slow");
+		        	});
+		          $('h2.tecnicas').click(function(){
+		        		$(this).parent().find('div.tecnicas').slideToggle("slow");
+		        	});
+		          $('h2.presenca').click(function(){
+		      		$(this).parent().find('div.presenca').slideToggle("slow");
+		      		});
+		      		
+		          $("#tabs").bind('tabsselect',function(event, ui) {
+		            	window.location.href=ui.tab;
+					});
+	
+		         $("#tabs").tabs({
+		               select: function(event, ui) {
+		               		var valido = true;
+					        return valido;
+					    }
+		          });
 
-        });
+				$('a#contratante').click(function (){
+					$tabs.tabs('select', 2);
+					alert('teste')
+					/*$('#tabs').tabs('select', 1);*/
+					return false;
+				}); 
+
+	        });
+
+	</script>
+</head>
   
-      
-      {% block extrajs %}
-      {% endblock extrajs %}
-  
-      </script>
-  
-  
-  </head>
-  
-  <body>
-  
-  
-      <div id="conteiner" class="conteiner">
-      	
-          {% block cabecalho %}
-              {% include "includes/cabecalho.html" %}
-          {% endblock cabecalho %}
-          <div id="conteudo" class="conteudo">         
-              {% block conteudo %}
-              {% endblock %}
-        </div>
-       {% block rodape %}
+<body class="bg0">
+	  	  {% block cabecalho_superior %}
+				{% include "includes/cabecalho_superior.html" %}
+	      {% endblock cabecalho_superior %}
+	      <div id="conteiner" class="conteiner">    	
+	      	  <div id="topo_geral" class="topo_geral">
+	      	  	  {% block cabecalho_inferior %}
+		  			{% include "includes/cabecalho_inferior.html" %}
+		  		  {% endblock cabecalho_inferior %}
+		          {% block animacao %}
+		        	 {% include "includes/animacao.html" %}
+		   		  {% endblock animacao %}
+		   	 </div>
+		     <div id="conteudo" class="conteudo">         
+		           {% block conteudo %}{% endblock %}
+		      </div>  	       
+	      </div>
+      {% block rodape %}
 			{% include "includes/rodape.html" %}
-
-      {% endblock rodape %}      
-      </div>
+	  {% endblock rodape %} 
  
   
   </body>

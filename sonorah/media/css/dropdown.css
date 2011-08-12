@@ -15,31 +15,73 @@ way to fit your requirements.
 	float:left;
 	font-family: "Franklin Gothic Medium";
 	/*width:750px; */
-	top:60px;
+	top:75px;
 	left:30px;
 	height:130px; 
 	z-index:100;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(border-radius.htc);
 
 	 }
 .menu ul li a, .menu ul li a:visited {
 	display:block; 
 	text-decoration:none; 
 	color:#131315;
-	width:110px; 
-	height:66px; 
+	width:125px; 
 	text-align:center; 
-	color:#fff; 
-	border:1px thin #333; 
+	color:#FF5A00; 
+	/*border:1px thin #333;*/ 
 	background:#131315; 
-	line-height:20px; 
+
 	font-size:18px; 
 	overflow:hidden;
-	-moz-border-radius: 11px;
-	-webkit-border-radius: 11px;
-	border-radius: 11px;
-	behavior: url(border-radius.htc);
+
 
 }
+
+.menu ul li a#empresa_menu{ height: 66px;background:#131315;}
+.menu ul li a#portfolio_menu{height: 66px;background:#131315;}
+.menu ul li a#artistas_menu{height: 66px;background:#131315;}/*ESTADO NORMAL DOS BOTOES*/
+.menu ul li a#noticias_menu{height: 66px;background:#131315;}
+.menu ul li a#parceiros_menu{height: 66px;background:#131315;}
+.menu ul li a#contato_menu{height: 66px;background:#131315;}
+.menu ul li a#empresa_menu:hover{background:#000;}
+.menu ul li a#portfolio_menu:hover{background:#000;}/*PASSAR O MOUSE*/
+.menu ul li a#artistas_menu:hover{background:#000;}
+.menu ul li a#noticias_menu:hover{background:#000;}
+.menu ul li a#parceiros_menu:hover{	height: 66px;background:#000;}
+.menu ul li a#contato_menu:hover{	height: 66px;background:#000;}
+
+
+
+.separador_menu{
+	position:relative;
+	float:left;
+	
+}
+.separador_menu img{
+	height: 2px;
+	margin-left:20px;
+	width: 80px;
+	background-color: #000;
+}
+.vcnasonorah{
+	font-family: "Franklin Gothic Medium";
+	font-size: 14px;
+	
+}
+.vcnasonorah img{
+	padding-top: 4px;	
+}
+.texto_item_submenu{
+	font-family: "Franklin Gothic Medium";
+	font-size: 15px;
+	padding-top: 2px;
+}
+
+
 .menu ul {
 	padding:0; 
 	margin:0; 
@@ -49,7 +91,7 @@ way to fit your requirements.
 .menu ul li {
 	float:left;
 	position:relative;
-	height:20px; 
+	height:30px; 
 	display:block;
 	 }
 .menu ul li ul {
@@ -58,17 +100,23 @@ way to fit your requirements.
 	}
 
 /* specific to non IE browsers */
+.menu ul li:hover ul li a:hover {
+	background:#262629;/*cor do fundo dos itens*/
+	color:#FF5A00;
+	height: 30px;
+}
 .menu ul li:hover a {color:#FF5A00; background:#020202;}
+.menu ul li:hover a#artistas_menu {background-color: #000;}
 .menu ul li:hover ul {
 	display:list-item; 
 	position:absolute; 
 	top:21px; 
 	left:0; 
-	width:105px; 
-	 }
+	width:125px; 
+	background:#020202;
+}/*
 .menu ul li:hover ul li a.hide {
 	background:#131315; 
-	color:#FFF;
 	}
 .menu ul li:hover ul li:hover a.hide {
 	background:#3CC; 
@@ -81,11 +129,10 @@ way to fit your requirements.
 	display:block; 
 	background:#000; 
 	color:#FF5A00; 
-	}
-.menu ul li:hover ul li a:hover {
-	background:#131315; 
-	color:#FFF; 
-	}
+}
+
+*/
+/*
 .menu ul li:hover ul li:hover ul {
 	display:block; 
 	position:absolute; 
@@ -95,3 +142,4 @@ way to fit your requirements.
 .menu ul li:hover ul li:hover ul.left {
 	left:-105px; 
 	}
+*/

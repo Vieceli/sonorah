@@ -60,6 +60,10 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT_PATH, 'estatico')
 STATIC_URL = '/estatico/'
 
 DJBOLETO_MEDIA_URL = "/media/boletosimg/"
+from django.conf import global_settings
+
+#FILE_UPLOAD_HANDLERS = ('uploadprogresscachedhandler.UploadProgressCachedHandler', ) + global_settings.FILE_UPLOAD_HANDLERS
+#CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 GEOIP_PATH = os.path.join(PROJECT_ROOT_PATH, 'geoip')
 
@@ -71,7 +75,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
+   # 'django.contrib.messages.context_processors.messages',
 )
                      
                  

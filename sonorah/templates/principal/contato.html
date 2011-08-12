@@ -15,10 +15,16 @@
 	
 {% endblock %}
 
+{% block js_ready %}
+	{{ block.super }}
+	
+
+{% endblock js_ready %}
+
 
 {% block extrajs %}
 	{{ block.super }}
-
+	
 {% endblock extrajs %}
 
 
@@ -29,7 +35,7 @@
 	{% endblock topo %}
 </div>
 <div id="contato" class="contato">
-	<form enctype="multipart/form-data" action="." method="post">
+	<form enctype="multipart/form-data" action="{% url contato %}" method="post" id="form_upload">
 			{% csrf_token %}
 			<div class="fieldWrapper">
 				{{ contato_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
@@ -45,7 +51,12 @@
 			</div>
 			<div class="fieldWrapper">
 				{{ contato_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+				<!--<div class="fakeupload">
+					<input type="text" name="fakeupload" />
+				<input type="file" name="arquivo" id="arquivo_id" class="arquivo_id"  onchange="this.form.fakeupload.value = this.value;" /> -->
 				{{ contato_form.arquivo }}
+				<!--<input type="hidden" id="X-Progress-ID" name="X-Progress-ID" value=""/>
+				<input type="hidden" id="id" name="id" value=""/>-->
 			</div>
 			<div class="fieldWrapper">
 				{{ contato_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
@@ -67,7 +78,7 @@
 	<p>Rua 89, Nº540 Setor Sul.</p>
 	<p>Goiânia - GO | CEP: 74093-140</p>
     <p><img src="/media/images/telefone_contato.png"/> (62) 3281-0311</p>
-    <p><img src="/media/images/email_contato.png"/>contato@sonorah.com</p>
+    <p><img src="/media/images/email_contato.png"/> contato@sonorah.com</p>
     
     <div id="mapa_google" class="mapa_google">
     	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=380x310&maptype=roadmap&sensor=true" />    
