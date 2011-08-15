@@ -42,83 +42,38 @@
 	  {% block extrascripts %}
       {% endblock extrascripts %}
      <script language="javascript">
-     /*
-     		function muda_fundo(){
-		   		$("body").css({
-		   						'background-color','#131315',
-								'background-repeat', 'no-repeat',
-								'background-position', 'center 119.5px',
-								'background-image', 'url(/media/images/banner_meio_paginas.png)'
-							});
-		   };*/
+   
           function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
           function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
           function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
           function mouseOut2(){document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"}
           function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
           function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
-		
-		
-		
 	      {% block extrajs %}
-	      
 	      {% endblock extrajs %}
 	      
-	        $(document).ready(function()
-	        {
+	       $(document).ready(function(){
 	        	{% block js_ready %}	        
 		        {% endblock js_ready %}
-		        
-		        	var newClass = window.location.href;
-					newClass = newClass.substring(22,newClass.length - 1);
-					/*alert(newClass)*/
-					$('body').addClass(newClass); 	  
-		  	
-		          $('h2.assesoria_img').click(function(){
-		      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
-		      		});
-		          $('h2.assesoria_imp').click(function(){
-		        		$(this).parent().find('div.assesoria_imp').slideToggle("slow");
-		        	});
-		          $('h2.producao_m').click(function(){
-		        		$(this).parent().find('div.producao_m').slideToggle("slow");
-		        	});
-		          $('h2.producao_a').click(function(){
-		        		$(this).parent().find('div.producao_a').slideToggle("slow");
-		        	});
-		          $('h2.estrategia').click(function(){
-		      		$(this).parent().find('div.estrategia').slideToggle("slow");
-		      	});
-		          $('h2.fono').click(function(){
-		        		$(this).parent().find('div.fono').slideToggle("slow");
-		        	});
-		          $('h2.tecnicas').click(function(){
-		        		$(this).parent().find('div.tecnicas').slideToggle("slow");
-		        	});
-		          $('h2.presenca').click(function(){
-		      		$(this).parent().find('div.presenca').slideToggle("slow");
-		      		});
-		      		
-		          $("#tabs").bind('tabsselect',function(event, ui) {
-		            	window.location.href=ui.tab;
-					});
-	
- 			/*$("#tabs").tabs({
-		  	 
-		  		});
-      			*/
-		          $("#tabs").bind('tabsselect',function(event, ui) {
-		            	window.location.href=ui.tab;
-					});
-		
-		          
-		         $("#tabs").tabs({
-		               select: function(event, ui) {
-		               		var valido = true;
-					        return valido;
-					    }
-		          });
-          /*SELECIONA aba do parceiro pelo menu teste*/
+		     		         
+		     	
+		     	$('a#fundo1').click(function (){
+		     		$('body').removeClass("fundo2");
+		     		$('body').removeClass("fundo3");
+		     		$('body').addClass("fundo1"); 
+		     	});
+		     	$('a#fundo2').click(function (){
+		     		$('body').removeClass("fundo1");
+		     		$('body').removeClass("fundo3");
+		     		$('body').addClass("fundo2"); 
+		     	});
+		     	$('a#fundo3').click(function (){
+		     		$('body').removeClass("fundo2");
+		     		$('body').removeClass("fundo1");
+		     		$('body').addClass("fundo3"); 
+		     		 
+		     	});
+         	 /*SELECIONA aba do parceiro pelo menu teste*/
 				$('a#contratante').click(function (){
 					$tabs.tabs('select', 2);
 					alert('teste')
@@ -140,11 +95,8 @@
 	      	  	  {% block cabecalho_inferior %}
 		  				{% include "includes/cabecalho_inferior.html" %}
 		  		  {% endblock cabecalho_inferior %}
-
 		   	 </div>
-		            
-		          {% block conteudo %}{% endblock %}
-		     	       
+		     {% block conteudo %}{% endblock %}       
 	      </div>
       {% block rodape %}
 			{% include "includes/rodape.html" %}

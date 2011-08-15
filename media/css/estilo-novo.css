@@ -123,12 +123,13 @@ h3{
 	margin:0 auto;
 	text-align:left;
 	/*min-height:100%;*/
+	margin-bottom:50px;
 }
 
 .conteudo_home{
 	position: relative;
 	margin-top:320px;
-	margin-bottom:30px;
+	
 	float:left;
 	text-align:justify;
 	width:100%;
@@ -410,17 +411,15 @@ div.presenca{ display: none; }
 
 /*PORTFOLIO LISTA*/
 
-.portfolio_lista{
+.portfolio_box{
 	position: relative;
 	float:left;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
-	margin-left:320px;
-	margin-top: 30px;	
-	width: 1200px;
+	margin-top: 36px;	
 	display: inline-block;
 }
-.portfolio_lista a{
+.portfolio_box a{
 	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;
@@ -564,10 +563,14 @@ div#sharebtn a {
 	background-color:transparent;
 }
 /*PARCEIROS*/
+.parceiro_box{
+	position:relative;
+	float:left;
+	margin-top: 60px;
+}
 .texto_parceiro{
 	position: relative;	
 	float:left;
-	left:320px;
 	top:30px;
 	font-family:"Franklin Gothic Book";
 	font-size: 18px;
@@ -579,19 +582,15 @@ div#sharebtn a {
 .efeito_fundo_parceiro{
 	position:relative;
 	float:left;
-	left:320px;
-	top:50px;
-	height:5px;
+	margin-top:-20px;
 	z-index: 0;
 	opacity:0.4;filter:alpha(opacity=40);
-	background-color: #19191a;
 }
 .formularios_parceiros{
-	position: relative;
-	float: left;
-	top: 80px;	
-	z-index: 3;
-	left: 320px;	
+	position:relative;
+	float:left;
+	margin-top: -280px;
+	z-index: 10;	
 }
 .parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
 
@@ -655,7 +654,7 @@ input
 	height: 42px;
 	/*width:311px;*/
 	width:280px;
-	margin-left: 0px;
+	margin-left: -20px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
@@ -665,6 +664,7 @@ textarea {
 	border:0px;
 	color: #19191a;
 	background: #000;
+	margin-left: -20px;
 	width: 280px;
 	height: 105px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
@@ -686,7 +686,7 @@ textarea {
 	float: right;
 	bottom:-60px;
 	background: url(/media/images/enviar.png) 20% 20% no-repeat;
-	right: -25px;
+	right: -435px;
 	/*margin-left: 700px;*/
 	padding-right:90px;
 	padding-bottom:60px;
@@ -810,7 +810,7 @@ textarea {
 	float: left;
 	bottom:0px;
 	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
-	left: 245px;
+	left: 265px;
 	padding-right:90px;
 	padding-bottom:60px;
 	color: #3d3d3d;

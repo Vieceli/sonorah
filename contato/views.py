@@ -14,7 +14,7 @@ def contato(request,template_name):
 #        GET = request.GET  
 #        if GET.has_key('a'):  
 #            form = ArtistaForm(request.GET'  
-#    
+    contato_form = ContatoForm(request.POST)
     if request.method == 'POST': 
         POST=request.POST
         print POST

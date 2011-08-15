@@ -17,7 +17,33 @@
 	  
 		        
        {{ block.super }}
-          
+        {{ block.super }}
+ 		$('body').addClass("empresa");
+        
+          $('h2.assesoria_img').click(function(){
+		      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
+		      		});
+		          $('h2.assesoria_imp').click(function(){
+		        		$(this).parent().find('div.assesoria_imp').slideToggle("slow");
+		        	});
+		          $('h2.producao_m').click(function(){
+		        		$(this).parent().find('div.producao_m').slideToggle("slow");
+		        	});
+		          $('h2.producao_a').click(function(){
+		        		$(this).parent().find('div.producao_a').slideToggle("slow");
+		        	});
+		          $('h2.estrategia').click(function(){
+		      		$(this).parent().find('div.estrategia').slideToggle("slow");
+		      	});
+		          $('h2.fono').click(function(){
+		        		$(this).parent().find('div.fono').slideToggle("slow");
+		        	});
+		          $('h2.tecnicas').click(function(){
+		        		$(this).parent().find('div.tecnicas').slideToggle("slow");
+		        	});
+		          $('h2.presenca').click(function(){
+		      		$(this).parent().find('div.presenca').slideToggle("slow");
+		      		});  
 {% endblock js_ready %}
  
 			             
