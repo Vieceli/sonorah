@@ -1,4 +1,0 @@
-LOCAL = True
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
