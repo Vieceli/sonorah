@@ -42,16 +42,15 @@
 	  {% block extrascripts %}
       {% endblock extrascripts %}
      <script language="javascript">
-     
+     /*
      		function muda_fundo(){
 		   		$("body").css({
 		   						'background-color','#131315',
 								'background-repeat', 'no-repeat',
-								/*background-position: center center;*/
 								'background-position', 'center 119.5px',
 								'background-image', 'url(/media/images/banner_meio_paginas.png)'
 							});
-		   };
+		   };*/
           function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
           function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
           function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
@@ -69,31 +68,39 @@
 		        {% endblock js_ready %}
 		        
 		        /*tentativa 1 de mudar o fundo*/
-	    		$("li.portfolio_menu").click(muda_fundo);
+	    	/*	$("li.portfolio_menu").click(muda_fundo);*/
 					
 					/*("body").removeClass('bg0').addClass("bg1");*/
 				/*tentativa 2 de mudar o fundo*/
-				$("li.artistas_menu").click( function(){
+				/*$("li.artistas_menu").click( function(){
 					$("body").css({
 		   						'background-color','#fff',
 								'background-repeat', 'no-repeat',
-								/*background-position: center center;*/
+								
 								'background-position', 'center 119.5px',
 								'backgroundImage', 'url(/media/images/banner_meio_paginas.png)'
 							});
-				});
+				});*/
 				/*tentativa 3 de mudar o fundo*/
-				$("li.noticias_menu").click( function(){ $
-					("body").removeClass('bg0').addClass("bg1");
+				var newClass = window.location.href;
+				newClass = newClass.substring(22,newClass.length - 1)
+				/*newClass = newClass.substring(newClass.lastIndexOf('/')+22,30);*/
+				$('body').addClass(newClass);
+				
+				
+/*
+				$("li.noticias_menu").click( function(){ 
+					$("body").removeClass('bg0');
+					$('body').addClass('bg1');
 				});
 				
-				$("li.parceiros_menu").click( function(){ $
-					("body").removeClass('bg0').addClass("bg1");
+				$("li.parceiros_menu").click( function(){ 
+					$("body").removeClass('bg0').addClass("bg1");
 				});
-				$("li.contato_menu").click( function(){ $
-					("body").removeClass('bg0').addClass("bg1");
+				$("li.contato_menu").click( function(){ 
+					$("body").removeClass('bg0').addClass("bg1");
 				});
-				  
+				*/  
 		    	
 		          $('h2.assesoria_img').click(function(){
 		      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
@@ -161,13 +168,11 @@
 	      	  	  {% block cabecalho_inferior %}
 		  				{% include "includes/cabecalho_inferior.html" %}
 		  		  {% endblock cabecalho_inferior %}
-		          {% block animacao %}
-		        	 	{% include "includes/animacao.html" %}
-		   		  {% endblock animacao %}
+
 		   	 </div>
-		     <div id="conteudo" class="conteudo">         
+		            
 		          {% block conteudo %}{% endblock %}
-		     </div>  	       
+		     	       
 	      </div>
       {% block rodape %}
 			{% include "includes/rodape.html" %}

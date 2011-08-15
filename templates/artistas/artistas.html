@@ -20,12 +20,10 @@
 
 
 {% block conteudo %}
-<div id="topo" class="topo">
  	{% block topo %}
            {% include "includes/topo.html" %}
     {% endblock topo %}
-</div>
-<div id="artista_lista" class="artista_lista">
+<div id="artista_box" class="artista_box">
 	{% for artista in artistas %} 
 	<a href="{{ artista.site }}" target="_blank"> 
 		<img src="/media/{{ artista.imagem }}"  class="bn" width="943" height="208" align="bottom"/>

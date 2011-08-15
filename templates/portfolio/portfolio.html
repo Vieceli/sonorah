@@ -20,14 +20,11 @@
 
 
 {% block conteudo %}
-
-<div id="topo" class="topo">
  	{% block topo %}
            {% include "includes/topo.html" %}
     {% endblock topo %}
-</div>
 		
-	<div id="portfolio" class="portfolio">
+	<div id="portfolio_box" class="portfolio_box">
 		{% for trabalho in trabalhos %}
 		<div id="portfolio_item" class="portfolio_item">
 			{{ trabalho.url }}

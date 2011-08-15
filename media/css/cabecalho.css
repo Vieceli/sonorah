@@ -61,7 +61,9 @@
 	/*width:300px;*/
 }
 
+
 /*CABECALHO PAGINAS*/
+/*
 .topo{
 	position:relative;
 	float:left;
@@ -82,25 +84,20 @@
 	float:left;	
 	z-index:2;
 	top:-118px;
-}
-.barra_endereco_superior{
-	position:relative;
-	float:left;
-	top: -712px;
-	left:-10px;
-}
+}*/
+
 .barra_endereco{
+	top:40px;
 	position: relative;
 	float:left;
-	top: -695px;
-	left:165px;
-	width:1200px;
+	left: -180px;
+	width: 1200px;
 }
 .home{
 	position: relative;
 	float:left;
-	margin-left: 150px;
-	margin-top: -20px;
+	margin-left: 200px;
+	margin-top: -10px;
 	
 }
 
@@ -109,7 +106,7 @@
 	float:left;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
-	margin-left: 180px;
-	margin-top: -20px;
+	/*margin-left: 60px;*/
+	margin-top: -10px;
 	font-variant:small-caps;	
 }
