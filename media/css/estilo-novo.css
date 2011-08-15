@@ -411,17 +411,15 @@ div.presenca{ display: none; }
 
 /*PORTFOLIO LISTA*/
 
-.portfolio_lista{
+.portfolio_box{
 	position: relative;
 	float:left;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
-	margin-left:320px;
-	margin-top: 30px;	
-	width: 1200px;
+	margin-top: 36px;	
 	display: inline-block;
 }
-.portfolio_lista a{
+.portfolio_box a{
 	font-family:"Franklin Gothic Heavy";
 	font-size:14px;
 	color:#666;

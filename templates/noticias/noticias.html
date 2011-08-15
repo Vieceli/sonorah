@@ -13,6 +13,10 @@
 	{{ block.super }}
 {% endblock %}
 
+{% block js_ready %}
+ {{ block.super }}
+ $('body').addClass('noticias'); 	   
+{% endblock %}
 
 {% block extrajs %}
 	{{ block.super }}

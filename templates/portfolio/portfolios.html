@@ -13,6 +13,10 @@
 	{{ block.super }}
 {% endblock %}
 
+{% block js_ready %}
+ 	{{ block.super }}
+ 	$('body').addClass("portfolios"); 	   
+{% endblock %}
 
 {% block extrajs %}
 	{{ block.super }}
@@ -20,14 +24,14 @@
 
 
 {% block conteudo %}
-<div id="topo" class="topo">
+
  	{% block topo %}
            {% include "includes/topo.html" %}
     {% endblock topo %}
-</div>
+
 		
 	
-<div id="portfolio_lista" class="portfolio_lista">
+<div id="portfolio_box" class="portfolio_box">
 	{% for portfolio in portfolios %}
 	<div id="portfolio_item" class="portfolio_item">
 		<a href="/portfolio/{{ portfolio.slug }}"> <img src="/media/{{ portfolio.imagem }}" class="bn" width="943" height="208" align="bottom"/>
