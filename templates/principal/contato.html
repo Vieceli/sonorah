@@ -15,11 +15,16 @@
 	
 {% endblock %}
 
-{% block js_ready %}
-	{{ block.super }}
-	
 
-{% endblock js_ready %}
+{% block js_ready %}
+       {{ block.super }}
+       	var newClass = window.location.href;
+		newClass = newClass.substring(22,newClass.length - 1)
+				
+		/*newClass = newClass.substring(newClass.lastIndexOf('/')+22,30);*/
+		alert(newClass)
+		$('body').addClass(newClass); 	   
+{% endblock %}
 
 
 {% block extrajs %}

@@ -14,6 +14,10 @@
 {% endblock %}
 
  
+{% block js_ready %}
+       {{ block.super }}
+		$('body').addClass('noticia'); 	   
+{% endblock %}
 			             
 {% block extrajs %}
 	{{ block.super }}
@@ -21,13 +25,11 @@
 
 
 {% block conteudo %}
-<div id="topo" class="topo">
  	{% block topo %}
            {% include "includes/topo.html" %}
     {% endblock topo %}
-</div>
     
-	<div id="noticia" class="noticia">
+<div id="noticia_box" class="noticia_box">
 		<img src="/media/{{ noticia.miniatura }}"  class="bn" width="460" height="209" align="left"/> 
         
         <h1 id="noticia_titulo" class="noticia_titulo">
