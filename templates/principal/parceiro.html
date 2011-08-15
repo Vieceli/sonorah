@@ -15,8 +15,26 @@
 {% endblock %}
 
 {% block js_ready %}
- {{ block.super }} 
- $('body').addClass('parceiros'); 
+ 
+ 	{{ block.super }} 
+ 
+ 	$('body').addClass('parceiros'); 
+ 	
+ 	$("#tabs").bind('tabsselect',function(event, ui) {
+	         	window.location.href=ui.tab;
+	});
+	
+ 	$("#tabs").bind('tabsselect',function(event, ui) {
+	         	window.location.href=ui.tab;
+	});
+		
+		          
+	$("#tabs").tabs({
+		select: function(event, ui) {
+		  		var valido = true;
+			    return valido;
+		}
+	});
     	
 {% endblock %}
     	
