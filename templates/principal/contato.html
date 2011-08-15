@@ -29,12 +29,10 @@
 
 
 {% block conteudo %}
-<div id="topo" class="topo">
 	{% block topo %}
 	{% include "includes/topo.html" %}
 	{% endblock topo %}
-</div>
-<div id="contato" class="contato">
+<div id="contato_box" class="contato_box">
 	<form enctype="multipart/form-data" action="{% url contato %}" method="post" id="form_upload">
 			{% csrf_token %}
 			<div class="fieldWrapper">
@@ -81,7 +79,7 @@
     <p><img src="/media/images/email_contato.png"/> contato@sonorah.com</p>
     
     <div id="mapa_google" class="mapa_google">
-    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=380x310&maptype=roadmap&sensor=true" />    
+    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=350x232&maptype=roadmap&sensor=true" />    
     </div>
 </div>
 

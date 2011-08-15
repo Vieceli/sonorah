@@ -782,15 +782,16 @@ textarea {
 
 /*CONTATO
  */
-.contato{
+.contato_box{
 	position: relative;
 	float:left;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
-	margin-left:290px;
+	margin-left:-5px;
+	margin-right:-2px;
 /*	margin-top: -330px;	*/
-	width: 450px;
-	display: inline-block;
+	width: 480px;
+	display:block;
 	top:30px;
 	/*height: 400px;*/
 }
