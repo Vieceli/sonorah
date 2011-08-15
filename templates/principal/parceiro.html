@@ -16,7 +16,7 @@
 
 {% block js_ready %}
  {{ block.super }} 
- 
+ $('body').addClass('parceiros'); 
     	
 {% endblock %}
     	
@@ -28,11 +28,12 @@
 
 
 {% block conteudo %}
-<div id="topo" class="topo">
+
 	{% block topo %}
 	{% include "includes/topo.html" %}
 	{% endblock topo %}
-</div>
+
+<div id="parceiro_box" class="parceiro_box">
 <div id="texto_parceiro" class="texto_parceiro">
 	<p>
 		A Sonorah est&aacute; sempre em busca de grandes profissionais e grandes parcerias.
@@ -280,4 +281,5 @@
 		</div>
 	</div><!--fechamento das tabs -->
 </div><!--formularios_parceiros -->
+</div> <!--- box_parceiros-->
 {% endblock conteudo %} 
