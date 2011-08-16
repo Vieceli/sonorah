@@ -677,6 +677,7 @@ textarea {
 .submit input{
 	color: #fff;
 	background: #ffffff;
+	
 	/*background-image: url("/media/images/enviar.png");*/
 	/*border: 2px outset #d7b9c9*/
 }
@@ -849,26 +850,32 @@ input.enviar_contato:hover	{
 	float: left;
 	top: 20px;
 }
-.id_arquivo {
-	
-}
-/*
-.id_arquivo {
-	position:absolute;
-	top:0;
-	right:0;
-	opacity:0;
-	-moz-opacity:0;
+
+#id_arquivo {
+	position:relative;
+	float:left;
+	top:2px;
+	right:10px;
+	opacity:1.0;
+	-moz-opacity:1.0;
 	z-index:2; 
-	width:270px;
+	/*width:100px;*/
+	/*height:5px;*/
+	margin-top: 5px;
+	margin-left: 11px;
+	margin-bottom:15px;
+	background-color: #fff;
 }
-/*url(/media/images/enviar.png) 20% 20% no-repeat;
+/*url(/media/images/enviar.png) 10% 10% no-repeat;
 form .fakeupload {
-	background:url(/media/images/buscar_arquivo_fundo.png) no-repeat 20% 20%;
+	background:url(/media/images/buscar_arquivo_fundo.png) no-repeat center center;
+	width:20px;
+	height:24px;
 	background-color: red;
+	display: block;
 }
 form .fakeupload input {
-	width:280px;
+	width:20px;
 }
 */
 
