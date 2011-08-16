@@ -798,13 +798,14 @@ textarea {
 .enviar_radialista{
 	position: relative;
 	/*clear: both;*/
-	float: left;
+	float: right;
+	margin-right:15px;
 	bottom:0px;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left:700px;
+	/*left:700px;*/
 	top:70px;
-	padding-right:90px;
-	padding-bottom:60px;
+	/*padding-right:90px;
+	padding-bottom:60px;*/
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
 	font-size: 1.5em;
