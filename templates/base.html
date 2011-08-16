@@ -38,6 +38,7 @@
       <script type="text/javascript" src="/media/js/jquery.timers-1.2.js.txt" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/cuponClipper.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/thickbox.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/jquery.blockUI.js" charset="utf-8"></script>
       <script src="/media/js/widget-twetter.js" charset="utf-8"  type="text/javascript"></script>
 	  {% block extrascripts %}
       {% endblock extrascripts %}
@@ -56,7 +57,7 @@
 	        	{% block js_ready %}	        
 		        {% endblock js_ready %}
 		     		         
-		     	
+		     	//*usar chama de funcao de tempo com fade*/
 		     	$('a#fundo1').click(function (){
 		     		$('body').removeClass("fundo2");
 		     		$('body').removeClass("fundo3");
@@ -73,6 +74,65 @@
 		     		$('body').addClass("fundo3"); 
 		     		 
 		     	});
+		     	/*Carregar o conteudo*/
+		     	/*$('#foo').slideUp(300).delay(800).fadeIn(400);*/
+		    	
+		     	$.blockUI({ message: '<h1><img src="/media/images/ajax-loader.gif" /> Carregando...</h1>' }); 
+		    	$.blockUI({ css: { border:'0px solid #131315'} });  	
+		    	$.blockUI({ css: { backgroundColor:'#131315'} });
+		    	$.blockUI({ css: { color:'#ff5a00'} });  	
+	            
+	            $.ajax({ 
+	                url: '/', 
+	                cache: false, 
+	                context: document.body,
+	                success: function() { 
+	                    // unblock when remote call returns 	                    
+	                    $.unblockUI();/*
+	                    $('#book').fadeOut('slow', function() {
+						    // Animation complete.
+						});*/
+						
+						/*Animacao por tempo do conteudo*/
+	                    pulse1();
+	                    pulse2();
+	                    pulse3();
+	                    function pulse1() {
+	                    	/*alert('pulse1');*/
+								$('body').removeClass('fundo3', 2000, function() {
+									/*alert('remove_fundo3');*/
+									$('body').addClass('fundo1', 2000, pulse1)
+									/*alert('adiciona_fundo1');*/
+								});
+							}
+						
+						function pulse2() {
+							/*alert('pulse2');*/
+							$('body').removeClass('fundo1', 3000, function() {
+								/*alert('remove_fundo1');*/
+									$('body').addClass('fundo2', 4000, pulse2)
+									/*alert('adiciona_fundo2');*/
+								});
+						}
+						function pulse3() {
+							/*alert('pulse3');*/
+								$('body').removeClass('fundo2', 3000, function() {
+									/*alert('remove_fundo2');*/
+									$('body').addClass('fundo3', 4000, pulse3)
+									/*alert('adiciona_fundo3');*/
+								});
+						} 
+	                    /*alert('ola');*/ 
+	                } 
+	            }); 
+		     	/*
+		     	$('#bg0')
+		     		.animate({opacity: 0}, 'slow', function() {
+        			$(this)
+        				.css({'background-image': 'url(1.jpg)'})
+            			.animate({opacity: 1});
+    });*/
+
          	 /*SELECIONA aba do parceiro pelo menu teste*/
 				$('a#contratante').click(function (){
 					$tabs.tabs('select', 2);
