@@ -23,7 +23,7 @@ body{
 	background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 119.5px;
+	background-position: center 100px;
 }
 
 .empresa { 
@@ -123,7 +123,7 @@ h3{
 	margin:0 auto;
 	text-align:left;
 	/*min-height:100%;*/
-	margin-bottom:50px;
+	/*margin-bottom:50px;*/
 }
 
 .conteudo_home{
@@ -261,10 +261,10 @@ h2.twitter_titulo{
 
 /*Caixa de links*/
 .link_lista_inicial{
-/*		margin-left:-500px;*/
-		position:relative;
-		float:left;
-		width:500px;		
+/*	margin-left:-500px;*/
+	position:relative;
+	float:left;
+	width:500px;		
 }
 h2.links_home_titulo{
 	width:120px;
@@ -313,6 +313,7 @@ h2.links_home_titulo{
 	position:relative;
 	float:right;
 	right: 120px;
+	margin-bottom: 30px;
 }
 
 
@@ -386,7 +387,7 @@ font-family: "Franklin Gothic Book";font-size:14px;text-indent:20px;
 
 .servicos{
 		font-family: "Franklin Gothic Demi";font-size:8px;text-indent:20px;
-		padding-bottom:60px;
+		/*padding-bottom:60px;*/
 }
 .separador_empresa{
 	padding-top:15px;
@@ -476,6 +477,7 @@ div.presenca{ display: none; }
 	color:#131315;
 	margin-top: 30px;	
 	margin-left: -80px;
+	margin-bottom:30px;
 	width: 1200px;
 	display: inline-block;
 }
@@ -798,28 +800,41 @@ textarea {
 .efeito_enviar_contato{
 	position: relative;
 	clear: both;
-	float: left;
-	bottom:50px;
-	left:55px;
+	
+	bottom:35px;
+	left:70px;
 	width: 500px;
 }
 .enviar_contato{
 	position: relative;
 	/*clear: both;*/
 	float: left;
-	bottom:0px;
-	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
-	left: 265px;
+	
+	padding-top:0px;
+	left: 240px;
+	/*border: 1px solid #006;*/
+	/*
 	padding-right:90px;
-	padding-bottom:60px;
+	padding-bottom:60px;*/
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
-	font-size: 1.5em;
+	font-size: 1em;
+	
 }
+input.enviar_contato{
+	height: 60px;
+	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
+}
+input.enviar_contato:hover	{	
+	cursor: pointer;
+	color:#ff5a00;
+	
+}
+
 .detalhe_direito_contato{
 	position: relative;
 	float: left;
-	top: -80px;
+	top: -20px;
 	/*left:50px;*/
 	/*background-color: #fff;*/
 }
