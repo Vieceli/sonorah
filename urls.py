@@ -33,7 +33,9 @@ urlpatterns = patterns('',
 #    (r'^boleto/', include('boleto.urls')),#inseria midia propria -->url(r'imagem_barras/$', imagem_barras, name='imagem_barras'),
 #    (r'^conta/', include('django.contrib.auth.urls')),
 )
+#from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+#urlpatterns += staticfiles_urlpatterns()
 if LOCAL:
     urlpatterns = urlpatterns + patterns('',
         ((r'^media/(?P<path>.*)$', 'django.views.static.serve',

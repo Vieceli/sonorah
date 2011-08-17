@@ -29,7 +29,7 @@ class SelectMunicipioWidget(Widget):
             try:
                 municipio = Municipio.objects.get(pk=value)
                 uf_val = municipio.uf
-                mun_choices = [(m.id, m.nome)for m in Municipio.objects.filter(uf=uf_val).order_by('nome')]
+                mun_choices = [(m.pk, m.nome) for m in Municipio.objects.filter(uf=uf_val).order_by('nome')]
                 municipio_select = Select(choices=[('','- Selecione -')]+mun_choices)
             except Municipio.DoesNotExist:
                 pass
@@ -39,14 +39,14 @@ class SelectMunicipioWidget(Widget):
         required = False
         if 'class' in self.attrs:
             required = self.attrs['class'] == 'required'
-        output.append(u'<div class="field"><label%s>UF</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
+        output.append(u'<div class="field"><label%s>Estado</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
         
         munic_attrs = self.attrs.copy()
         munic_attrs['style']="width:250px;"
         select_html = municipio_select.render(name, value, munic_attrs)
-        output.append(u'<div class="field"><label%s>Município</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
+        output.append(u'<div class="field"><label%s>Cidade</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
         return mark_safe(u'\n'.join(output))
     
     class Media:
-        js = ( 'js/municipio.js',)
+        js = ( '/media/js/municipio.js',)
 

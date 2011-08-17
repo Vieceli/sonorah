@@ -3,4 +3,5 @@ from django import forms
 from widgets import SelectMunicipioWidget
 
 class FormMunicipio(forms.Form):
-    municipio = forms.IntegerField(label=u"UF - Município", widget=SelectMunicipioWidget, required=False)
+    #municipio = forms.IntegerField(label=u"Estado - Cidade", widget=SelectMunicipioWidget, required=False)
+    municipio = forms.IntegerField(widget=SelectMunicipioWidget, required=False)

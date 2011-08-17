@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Wed Aug 17 15:55:29 BRT 2011
+=======
+#Wed Aug 17 15:50:04 BRT 2011
+>>>>>>> 5dfc75bbf32e76bc12ad9ce37cc5fe5b475f07fa
 eclipse.preferences.version=1
 encoding//artistas/forms.py=utf-8
 encoding//artistas/models.py=utf-8
