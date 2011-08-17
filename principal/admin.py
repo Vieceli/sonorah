@@ -47,6 +47,10 @@ class LinkAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ['titulo',]
 
+class TrabalhoAdminInline(admin.TabularInline):
+    model = Trabalhos
+#
+   
 class PortfolioAdmin(admin.ModelAdmin):
     form = FormPortfolio
     date_hierarchy = 'criado_em'
@@ -55,6 +59,12 @@ class PortfolioAdmin(admin.ModelAdmin):
     list_filter = ('titulo', 'atualizado_em')
     list_per_page = 10
     search_fields = ['titulo','trabalho']
+    inlines = [
+        TrabalhoAdminInline,
+    ]
+    class Media:
+        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js', '/media/js/dynamic_inlines.js')
+        
 
 class TrabalhoAdmin(admin.ModelAdmin):
     date_hierarchy = 'criado_em'
@@ -63,6 +73,7 @@ class TrabalhoAdmin(admin.ModelAdmin):
     list_filter = ('atualizado_em',)
     list_per_page = 10
 #    search_fields = ['artista','titulo',]
+
 
 class ArtistaAdmin(admin.ModelAdmin):
     date_hierarchy = 'criado_em'
@@ -117,6 +128,8 @@ class ContatoAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+
+
     
 admin.site.register(Cadastra_Email, Cadastra_Email_Admin)
 admin.site.register(Noticia, NoticiaAdmin)
