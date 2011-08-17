@@ -916,17 +916,17 @@ input.enviar_contato:hover	{
 	position:relative;
 	float:left;
 	top:2px;
-	right:10px;
+	right:30px;
 	opacity:1.0;
 	-moz-opacity:1.0;
 	z-index:2; 
-	/*width:100px;*/
-	/*height:5px;*/
+	width:100px;
+	height:39px;
 	margin-top: 5px;
 	margin-left: 11px;
 	margin-bottom:15px;
-	background-color: #fff;
-}
+	background-color: #131315;
+
 /*url(/media/images/enviar.png) 10% 10% no-repeat;
 form .fakeupload {
 	background:url(/media/images/buscar_arquivo_fundo.png) no-repeat center center;
