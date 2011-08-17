@@ -882,11 +882,13 @@ textarea {
 }
 input.enviar_contato{
 	height: 60px;
-	background: url(/media/images/enviar_contato.png) 20% 20% no-repeat;
+	float:none; 
+	background: url(/media/images/enviar_contato.png) 50% no-repeat;
 }
 input.enviar_contato:hover	{	
 	cursor: pointer;
-	color:#ff5a00;
+	color:#CCCCCC;
+	background-color: #ff5a00;
 	
 }
 
@@ -899,7 +901,7 @@ input.enviar_contato:hover	{
 }
 .contato_direito{
 	position: relative;
-	float: left;
+	float: left; 
 	top: 45px;
 	left: 50px;
 }
