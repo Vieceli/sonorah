@@ -102,6 +102,9 @@ TEMPLATE_DIRS = (
                  os.path.join(PROJECT_ROOT_PATH,'templates'),
 )
 
+GEOIP_PATH = os.path.join(PROJECT_ROOT_PATH, 'geoip')
+MUNICIPIOS_GEO = False
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,6 +123,7 @@ INSTALLED_APPS = (
     'principal',
     'photologue',
     'parceiros',
+    'municipios',
 )
 
 AUTHENTICATION_BACKENDS = (
