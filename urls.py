@@ -10,7 +10,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
  
-
+    (r'^municipios_app/', include('municipios.urls')),
     (r'^(robots.txt)$', 'django.views.static.serve', {'document_root': '/var/www/massivecoupon/'}),
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),

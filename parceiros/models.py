@@ -18,10 +18,11 @@ class Parceiro(models.Model):
     email           = models.EmailField()
     endereco        = models.CharField(u"Endereço",max_length=40,
                               help_text=u'Endereço',default='Lorem Ipsum')
-    cidade          = models.CharField(u"Cidade",max_length=40,
-                              help_text=u'Cidade',default='Lorem Ipsum')
-    estado          = models.CharField(u"Estado",max_length=40,
-                              help_text=u'Estado',default='Lorem Ipsum')
+    cidade          = models.IntegerField();
+    #cidade          = models.CharField(u"Cidade",max_length=40,
+    #                          help_text=u'Cidade',default='Lorem Ipsum')
+    #estado          = models.CharField(u"Estado",max_length=40,
+    #                          help_text=u'Estado',default='Lorem Ipsum')
     telefone        = models.CharField(u"Telefone",max_length=400,
                             help_text=u'Telefone',default='123456789')
     mensagem        = models.TextField()
@@ -71,10 +72,7 @@ class Radialista(models.Model):
                             help_text=u'Telefone',default='123456789')
     endereco        = models.CharField(u"Endereço",max_length=40,
                               help_text=u'Endereço',default='Lorem Ipsum', blank=True)
-    cidade          = models.CharField(u"Cidade",max_length=40,
-                              help_text=u'Cidade',default='Lorem Ipsum')
-    estado          = models.CharField(u"Estado",max_length=40,
-                              help_text=u'Estado',default='Lorem Ipsum')
+    cidade          = models.IntegerField();
     mensagem        = models.TextField()
     anexo           = models.FileField(upload_to='radialista_arquivo', max_length=20971520, blank=True)
     site            = models.URLField(u"Site da radio",max_length=255,
@@ -109,10 +107,7 @@ class Contratante(models.Model):
     email           = models.EmailField()
     endereco        = models.CharField(u"Endereço",max_length=40,
                               help_text=u'Endereço',default='Lorem Ipsum')
-    cidade          = models.CharField(u"Cidade",max_length=40,
-                              help_text=u'Cidade',default='Lorem Ipsum')
-    estado          = models.CharField(u"Estado",max_length=40,
-                              help_text=u'Estado',default='Lorem Ipsum')
+    cidade          = models.IntegerField();
     telefone        = models.CharField(u"Telefone",max_length=400,
                             help_text=u'Telefone',default='123456789')
     mensagem        = models.TextField()

@@ -11,6 +11,8 @@ from contato.models import Contato
 from noticias.forms import NoticiaAdminForm
 from portfolio.models import Portfolio, Trabalhos
 from portfolio.forms import FormPortfolio
+from parceiros.forms import ParceiroForm, ContratantesForm, CompositoresForm,\
+    RadialistaForm
 
 
 class FlatPageAdmin(FlatPageAdminOld):
@@ -78,6 +80,7 @@ class ArtistaContatoAdmin(admin.ModelAdmin):
     search_fields = ['nome',]
 
 class ParceiroAdmin(admin.ModelAdmin):
+    form =  ParceiroForm
     date_hierarchy = 'criado_em'
     list_display = ['nome', 'atualizado_em',]
     list_filter = ('nome', 'atualizado_em')
@@ -85,6 +88,7 @@ class ParceiroAdmin(admin.ModelAdmin):
     search_fields = ['nome',]
     
 class ContratanteAdmin(admin.ModelAdmin):
+    form =  ContratantesForm
     date_hierarchy = 'criado_em'
     list_display = ['nome', 'atualizado_em',]
     list_filter = ('nome', 'atualizado_em')
@@ -92,6 +96,7 @@ class ContratanteAdmin(admin.ModelAdmin):
     search_fields = ['nome',]
 
 class CompositorAdmin(admin.ModelAdmin):
+    form = CompositoresForm
     date_hierarchy = 'criado_em'
     list_display = ['nome', 'atualizado_em',]
     list_filter = ('nome', 'atualizado_em')
@@ -99,6 +104,7 @@ class CompositorAdmin(admin.ModelAdmin):
     search_fields = ['nome',]
 
 class RadialistaAdmin(admin.ModelAdmin):
+    form = RadialistaForm
     date_hierarchy = 'criado_em'
     list_display = ['nome_radio', 'atualizado_em',]
     list_filter = ('nome_radio', 'atualizado_em')
