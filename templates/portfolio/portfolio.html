@@ -4,6 +4,7 @@
 
 {% block extralinks %}
 	{{ block.super }}
+	<link rel="stylesheet" type="text/css" href="/media/css/jquery.lightbox-0.5.css" media="screen" />
 {% endblock %}
 {% block extracss %}
 	{{ block.super }}
@@ -11,11 +12,17 @@
 
 {% block extrascripts %}
 	{{ block.super }}
+	<script type="text/javascript" src="/media/js/jquery.lightbox-0.5.min.js"></script>
 {% endblock %}
 
 {% block js_ready %}
  	{{ block.super }}
- 	$('body').addClass("portfolio"); 	   
+ 	$('body').addClass("portfolio"); 	 
+ 	
+ 	$('#galerias a').lightBox();
+ 	$('#fotos_extras a').lightBox();
+ 	
+
 {% endblock %}
 
 {% block extrajs %}
@@ -28,20 +35,50 @@
            {% include "includes/topo.html" %}
     {% endblock topo %}
 		
-	<div id="portfolio_box" class="portfolio_box">
-		{% for trabalho in trabalhos %}
+	<div id="portfolio_box" class="portfolio_box">		
+		
 		<div id="portfolio_item" class="portfolio_item">
-			{{ trabalho.url }}
-			{{ trabalho.link_video }}
-			{% for photo in galerias %}
-				<a class="thumb" name="{{ photo.title }}" title="{{ photo.title }}" href="{{ photo.get_display_url }}"><img src="{{ photo.get_thumbnail_url }}" alt="{{ photo.title }}"/></a>
-			{% endfor %}
+			<div id="galerias" class="galerias"><!--todas as fotos das galerias -->
+				{% for foto in fotos %}
+					<p>{{ foto.tipo }}</p>
+					<a href="/media/{{ foto.image }}">
+				{% endfor %}
+						<img src="/media/images/galeria_imagens.jpg" />
+					</a>
+			</div>
 		</div>
 		<div id="separador_portfolio" class="separador_portfolio">
 			<img src="/media/images/separador_portfolio.png" align="left"/>
-		</div>	
-	{% endfor %}
-	</div>
+		</div>
+		<div id="videos" class="videos">
+			{% for video in videos %}
+				<p>{{ video.tipo }}</p>
+				<a href="{{ video.url_video }}">
+			{% endfor %}
+					<img src="/media/images/portfolio_youtube.jpg" /> 
+				</a>
+		</div>
+		<div id="site" class="site">
+			{% for site in sites %}
+				<p>{{ site.tipo }}</p>
+				
+				<a href="{{ site.url_site }}">
+			{% endfor %}
+					<img src="/media/images/url_externa.jpg" />
+				</a>
+		</div>
+		<div id="fotos_extras" class="fotos_extras">
+			{% for fe in fotos_extras %}
+				<p>{{ fe.tipo }}</p>
+				
+				<a href="/media/{{ fe.foto.image }}">	
+					<img src="/media/{{ fe.foto.image }}" />
+				</a>
+				{% endfor %}
+		</div>
 	
+</div>
+	
+
 
 {% endblock conteudo %}	
