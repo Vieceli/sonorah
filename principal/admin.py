@@ -9,10 +9,9 @@ from artistas.models import Artista, Artista_Contato
 from parceiros.models import Parceiro, Contratante, Compositor, Radialista
 from contato.models import Contato
 from noticias.forms import NoticiaAdminForm
-from portfolio.models import Portfolio, Trabalhos
+from portfolio.models import Portfolio, Galeria, Foto, Site, Video
 from portfolio.forms import FormPortfolio
-from parceiros.forms import ParceiroForm, ContratantesForm, CompositoresForm,\
-    RadialistaForm
+from parceiros.forms import ParceiroForm, ContratantesForm, CompositoresForm,RadialistaForm
 
 
 class FlatPageAdmin(FlatPageAdminOld):
@@ -47,10 +46,26 @@ class LinkAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ['titulo',]
 
-class TrabalhoAdminInline(admin.TabularInline):
-    model = Trabalhos
-#
-   
+class GaleriaAdminInline(admin.TabularInline):
+    model = Galeria
+    extra = 1
+    exclude = ('tipo',)
+
+class FotoAdminInline(admin.TabularInline):
+    model = Foto
+    extra = 1
+    exclude = ('tipo',)
+    
+class UrlSiteAdminInline(admin.TabularInline):
+    model = Site
+    extra = 1
+    exclude = ('tipo',)
+    
+class UrlVideoAdminInline(admin.TabularInline):
+    model = Video
+    extra = 1
+    exclude = ('tipo',)
+    
 class PortfolioAdmin(admin.ModelAdmin):
     form = FormPortfolio
     date_hierarchy = 'criado_em'
@@ -60,19 +75,19 @@ class PortfolioAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ['titulo','trabalho']
     inlines = [
-        TrabalhoAdminInline,
+        GaleriaAdminInline,FotoAdminInline,UrlSiteAdminInline,UrlVideoAdminInline
     ]
-    class Media:
-        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js', '/media/js/dynamic_inlines.js')
+#    class Media:
+#        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js', '/media/js/dynamic_inlines.js')
         
 
-class TrabalhoAdmin(admin.ModelAdmin):
-    date_hierarchy = 'criado_em'
-#    prepopulated_fields = {'slug':('titulo',)}
-    list_display = ['atualizado_em',]
-    list_filter = ('atualizado_em',)
-    list_per_page = 10
-#    search_fields = ['artista','titulo',]
+#class TrabalhoAdmin(admin.ModelAdmin):
+#    date_hierarchy = 'criado_em'
+##    prepopulated_fields = {'slug':('titulo',)}
+#    list_display = ['atualizado_em',]
+#    list_filter = ('atualizado_em',)
+#    list_per_page = 10
+##    search_fields = ['artista','titulo',]
 
 
 class ArtistaAdmin(admin.ModelAdmin):
@@ -135,7 +150,7 @@ admin.site.register(Cadastra_Email, Cadastra_Email_Admin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Link, LinkAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)
-admin.site.register(Trabalhos, TrabalhoAdmin)
+#admin.site.register(Trabalhos, TrabalhoAdmin)
 admin.site.register(Artista, ArtistaAdmin)
 admin.site.register(Artista_Contato, ArtistaContatoAdmin)
 admin.site.register(Parceiro, ParceiroAdmin)

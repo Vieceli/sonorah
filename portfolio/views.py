@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response, get_object_or_404
 
 from django.template.context import RequestContext
-from portfolio.models import Portfolio, Trabalhos
+from portfolio.models import Portfolio
 from artistas.models import Artista
 
 def portfolios(request,template_name):
@@ -21,10 +21,10 @@ def portfolio(request,template_name,portfolio_slug):
     noticia = nome_pagina.rpartition('/')[2]
     
     portfolio = get_object_or_404(Portfolio, slug=portfolio_slug)
-    trabalhos = portfolio.trabalho.all().order_by('-atualizado_em')
-    galerias=""
-    for i in trabalhos:
-        galerias = i.galeria.all()
+    #trabalhos = portfolio.trabalho.all().order_by('-atualizado_em')
+   # galerias=""
+    #for i in trabalhos:
+    #    galerias = i.galeria.all()
     
     
     
