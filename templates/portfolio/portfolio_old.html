@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block titulo %}portfolio - {{ portfolio.nome }}{{ n{% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+{% block js_ready %}
+ 	{{ block.super }}
+ 	$('body').addClass("portfolio"); 	   
+{% endblock %}
+
+{% block extrajs %}
+	{{ block.super }}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+ 	{% block topo %}
+           {% include "includes/topo.html" %}
+    {% endblock topo %}
+		
+	<div id="portfolio_box" class="portfolio_box">
+		{% for f in foto %}
+		<div id="portfolio_item" class="portfolio_item">
+			{{ f.image }}
+			{{ trabalho.link_video }}
+			{% for photo in galerias %}
+				<a class="thumb" name="{{ photo.title }}" title="{{ photo.title }}" href="{{ photo.get_display_url }}"><img src="{{ photo.get_thumbnail_url }}" alt="{{ photo.title }}"/></a>
+			{% endfor %}
+		</div>
+		<div id="separador_portfolio" class="separador_portfolio">
+			<img src="/media/images/separador_portfolio.png" align="left"/>
+		</div>	
+	{% endfor %}
+	kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+	</div>
+	
+
+{% endblock conteudo %}	

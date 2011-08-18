@@ -10,7 +10,7 @@ def portfolios(request,template_name):
     url=str(request.get_full_path())
     pagina=url[1:-1]
     portfolios = Portfolio.objects.all().order_by('-atualizado_em')
-    
+
     return render_to_response(template_name, locals(), context_instance=RequestContext(request))
 
 def portfolio(request,template_name,portfolio_slug):
@@ -21,8 +21,19 @@ def portfolio(request,template_name,portfolio_slug):
     noticia = nome_pagina.rpartition('/')[2]
     
     portfolio = get_object_or_404(Portfolio, slug=portfolio_slug)
+    galerias=portfolio.galeria_set.all()
+    sites=portfolio.site_set.all()
+    videos=portfolio.video_set.all()
+    fotos_extras = portfolio.foto_set.all()
+    
+    print galerias
+    fotos=[]
+    for f in galerias:
+        fotos = f.galeria.photos.all()            
+    print fotos
+    
     #trabalhos = portfolio.trabalho.all().order_by('-atualizado_em')
-   # galerias=""
+    # galerias=""
     #for i in trabalhos:
     #    galerias = i.galeria.all()
     
