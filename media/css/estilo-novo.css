@@ -594,7 +594,7 @@ div#sharebtn a {
 	margin-top: -280px;
 	z-index: 10;	
 }
-.parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 80px;}
+.parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
 
 /*conteudo dos forms*/
 .parceiro{
@@ -604,7 +604,7 @@ div#sharebtn a {
 	background-color:#19191a;
 	margin-top: -5px;
 	width: 940px;
-	margin-left:-20px;
+	margin-left:2px;
 	margin-bottom:80px;
 }
 .compositor{
@@ -613,7 +613,7 @@ div#sharebtn a {
 	background:#19191a;
 	margin-top:-5px;
 	width:940px;
-	margin-left:-20px;
+	margin-left:2px;
 	margin-bottom:80px;
 }
 .radialista{
@@ -622,7 +622,7 @@ div#sharebtn a {
 	background:#19191a;
 	margin-top: -5px;
 	width:940px;
-	margin-left:-20px;
+	margin-left:2px;
 	margin-bottom:80px;
 }
 .contratante{
@@ -631,7 +631,7 @@ div#sharebtn a {
 	background:#19191a;
 	margin-top:-5px;
 	width:940px;
-	margin-left:-20px;
+	margin-left:2px;
 	margin-bottom:80px;
 }
 label
@@ -721,11 +721,17 @@ textarea {
 	position: relative;
 	float: left;
 	left: 0px;
+	margin-top:-5px;
+	margin-left:-35px;
+	padding-left: 1px;
 }
 .parceiro_esquerda{
 	position: relative;
 	float: right;
-	right: 80px;
+	right: 0px;
+	margin-top:-5px;
+	margin-right:65px;
+	padding-right: 1px;
 }
 .mensagem_parceiro{
 	margin-left:125px;
@@ -738,7 +744,7 @@ textarea {
 	float: left;
 	bottom:0;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 705px;
+	left: 311px;
 	padding-right:90px;
 	padding-bottom:72px;
 	top:80px;
@@ -753,11 +759,19 @@ textarea {
 	position: relative;
 	float: left;
 	left: 0px;
+	margin-top:-5px;
+	margin-left:-35px;
+	padding-left: 1px;
 }
 .compositor_esquerda{
-	position: relative;
-	float: right;
-	right: 80px;
+	/*position: relative;*/
+	/*float: right;*/
+	/*right: -10px;*/
+	/*margin-top:-5px;*/
+	/*margin-right:120px;*/
+	/*padding-right: 10px;*/
+	
+
 }
 .mensagem_compositor{
 	margin-left:125px;
@@ -767,10 +781,10 @@ textarea {
 .enviar_compositor{
 	position: relative;
 	/*clear: both;*/
-	float: left;
+	float: right;
 	bottom:0px;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 264px;
+	left: 5px;
 	top:80px;
 	padding-right:90px;
 	padding-bottom:71px;
@@ -783,12 +797,18 @@ textarea {
 	position: relative;
 	float: left;
 	left: 0px;
-	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+	margin-top:-5px;
+	margin-left:-35px;
+	padding-left: 1px;
+			
 }
 .radialista_esquerda{
 	position: relative;
 	float: right;
-	right: 80px;
+	right: 0px;
+	margin-top:-5px;
+	margin-right:65px;
+	padding-right: 1px;
 }
 .mensagem_radialista{
 	padding-left: 25px;
@@ -799,13 +819,12 @@ textarea {
 	position: relative;
 	/*clear: both;*/
 	float: right;
-	margin-right:15px;
 	bottom:0px;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	/*left:700px;*/
-	top:70px;
-	/*padding-right:90px;
-	padding-bottom:60px;*/
+	left: 485px;
+	top:80px;
+	padding-right:90px;
+	padding-bottom:71px;
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
 	font-size: 1.5em;
@@ -815,12 +834,17 @@ textarea {
 	position: relative;
 	float: left;
 	left: 0px;
-	/*	position: relative;	background: #19191a;	float: left;	height: 520px;	top: -18px;	width: 480px;*/		
+	margin-top:-5px;
+	margin-left:-35px;
+	padding-left: 1px;		
 }
 .contratante_esquerda{
 	position: relative;
 	float: right;
-	right: 80px;
+	right: 0px;
+	margin-top:-5px;
+	margin-right:65px;
+	padding-right: 1px;
 }
 .mensagem_contratante{
 	padding-left: 25px;
@@ -833,7 +857,7 @@ textarea {
 	float: left;
 	bottom:0px;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 705px;
+	left: 311px;
 	top:70px;
 	padding-right:90px;
 	padding-bottom:60px;

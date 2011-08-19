@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 
-{% block titulo %}Parceiro - {{ noticia.titulo }}{% endblock %}
+{% block titulo %}Parceiros{% endblock %}
 
 {% block extralinks %}
-{{ block.super }}
-
+	{{ block.super }}
 {% endblock %}
+
 {% block extracss %}
-{{ block.super }}
+	{{ block.super }}
 {% endblock %}
 
 {% block extrascripts %}
-{{ block.super }}
+	{{ block.super }}
 {% endblock %}
 
 {% block js_ready %}
- 
  	{{ block.super }} 
  
  	$('body').addClass('parceiros'); 
@@ -40,8 +39,8 @@
     	
 
 {% block extrajs %}
-{{ block.super }}
-
+	{{ block.super }}
+	
 {% endblock extrajs %}
 
 
