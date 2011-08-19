@@ -16,11 +16,15 @@ class Portfolio(models.Model):
     imagem              = models.ImageField(upload_to='imagem_portfolio/', blank=False, help_text=u'Imagem representativa')
     descricao           = models.CharField("Descricao do Portfolio",max_length=255,
                               help_text=u'Descricao do Portfolio',default='Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!')
-    slug                = models.SlugField(unique=True)
-   
-    ordem               = models.IntegerField(default=0)
+    ordem               = models.IntegerField(default=0, blank=True)
+    slug                = models.SlugField(unique=True)             
+    meta_keywords       = models.CharField('Palavras Chaves usadas no Google',max_length=255, 
+                                            help_text=u'portfolio sonorah artista equipe',default='Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!')
+    meta_description    = models.CharField('Descricao do site usado no Google',max_length=255, 
+                                            help_text=u'Produção de carreiras musicais, vencedoras em varios estilos',default='Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!')
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
+    
     #teste = models.ForeignKey('self')
     
     def __unicode__(self):
@@ -39,7 +43,7 @@ class Galeria(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(blank=True)
+    ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='G')
     
     def __unicode__(self):
@@ -50,7 +54,7 @@ class Foto(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(blank=True)
+    ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='F')
     
     def __unicode__(self):
@@ -62,7 +66,7 @@ class Site(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(blank=True)
+    ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='S')
     
     def __unicode__(self):
@@ -74,37 +78,8 @@ class Video(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(blank=True)
+    ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='V')
     
     def __unicode__(self):
         return self.url_video
-    
-#class Trabalhos(models.Model):
-#    class Meta:
-#        db_table = 'trabalho'
-#        verbose_name = _('Trabalho')
-#        verbose_name_plural = _('Trabalhos')
-#    
-#    
-#       
-#    titulo              = models.CharField("Nome para o trabalho",max_length=255,
-#                              help_text=u'Nome para o trabalho',default='Hitallo e Elan', blank=True)  
-#    link_video          = models.URLField(u"Link YouTube",max_length=255,
-#                              help_text=u'http://www.youtube.com/watch?v=65B6qyz6IQ4', blank=True)
-#    url                 = models.URLField(u"Endereço na web do portfolio",max_length=255,
-#                              help_text=u'http://sitedoportfolio.com', blank=True)
-#    galeria             = models.ManyToManyField(Gallery, blank=True)
-#    slug                = models.SlugField(unique=True)
-#    criado_em           = models.DateTimeField(auto_now_add=True)
-#    atualizado_em       = models.DateTimeField(auto_now=True)
-#    portfolios          = models.ForeignKey(Portfolio)
-#    
-#    def __unicode__(self):
-#        return self.titulo
-#    
-#    # def get_absolute_url(self):
-#    #     return reverse('noticias', kwargs={'noticia_slug': self.pk})
-#    def get_absolute_url(self):
-#        return reverse('portfolio', kwargs={'portfolio_slug': self.slug})
-    

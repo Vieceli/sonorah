@@ -12,6 +12,7 @@ class Artista(models.Model):
         
     nome                = models.CharField("Nome",max_length=255,
                               help_text=u'Nome do Artista',default='Lorem Ipsum')
+    imagem              = models.ImageField(upload_to='img_artista/', blank=False)
     site                = models.URLField(u"Endereço do Site do Artista",max_length=255,
                               help_text=u'http://www.artista.com',default='http://www.artista.com')
     facebook            = models.URLField(u"Endereço do Facebook",max_length=255,
@@ -23,7 +24,6 @@ class Artista(models.Model):
     youtube             = models.URLField(u"Endereço do Youtube",max_length=255,
                               help_text=u'http://www.youtube.com',default='http://www.youtube.com', blank=True)
     slug                = models.SlugField(unique=True)
-    imagem              = models.ImageField(upload_to='img_artista/', blank=False)
     meta_description    = models.CharField("Descricao do artista para o google",max_length=255,
                               help_text=u'Descricao do artista para o google',default='Lorem ipsum dolor sit amet!')
     meta_keywords       = models.CharField("Palavras chave da noticia para o google",max_length=255,

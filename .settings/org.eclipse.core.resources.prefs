@@ -1,6 +1,4 @@
-
-#Wed Aug 17 15:50:04 BRT 2011
-
+#Fri Aug 19 10:39:03 BRT 2011
 eclipse.preferences.version=1
 encoding//artistas/forms.py=utf-8
 encoding//artistas/models.py=utf-8
@@ -8,6 +6,7 @@ encoding//contas/forms.py=utf-8
 encoding//contato/forms.py=utf-8
 encoding//contato/models.py=utf-8
 encoding//municipios/utils/ibge.py=utf-8
+encoding//noticias/forms.py=utf-8
 encoding//parceiros/forms.py=utf-8
 encoding//parceiros/models.py=utf-8
 encoding//portfolio/models.py=utf-8
@@ -15,4 +14,6 @@ encoding//principal/admin.py=utf-8
 encoding//principal/forms.py=utf-8
 encoding//principal/models.py=utf-8
 encoding//principal/views.py=utf-8
+encoding/feeds.py=utf-8
 encoding/settings.py=utf-8
+encoding/site_metas.py=utf-8

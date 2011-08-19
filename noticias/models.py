@@ -14,9 +14,10 @@ class Noticia(models.Model):
     subtitulo           = models.CharField("Subtitulo",max_length=255,
                               help_text=u'Subtitulo da noticia',default='Lorem ipsum dolor sit amet!')
     texto               = models.TextField("Texto da Noticia")
-    slug                = models.SlugField(unique=True)
-    miniatura           = models.ImageField(upload_to='mini_noticia/', blank=False)
     imagem              = models.ImageField(upload_to='noticia/', blank=False)
+    miniatura           = models.ImageField(upload_to='mini_noticia/', blank=False)
+    
+    slug                = models.SlugField(unique=True)
     meta_description    = models.CharField("Descricao da noticia para o google",max_length=255,
                               help_text=u'Descricao da noticia para o google',default='Lorem ipsum dolor sit amet!')
     meta_keywords       = models.CharField("Palavras chave da noticia para o google",max_length=255,

@@ -13,7 +13,6 @@ from noticias.models import Noticia
 class NoticiaAdminForm(ModelForm):
     class Meta:
         model = Noticia
-        fields = ('titulo', 'subtitulo', 'slug','miniatura','texto',)
 
 class FormBuscar(forms.Form):
     query = forms.CharField(label=u'Procurar por: ',widget=forms.TextInput(attrs={'size': 32}))

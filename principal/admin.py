@@ -31,6 +31,17 @@ class NoticiaAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ['titulo',]
     
+    fieldsets = (
+                    (None, {
+                        'fields': ('titulo','subtitulo','texto','imagem','miniatura', )
+                    }),
+                    (u'Opções Avançadas', {
+                        'classes': ('collapse',),
+                        'fields': ('slug','meta_keywords', 'meta_description')
+                    }),
+                 )    
+    
+    
     class Media:
         js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js')
     
@@ -77,6 +88,15 @@ class PortfolioAdmin(admin.ModelAdmin):
     inlines = [
         GaleriaAdminInline,FotoAdminInline,UrlSiteAdminInline,UrlVideoAdminInline
     ]
+    fieldsets = (
+                    (None, {
+                        'fields': ('titulo', 'imagem', 'descricao' )
+                    }),
+                    (u'Opções Avançadas', {
+                        'classes': ('collapse',),
+                        'fields': ('ordem','slug','meta_keywords', 'meta_description')
+                    }),
+                 )
 #    class Media:
 #        js = ('/media/js/tiny_mce/tiny_mce.js', '/media/js/textareas.js', '/media/js/dynamic_inlines.js')
         
@@ -97,6 +117,17 @@ class ArtistaAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    
+    fieldsets = (
+                    (None, {
+                        'fields': ('nome', 'imagem', 'site','facebook','twitter','myspace','youtube' )
+                    }),
+                    (u'Opções Avançadas', {
+                        'classes': ('collapse',),
+                        'fields': ('slug','meta_keywords', 'meta_description')
+                    }),
+                 )
+    
 
 class ArtistaContatoAdmin(admin.ModelAdmin):
     date_hierarchy = 'criado_em'
