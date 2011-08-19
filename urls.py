@@ -4,12 +4,17 @@ from settings import LOCAL,MEDIA_ROOT
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from django.conf.urls.defaults import patterns, include
-#from feeds import UltimasNoticias
+from feeds import UltimasNoticias
+
+feeds = {
+    'ultimos': UltimasNoticias
+}
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
- 
+    
+    (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
     (r'^municipios_app/', include('municipios.urls')),
     (r'^photologue/', include('photologue.urls')),
     (r'^(robots.txt)$', 'django.views.static.serve', {'document_root': '/var/www/massivecoupon/'}),

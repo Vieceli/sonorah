@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 19/07/2011
 
@@ -8,6 +9,22 @@ from noticias.models import Noticia
 from django.utils import feedgenerator
 
 
+
+class UltimasNoticias(Feed):
+    title = "Ultimas noticias do Sonorah"
+    link = "/noticias/"
+    description = u"Ultimas atualizações da Sonorah"
+
+    def items(self):
+        #print (Noticia.objects.order_by('-atualizado_em')[:5])
+        return Noticia.objects.order_by('-atualizado_em')[:5]
+        
+    def item_link(self, noticia):
+        return '/noticias/%s/'%noticia.slug
+    
+    def item_description(self, noticia):
+        return noticia.texto
+    
 #class UltimasNoticias(Feed):
 #    title = 'Ultimas noticias do Sonorah'
 #    link = '/'
