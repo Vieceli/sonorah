@@ -81,13 +81,21 @@
 						} 
 	                    /*alert('ola');*/ 
 	                } 
-	            });  
+	            });
+	     
+	              
 {% endblock %}
 	         
 		     
 
 {% block extrajs %}
-	{{ block.super }}
+	  {{ block.super }}
+	  function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
+      function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut2(){document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"}
+      function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
 {% endblock extrajs %}
 
 
@@ -221,6 +229,21 @@
 
 
  </div>
+ 
+ <div id="dialog-form" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
 {% endblock conteudo %}
 
  

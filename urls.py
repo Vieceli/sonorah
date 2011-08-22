@@ -21,9 +21,9 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     
-#(r'^rss/$', 'django.contrib.syndication.views.feed',  {'feed_dict': {'ultimos': UltimasNoticias} } ),
-   #(r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
-    #   {'feed_dict': {'ultimos': UltimasNoticias}}),
+                          
+    (r'^radio/$', 'principal.views.radio', {'template_name':'principal/radio.html'}, 'radio'),
+
                     
      #includes
     (r'^$', include('principal.urls')),

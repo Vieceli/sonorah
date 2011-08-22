@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.flatpages.models import FlatPage
 from django.contrib.flatpages.admin import FlatPageAdmin as FlatPageAdminOld
 
-from principal.models import Cadastra_Email, Link
+from principal.models import Cadastra_Email, Link, Musica
 from noticias.models import Noticia
 from artistas.models import Artista, Artista_Contato
 from parceiros.models import Parceiro, Contratante, Compositor, Radialista
@@ -174,10 +174,18 @@ class ContatoAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    
+class MusicaAdmin(admin.ModelAdmin):
+    date_hierarchy = 'criado_em'
+    list_display = ['nome','disponivel', 'atualizado_em',]
+    list_filter = ('nome','disponivel', 'atualizado_em')
+    list_per_page = 10
+    search_fields = ['nome',]
 
 
     
 admin.site.register(Cadastra_Email, Cadastra_Email_Admin)
+admin.site.register(Musica, MusicaAdmin)
 admin.site.register(Noticia, NoticiaAdmin)
 admin.site.register(Link, LinkAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)

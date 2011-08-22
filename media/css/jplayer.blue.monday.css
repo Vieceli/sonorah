@@ -13,7 +13,10 @@
  * Skin Version: 3.0 (jPlayer 2.0.0)
  * Date: 20th December 2010
  */
+body {
 
+	background-color: #131315;;
+	}
 div.jp-audio,
 div.jp-video {
 
@@ -351,8 +354,8 @@ div.jp-video div.jp-duration {
 div.jp-playlist {
 	/* width:418px; */
 	width:100%;
-	background-color:#ccc;
-	border:1px solid #009be3;
+	background-color:#131315;
+	border:1px solid #FF5A00;
 	border-top:none;
 }
 div.jp-playlist ul {
@@ -398,6 +401,8 @@ div.jp-type-playlist div.jp-playlist a:hover {
 	color:#0d88c1;
 }
 div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	background-color: #131315;
+	
 	color:#0d88c1;
 }
 div.jp-type-playlist div.jp-playlist div.jp-free-media {

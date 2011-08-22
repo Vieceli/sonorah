@@ -5,6 +5,21 @@ from django.utils.translation import ugettext_lazy as _
 #OFERTA_IMG = 'cupon_imagens/'
 #OFERTA_MINI = 'cupon_mini/'
 
+class Musica(models.Model):
+    class Meta:
+        db_table = 'musica'
+        verbose_name = _('Musica')
+        verbose_name_plural = _('Musicas')
+    
+    nome                = models.CharField('Nome da Musica', max_length=50)
+    mp3                 = models.FileField('Musica formato MP3', upload_to='musicas')
+    disponivel          = models.BooleanField(help_text=u'Disponivel para download', default=False)
+    criado_em           = models.DateTimeField(auto_now_add=True)
+    atualizado_em       = models.DateTimeField(auto_now=True)
+    
+    def __unicode__(self):
+        return self.nome   
+
 class Link(models.Model):
     class Meta:
         db_table = 'links'
