@@ -1,5 +1,5 @@
 
-from settings import LOCAL,MEDIA_ROOT
+from settings import LOCAL,MEDIA_ROOT, ADMIN_MEDIA_ROOT, STATIC_ROOT
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -47,6 +47,12 @@ if LOCAL:
     urlpatterns = urlpatterns + patterns('',
         ((r'^media/(?P<path>.*)$', 'django.views.static.serve',
           {'document_root': MEDIA_ROOT})),
+                                         
+         (r'^admin-media/(?P<path>.*)$', 'django.views.static.serve',
+          {'document_root': ADMIN_MEDIA_ROOT}),
+    
+         (r'^estatico/(?P<path>.*)$', 'django.views.static.serve',
+          {'document_root': STATIC_ROOT}),
                                   
         )
 #    

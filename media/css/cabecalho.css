@@ -41,19 +41,14 @@
 	/*background:#131315;*/
 	
 }
-#image{
-	position:relative;
-	float:left;
-	z-index:0;
-	margin-top:-60px;
-}
+
 
 
 .bolas{
 	position:relative;
 	float: right;
-	top:300px;
-	right: 85px;
+	top:351px;
+	right: 66px;
 	/*margin-top:330px;
 	top:-220px;
 	left:-425px;
@@ -65,21 +60,21 @@
 	background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 100px;
+	background-position: center 104px;
 }
 .fundo2{
 	background-color:#131315;
 	background-image: url(/media/images/home/fundo_banner_inter2.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 100px;
+	background-position: center 104px;
 }
 .fundo3{
 	background-color:#131315;
 	background-image: url(/media/images/home/fundo_banner_inter3.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 100px;
+	background-position: center 104px;
 }
 
 
