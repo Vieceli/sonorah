@@ -17,7 +17,6 @@ def contato(request,template_name):
     contato_form = ContatoForm(request.POST)
     if request.method == 'POST': 
         POST=request.POST
-        print POST
         if POST.has_key('contato'):
             contato_form = ContatoForm(request.POST)
             if contato_form.is_valid(): 
