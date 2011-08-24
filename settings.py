@@ -21,12 +21,13 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT_PATH, 'mycms.db'),
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(PROJECT_ROOT_PATH, 'mycms.db'),
+#    }
+#}
+#
 
 
 # Absolute path to the directory that holds media.
