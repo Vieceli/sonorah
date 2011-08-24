@@ -7,6 +7,7 @@
 {% endblock %}
 {% block extracss %}
 	{{ block.super }}
+
 {% endblock %}
 
 {% block extrascripts %}
@@ -81,13 +82,22 @@
 						} 
 	                    /*alert('ola');*/ 
 	                } 
-	            });  
+	            });
+	    
+	  
+	              
 {% endblock %}
 	         
 		     
 
 {% block extrajs %}
-	{{ block.super }}
+	  {{ block.super }}
+	  function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
+      function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut2(){document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"}
+      function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
 {% endblock extrajs %}
 
 
@@ -126,7 +136,7 @@
         <div id="botoes_noticias" class="botoes_noticias">
     
 	        <a href="/noticias/"> <img src="/media/images/home/mais_noticias.gif" align="bottom"/> Mais Noticias </a>
-            <a href="/rss"><img src="/media/images/home/rss.gif"  align="bottom"/> Assine o RSS</a>
+            <a href="/rss/ultimos/"><img src="/media/images/home/rss.gif"  align="bottom"/> Assine o RSS</a>
             <a href="/email"><img src="/media/images/home/email.gif"  align="bottom"/> Receba Noticias por E-mail</a>
         </div>
 	</div>
@@ -221,6 +231,8 @@
 
 
  </div>
+ 
+
 {% endblock conteudo %}
 
  

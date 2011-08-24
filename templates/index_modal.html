@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+
+{% block titulo %}Noticias - {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		h1 { font-size: 1.2em; margin: .6em 0; }
+		div#users-contain { width: 350px; margin: 20px 0; }
+		div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+		div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+		.ui-dialog .ui-state-error { padding: .3em; }
+		.validateTips { border: 1px solid transparent; padding: 0.3em; }
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+{% block js_ready %}
+ {{ block.super }}
+ 	  	//*usar chama de funcao de tempo com fade*/
+		     	$('a#fundo1').click(function (){
+		     		$('body').removeClass("fundo2");
+		     		$('body').removeClass("fundo3");
+		     		$('body').addClass("fundo1"); 
+		     	});
+		     	$('a#fundo2').click(function (){
+		     		$('body').removeClass("fundo1");
+		     		$('body').removeClass("fundo3");
+		     		$('body').addClass("fundo2"); 
+		     	});
+		     	$('a#fundo3').click(function (){
+		     		$('body').removeClass("fundo2");
+		     		$('body').removeClass("fundo1");
+		     		$('body').addClass("fundo3"); 
+		     		 
+		     	});
+		     	/*Carregar o conteudo*/
+		     	/*$('#foo').slideUp(300).delay(800).fadeIn(400);*/
+		    	
+		     	$.blockUI({ message: '<h1><img src="/media/images/ajax-loader.gif" /> Carregando...</h1>' }); 
+		    	$.blockUI({ css: { border:'0px solid #131315'} });  	
+		    	$.blockUI({ css: { backgroundColor:'#131315'} });
+		    	$.blockUI({ css: { color:'#ff5a00'} });  	
+	            
+	            $.ajax({ 
+	                url: '/', 
+	                cache: false, 
+	                context: document.body,
+	                success: function() { 
+	                    // unblock when remote call returns 	                    
+	                    $.unblockUI();/*
+	                    $('#book').fadeOut('slow', function() {
+						    // Animation complete.
+						});*/
+						
+						/*Animacao por tempo do conteudo*/
+	                    pulse1();
+	                    pulse2();
+	                    pulse3();
+	                    function pulse1() {
+	                    	/*alert('pulse1');*/
+								$('body').removeClass('fundo3', 2000, function() {
+									/*alert('remove_fundo3');*/
+									$('body').addClass('fundo1', 2000, pulse1)
+									/*alert('adiciona_fundo1');*/
+								});
+							}
+						
+						function pulse2() {
+							/*alert('pulse2');*/
+							$('body').removeClass('fundo1', 3000, function() {
+								/*alert('remove_fundo1');*/
+									$('body').addClass('fundo2', 4000, pulse2)
+									/*alert('adiciona_fundo2');*/
+								});
+						}
+						function pulse3() {
+							/*alert('pulse3');*/
+								$('body').removeClass('fundo2', 3000, function() {
+									/*alert('remove_fundo2');*/
+									$('body').addClass('fundo3', 4000, pulse3)
+									/*alert('adiciona_fundo3');*/
+								});
+						} 
+	                    /*alert('ola');*/ 
+	                } 
+	            });
+	    
+	    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+		
+		var name = $( "#name" ),
+			email = $( "#email" ),
+			password = $( "#password" ),
+			allFields = $( [] ).add( name ).add( email ).add( password ),
+			tips = $( ".validateTips" );
+
+		function updateTips( t ) {
+			tips
+				.text( t )
+				.addClass( "ui-state-highlight" );
+			setTimeout(function() {
+				tips.removeClass( "ui-state-highlight", 1500 );
+			}, 500 );
+		}
+
+		function checkLength( o, n, min, max ) {
+			if ( o.val().length > max || o.val().length < min ) {
+				o.addClass( "ui-state-error" );
+				updateTips( "Length of " + n + " must be between " +
+					min + " and " + max + "." );
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function checkRegexp( o, regexp, n ) {
+			if ( !( regexp.test( o.val() ) ) ) {
+				o.addClass( "ui-state-error" );
+				updateTips( n );
+				return false;
+			} else {
+				return true;
+			}
+		}
+		
+		$( "#dialog-form" ).dialog({
+			autoOpen: false,
+			height: 300,
+			width: 350,
+			modal: true,
+			buttons: {
+				"Create an account": function() {
+					var bValid = true;
+					allFields.removeClass( "ui-state-error" );
+
+					bValid = bValid && checkLength( name, "username", 3, 16 );
+					bValid = bValid && checkLength( email, "email", 6, 80 );
+					bValid = bValid && checkLength( password, "password", 5, 16 );
+
+					bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
+					// From jquery.validate.js (by joern), contributed by Scott Gonzalez: http://projects.scottsplayground.com/email_address_validation/
+					bValid = bValid && checkRegexp( email, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
+					bValid = bValid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
+
+					if ( bValid ) {
+						$( "#users tbody" ).append( "<tr>" +
+							"<td>" + name.val() + "</td>" + 
+							"<td>" + email.val() + "</td>" + 
+							"<td>" + password.val() + "</td>" +
+						"</tr>" ); 
+						$( this ).dialog( "close" );
+					}
+				},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			close: function() {
+				allFields.val( "" ).removeClass( "ui-state-error" );
+			}
+		});
+
+		$( "#create-user" )
+			.button()
+			.click(function() {
+				$( "#dialog-form" ).dialog( "open" );
+			});
+	              
+{% endblock %}
+	         
+		     
+
+{% block extrajs %}
+	  {{ block.super }}
+	  function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
+      function mouseOver2(){document.getElementById("thumb2").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut2(){document.getElementById("thumb2").src ="/media/images/home/bola_preta.png"}
+      function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
+      function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+
+    {% block animacao %}
+		{% include "includes/animacao.html" %}
+	{% endblock animacao %}
+	<div id="conteudo_home" class="conteudo_home">  
+	<div id="noticia_lista_inicial" class="noticia_lista_inicial">
+		<h2 id="noticias_home_titulo" class="noticias_home_titulo">Noticias</h2>
+             
+        <div id="separador_noticia_topo" class="separador_noticia_topo">
+        	<img src="/media/images/home/separador.png" />
+        </div>
+			
+		<div id="noticias_home_box" class="noticias_home_box">
+		     {% for noticia in noticias %}
+		    	<div id="item_home_noticia" class="item_home_noticia">
+		       
+		            <a class="noticia_home_link" href="/noticias/{{ noticia.slug }}">
+		                <img src="/media/{{ noticia.miniatura }}"  class="bn" width="146" height="67" align="left"/>
+                        <div id="texto_noticia_home" class="texto_noticia_home">
+                            <small>{{ noticia.criado_em|date:"d M"|upper }}</small>
+                            <p>{{ noticia.titulo }}</p>
+                        </div>
+                        
+		            </a>	
+		        </div>
+                <div id="separador" class="separador">
+                 		<img src="/media/images/home/separador.png" />
+                 </div>
+		       {% endfor %}
+		</div>
+		
+        <div id="botoes_noticias" class="botoes_noticias">
+    
+	        <a href="/noticias/"> <img src="/media/images/home/mais_noticias.gif" align="bottom"/> Mais Noticias </a>
+            <a href="/rss/ultimos/"><img src="/media/images/home/rss.gif"  align="bottom"/> Assine o RSS</a>
+            <a href="/email"><img src="/media/images/home/email.gif"  align="bottom"/> Receba Noticias por E-mail</a>
+        </div>
+	</div>
+	
+ 	
+    
+	<div id="twitter" class="twitter">
+		<h2 id="twitter_titulo" class="twitter_titulo">Sonorah no Twitter</h2>
+     </div>
+      <div id="separador_twitter_topo" class="separador_twitter_topo">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+     <div id="twitter_box" class="twitter_box">
+       	<script>
+		
+		  new TWTR.Widget({
+			  version: 2,
+			  type: 'profile',
+			  rpp: 5,
+			  interval: 6000,
+			  width: 400,
+			  height: 200,
+			  theme: {
+				shell: {
+				  background: '#131315',
+				  color: '#ffffff'
+				},
+				tweets: {
+				  background: '#131315',
+				  color: '#ffffff',
+				  links: '#ff8c00'
+				}
+			  },
+			  features: {
+				scrollbar: true,
+				loop: true,
+				live: true,
+				hashtags: false,
+				timestamp: false,
+				avatars: true,
+				behavior: 'default'
+			  }
+			}).render().setUser('veiodruida').start();
+
+		</script>
+        
+	</div>
+     <div id="separador_twitter_fim" class="separador_twitter_fim">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+     
+    <div id="botoes_twitter" class="botoes_twitter">
+         <a href="/twitter/"> <img src="/media/images/home/twitter.gif"  align="bottom"/> Siga-nos no Twitter</a>
+          <a href="/facebook/"><img src="/media/images/home/facebook.gif"  align="bottom"/> Curta no facebook</a>
+    </div>
+    
+    <div id="link_lista_inicial" class="link_lista_inicial">
+		<h2 id="links_home_titulo" class="links_home_titulo">Links</h2>
+              
+              <div id="separador_noticia_topo" class="separador_noticia_topo">
+              	<img src="/media/images/home/separador.png" />
+              </div>
+              
+              <div id="links_home_box" class="links_home_box">
+			     {% for link in links %}
+			    	<div id="item_home_link" class="item_home_link">
+			        
+			           <a href="{{ link.url }}">
+			                <img src="/media/{{ link.miniatura }}"   class="bn" width="146" height="67" align="left"/>
+			                <div id="texto_noticia_home" class="texto_noticia_home">
+	                            <small>{{ link.criado_em|date:"d M"|upper }}</small>
+				                <p>{{ link.titulo }}</p>
+                            </div>
+			            </a>	
+			        </div>
+                    <div id="separador" class="separador">
+                    	<img src="/media/images/home/separador.png" />
+                     </div>
+			        {% endfor %}
+			</div>
+	</div>
+     
+    
+    
+    <div id="separador_youtube_topo" class="separador_youtube_topo">
+     		<img src="/media/images/home/separador.png" />
+     </div>   
+    <div id="youtube" class="youtube">
+    	<img src="/media/images/home/youtube.gif" />
+    	
+    </div>
+
+
+ </div>
+ 
+ <div id="dialog-form" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+<button id="create-user">Create new user</button>
+{% endblock conteudo %}
+
+ 

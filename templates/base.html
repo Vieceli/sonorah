@@ -1,7 +1,7 @@
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   
   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-  
+  <!-- Coded By: veiodruida@gmail.com -->
   <head>
       <link rel="shortcut icon" href="/media/images/favicon.ico" >
   
@@ -11,7 +11,8 @@
       <meta content="{{ meta_description }}" name="Description"/>
       <meta content="pt-br" http-equiv="Content-Language"/>
       <meta name="verify-v1" content="l4Z4jgwG5X58psxFkH3eILv9ua3nJKYrq5zGFZC0xj0=" />
-      {% block metadata %}
+      <meta name="google-site-verification" content="Ntmm7v_b9WRnWCY6qZlD1Z32hC80m4d1crcI_7jLOqU" />
+      {% block metadata %}<!--revisar as metadatas -->
       {% endblock metadata %}
   	  <link href="/media/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css"/>
       <link href="/media/css/thickbox.css" rel="stylesheet" type="text/css"/>
@@ -20,6 +21,7 @@
       <link type="text/css" rel="stylesheet" href="/media/css/estilo-novo.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/dropdown.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/cabecalho.css" />
+      <link type="text/css" rel="stylesheet" href="/media/css/jquery.lightbox-0.5.css" />
       <!--[if IE]>
       <link type="text/css" rel="stylesheet" href="/media/css/cabecalho_ie.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/dropdown_ie.css" />
@@ -41,10 +43,11 @@
       <script type="text/javascript" src="/media/js/jquery.blockUI.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/municipio.js" charset="utf-8"></script>
       <script src="/media/js/widget-twetter.js" charset="utf-8"  type="text/javascript"></script>
-      
 	  {% block extrascripts %}
       {% endblock extrascripts %}
+      
      <script language="javascript">
+<<<<<<< HEAD
    
           function mouseOver1(){ document.getElementById("thumb1").src ="/media/images/home/bola_laranja.png"}
           function mouseOut1(){document.getElementById("thumb1").src ="/media/images/home/bola_preta.png"}
@@ -53,21 +56,32 @@
           function mouseOver3(){document.getElementById("thumb3").src ="/media/images/home/bola_laranja.png"}
           function mouseOut3(){document.getElementById("thumb3").src ="/media/images/home/bola_preta.png"}
           
+=======
+   		var newwindow = '';
+
+		function popitup(url){
+			if (!newwindow.closed && newwindow.location){
+				newwindow.location.href = url;
+			}else{
+				newwindow=window.open(url,'name','height=600,width=460');
+				if (!newwindow.opener) newwindow.opener = self;
+			}
+			if (window.focus) {newwindow.focus()}
+				return false;
+			}	
+		function to_old_win(url){
+				opener.location.href = url;
+			}
+				
+>>>>>>> c46022f08b178966daab13e4efe980db20fa6cd5
 	      {% block extrajs %}
+	      
 	      {% endblock extrajs %}
 	      
 	       $(document).ready(function(){
 	        	{% block js_ready %}	        
 		        {% endblock js_ready %}
-		     	
-		     	/*
-		     	$('#bg0')
-		     		.animate({opacity: 0}, 'slow', function() {
-        			$(this)
-        				.css({'background-image': 'url(1.jpg)'})
-            			.animate({opacity: 1});
-    });*/
-
+		    
          	 /*SELECIONA aba do parceiro pelo menu teste*/
 				$('a#contratante').click(function (){
 					$tabs.tabs('select', 2);
