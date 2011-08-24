@@ -1,24 +1,21 @@
 {% extends "base.html" %}
 
-<<<<<<< HEAD
-{% block titulo %}Parceiros{% endblock %}
-=======
 {% block titulo %}Parceiros - {% endblock %}
->>>>>>> c46022f08b178966daab13e4efe980db20fa6cd5
 
 {% block extralinks %}
-	{{ block.super }}
-{% endblock %}
+{{ block.super }}
 
+{% endblock %}
 {% block extracss %}
-	{{ block.super }}
+{{ block.super }}
 {% endblock %}
 
 {% block extrascripts %}
-	{{ block.super }}
+{{ block.super }}
 {% endblock %}
 
 {% block js_ready %}
+ 
  	{{ block.super }} 
  
  	$('body').addClass('parceiros'); 
@@ -43,8 +40,8 @@
     	
 
 {% block extrajs %}
-	{{ block.super }}
-	
+{{ block.super }}
+
 {% endblock extrajs %}
 
 
@@ -151,7 +148,7 @@
 						{{ compositor_form.email }}
 					</div>
 				</div>
-				<div id="compositor_esquerda" class="compositor_esquerda">
+				<div id="compositor_esquerda" class="compositor_direita">
 					<div class="fieldWrapper">
 						{{ compositor_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
 						{{ compositor_form.telefone }}
@@ -240,6 +237,7 @@
 						</div>
 					</div>
 				</div>
+				
 
 					<input type="submit" value="Enviar" name="radialista" class="enviar_radialista"/>
 			
