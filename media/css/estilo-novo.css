@@ -1,4 +1,8 @@
 /*valores padrão*/
+
+/*RESET PADRAO*/
+* { padding: 0; margin: 0; border: 0 ; }
+
 html,body{
 	height:100%;
 }
@@ -594,16 +598,21 @@ div#sharebtn a {
 	margin-top: -280px;
 	z-index: 10;	
 }
-.parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
+.parceiro_aba, 
+.compositor_aba, 
+.radialista_aba, 
+.contratante_aba{
+	margin-left: 60px;
+}
 
 /*conteudo dos forms*/
 .parceiro{
 	/*background-color:#19191a;*/
-	position: relative;
+	position:relative;
 	float:left;
 	background-color:#19191a;
-	margin-top: -5px;
-	width: 940px;
+	margin-top:-5px;
+	width:940px;
 	margin-left:2px;
 	margin-bottom:80px;
 }
@@ -620,13 +629,13 @@ div#sharebtn a {
 	position:relative;
 	float:left;
 	background:#19191a;
-	margin-top: -5px;
+	margin-top:-5px;
 	width:940px;
 	margin-left:2px;
 	margin-bottom:80px;
 }
 .contratante{
-	position: relative;
+	position:relative;
 	float:left;
 	background:#19191a;
 	margin-top:-5px;
@@ -638,24 +647,24 @@ label
 {
 	/*texto antes do input*/
 	font-family:"Franklin Gothic Book";
-	margin-top: 14px;
+	margin-top: 10px;
 	font-size: 16px;
 	position:relative;
-	width: 7em;
+	width: 7.4em;
 	float: left;
-	margin-right: 0.5em;
-	padding-left:30px;
+	margin-right: 1.4em;
+	padding-left:22px;
 	color:#6d6d6d; 
 }
 
 input
 {
-	border:0px;
+	border:0px solid;
 	color: #19191a;
 	background: #000;
-	height: 42px;
+	height: 39px;
 	/*width:311px;*/
-	width:280px;
+	width:312px;
 	margin-left: -20px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
@@ -667,8 +676,8 @@ textarea {
 	color: #19191a;
 	background: #000;
 	margin-left: -20px;
-	width: 280px;
-	height: 102px;
+	width: 312px;
+	height: 120px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
@@ -724,14 +733,15 @@ textarea {
 	margin-top:-5px;
 	margin-left:-35px;
 	padding-left: 1px;
+	
 }
 .parceiro_esquerda{
 	position: relative;
 	float: right;
+	left: auto;
 	right: 0px;
 	margin-top:-5px;
-	margin-right:65px;
-	padding-right: 1px;
+	margin-right:20px;
 }
 .mensagem_parceiro{
 	margin-left:125px;
@@ -744,7 +754,7 @@ textarea {
 	float: left;
 	bottom:0;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 311px;
+	left: 20px;
 	padding-right:90px;
 	padding-bottom:72px;
 	top:80px;
@@ -764,12 +774,12 @@ textarea {
 	padding-left: 1px;
 }
 .compositor_esquerda{
-	/*position: relative;*/
-	/*float: right;*/
-	/*right: -10px;*/
-	/*margin-top:-5px;*/
-	/*margin-right:120px;*/
-	/*padding-right: 10px;*/
+	position: relative;
+	float: right;
+	left: auto;
+	right: 0px;
+	margin-top:-5px;
+	margin-right:20px;
 	
 
 }
@@ -805,10 +815,10 @@ textarea {
 .radialista_esquerda{
 	position: relative;
 	float: right;
+	left: auto;
 	right: 0px;
 	margin-top:-5px;
-	margin-right:65px;
-	padding-right: 1px;
+	margin-right:20px;
 }
 .mensagem_radialista{
 	padding-left: 25px;
@@ -841,10 +851,10 @@ textarea {
 .contratante_esquerda{
 	position: relative;
 	float: right;
+	left: auto;
 	right: 0px;
 	margin-top:-5px;
-	margin-right:65px;
-	padding-right: 1px;
+	margin-right:20px;
 }
 .mensagem_contratante{
 	padding-left: 25px;
