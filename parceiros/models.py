@@ -40,7 +40,7 @@ class Compositor(models.Model):
         
     nome            = models.CharField("Nome do Compositor",max_length=40,
                               help_text=u'nome do Compositor',default='Lorem Ipsum')
-    arquivo         = models.FileField(upload_to='compositor_arquivo', max_length=20, blank=True)
+    arquivo         = models.FileField(upload_to='compositor_arquivo', max_length=10485760, blank=True)
     email           = models.EmailField()
     telefone        = models.CharField(u"Telefone",max_length=400,
                             help_text=u'Telefone',default='123456789')
@@ -74,7 +74,7 @@ class Radialista(models.Model):
                               help_text=u'Endereço',default='Lorem Ipsum', blank=True)
     cidade          = models.IntegerField();
     mensagem        = models.TextField()
-    anexo           = models.FileField(upload_to='radialista_arquivo', max_length=20971520, blank=True)
+    anexo           = models.FileField(upload_to='radialista_arquivo', max_length=10485760, blank=True)
     site            = models.URLField(u"Site da radio",max_length=255,
                               help_text=u'http://site.com',default='http://www.globo.com',blank=True,)
     facebook        = models.CharField(u"Facebook",max_length=400,

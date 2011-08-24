@@ -12,16 +12,28 @@
 {% endblock %}
 
 
+{% block js_ready %}
+ 
+ 	{{ block.super }} 
+ 
+ 	$('body').addClass('entrar'); 
+ 	
+{% endblock %}
+
 {% block extrajs %}
 	{{ block.super }}
 {% endblock extrajs %}
 
 {% block conteudo %}
-<div id="conteudo" class="conteudo">
+{% block topo %}
+	{% include "includes/topo.html" %}
+{% endblock topo %}
+	
+<div id="entrar_box" class="entrar_box">
 		{% if form.errors %}
 			<p>Usuario ou senha inexistentes</p>
 		{% endif %}
-		<form method="post" action=".">{% csrf_token %}
+		<form method="post" action="{% url entrar %}">{% csrf_token %}
 		 	<label for="usuario">Usuario:</label>
     		<input type="text" name="username" value="" id="username">
 		    <label for="senha">Senha:</label>

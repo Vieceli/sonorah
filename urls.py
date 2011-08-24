@@ -26,16 +26,17 @@ urlpatterns = patterns('',
 
                     
      #includes
-    (r'^$', include('principal.urls')),
+    (r'^$', 'views.manutencao'),
+    (r'^beta/$', include('principal.urls')),
     
    # (r'^/get_upload_progress^$', 'contato.views.get_upload_progress'),
-    (r'^empresa/', include('empresa.urls')),
-    (r'^portfolio/', include('portfolio.urls')),
-    (r'^noticias/', include('noticias.urls')),
-    (r'^artistas/', include('artistas.urls')),
-    (r'^parceiros/', include('parceiros.urls')),
-    (r'^conta/', include('contas.urls')),
-    (r'^contato/', include('contato.urls')),
+    (r'^beta/empresa/', include('empresa.urls')),
+    (r'^beta/portfolio/', include('portfolio.urls')),
+    (r'^beta/noticias/', include('noticias.urls')),
+    (r'^beta/artistas/', include('artistas.urls')),
+    (r'^beta/parceiros/', include('parceiros.urls')),
+    (r'^beta/conta/', include('contas.urls')),
+    (r'^beta/contato/', include('contato.urls')),
 #    (r'^boleto/', include('boleto.urls')),#inseria midia propria -->url(r'imagem_barras/$', imagem_barras, name='imagem_barras'),
 #    (r'^conta/', include('django.contrib.auth.urls')),
 )

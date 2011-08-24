@@ -90,6 +90,27 @@ body{
 	background-position: center 70px;
 	background-image: url(/media/images/banner_meio_paginas.png);
 }
+.entrar{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.sair{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.registrar{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
 img{border-style:none;}
 
 a{
@@ -911,7 +932,18 @@ input.enviar_contato:hover	{
 	float: left;
 	top: 20px;
 }
-
+.entrar_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:-5px;
+	margin-right:-2px;
+/*	margin-top: -330px;	*/
+	width: 480px;
+	display:block;
+	top:30px;
+}
 /*#id_arquivo {
 	position:relative;
 	float:left;
