@@ -10,8 +10,6 @@ class EmailOrUsernameModelBackend(object):
         else:
             kwargs = {'username': username}
         try:
-            print (kwargs)
-            print ("backend")
             user = User.objects.get(**kwargs)
             if user.check_password(password):
                 return user

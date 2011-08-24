@@ -21,13 +21,13 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(PROJECT_ROOT_PATH, 'mycms.db'),
-#    }
-#}
-#
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_ROOT_PATH, 'mycms.db'),
+    }
+}
+
 
 
 # Absolute path to the directory that holds media.
@@ -59,6 +59,9 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT_PATH, 'estatico')
 STATIC_URL = '/estatico/'
+
+ADMIN_MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'admin-media')
+ADMIN_MEDIA_PREFIX = '/admin-media/'
 
 DJBOLETO_MEDIA_URL = "/media/boletosimg/"
 from django.conf import global_settings
