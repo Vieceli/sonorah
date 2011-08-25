@@ -644,7 +644,6 @@ label
 	float: left;
 	color:#6d6d6d;
 	margin-top: 5px;
-	border: solid; 
 }
 
 .fieldWrapper input
@@ -866,7 +865,6 @@ textarea {
 .efeito_enviar_contato{
 	position: relative;
 	clear: both;
-	
 	bottom:35px;
 	left:70px;
 	width: 500px;
@@ -875,7 +873,6 @@ textarea {
 	position: relative;
 	/*clear: both;*/
 	float: left;
-	
 	padding-top:0px;
 	left: 240px;
 	/*border: 1px solid #006;*/
