@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 
-{% block titulo %}Parceiros - {% endblock %}
+{% block titulo %}Parceiros{% endblock %}
 
 {% block extralinks %}
-{{ block.super }}
-
+	{{ block.super }}
 {% endblock %}
+
 {% block extracss %}
-{{ block.super }}
+	{{ block.super }}
 {% endblock %}
 
 {% block extrascripts %}
-{{ block.super }}
+	{{ block.super }}
 {% endblock %}
 
 {% block js_ready %}
- 
  	{{ block.super }} 
  
  	$('body').addClass('parceiros'); 
@@ -35,13 +34,63 @@
 			    return valido;
 		}
 	});
+	
+	$(document).ready(
+    function()
+    {
+        // bind click file to div fake
+        $(".fieldWrapper input[type='file']").change(
+                function()
+                {
+			$(".fieldWrapper span").remove();
+
+		    var text = $(this).val();
+		    text = text.length > 30 ? text.substring( 0, 30 ) + '...' : text;
+			var span = $('<span>');
+
+			$(span).html( text );
+		
+                    $(".fieldWrapper").append( span  );
+                }
+            );
+        }
+);
+
+	
+	(function ($) {
+	$.fn.extend({
+
+		customStyle: function (options) {
+			if (!$.browser.msie || ($.browser.msie && $.browser.version > 6)) {
+				return this.each(function () {
+
+					var currentSelected = $(this).find(':selected');
+					$(this).wrap("<div class='selectcustom' />");
+					$(this).before('<span class="customStyleSelectBox"><span class="customStyleSelectBoxInner">' + currentSelected.text() + '</span></span>').css({ position: 'absolute', opacity: 0, fontSize: $(this).next().css('font-size') });
+					var selectBoxSpan = $(this).next();
+					var selectBoxWidth = parseInt($(this).width()) - parseInt(selectBoxSpan.css('padding-left')) - parseInt(selectBoxSpan.css('padding-right'));
+					var selectBoxSpanInner = selectBoxSpan.find(':first-child');
+					selectBoxSpan.css({ display: 'inline-block' });
+					selectBoxSpanInner.css({ width: selectBoxWidth, display: 'inline-block' });
+					var selectBoxHeight = parseInt(selectBoxSpan.height()) + parseInt(selectBoxSpan.css('padding-top')) + parseInt(selectBoxSpan.css('padding-bottom'));
+					$(this).height(selectBoxHeight).change(function () {
+						// selectBoxSpanInner.text($(this).val()).parent().addClass('changed');   This was not ideal
+						$(this).parent().find('.customStyleSelectBoxInner').text($(this).find(':selected').text()).parent().addClass('changed');
+						// Thanks to Juarez Filho & PaddyMurphy
+					});
+
+				});
+			}
+		}
+	});
+})(jQuery);
     	
 {% endblock %}
     	
 
 {% block extrajs %}
-{{ block.super }}
-
+	{{ block.super }}
+	
 {% endblock extrajs %}
 
 
@@ -140,15 +189,17 @@
 						{{ compositor_form.nome }}
 					</div>
 						<div class="fieldWrapper">
+							<div id="file">
 							{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
 							{{ compositor_form.arquivo }}
 						</div>
-						<div>
+						</div>
+						<div class="fieldWrapper">
 						{{ compositor_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
 						{{ compositor_form.email }}
 					</div>
 				</div>
-				<div id="compositor_esquerda" class="compositor_direita">
+				<div id="compositor_esquerda" class="compositor_esquerda">
 					<div class="fieldWrapper">
 						{{ compositor_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
 						{{ compositor_form.telefone }}
