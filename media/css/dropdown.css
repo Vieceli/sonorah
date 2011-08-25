@@ -32,12 +32,10 @@ way to fit your requirements.
 	width:125px; 
 	text-align:center; 
 	color:#FF5A00; 
-	/*border:1px thin #333;*/ 
 	background:#131315; 
-
 	font-size:18px; 
 	overflow:hidden;
-
+	height: 30px;
 
 }
 .menu ul {padding:0;margin:0;list-style: none;}
@@ -50,7 +48,7 @@ way to fit your requirements.
 .menu ul li:hover ul li a.hide {background:#6a3; color:#fff;}
 .menu ul li:hover ul li:hover a.hide {background:#262629; color:#FF5A00;height: 30px;}
 .menu ul li:hover ul li ul {display: none;}
-.menu ul li:hover ul li a {display:block; background:#ddd; color:#FF5A00;}
+.menu ul li:hover ul li a {display:block;  color:#FF5A00;}
 .menu ul li:hover ul li a:hover {background:#262629; color:#FF5A00;}
 .menu ul li:hover ul li:hover ul {display:block; position:absolute; left:105px; top:0;}
 .menu ul li:hover ul li:hover ul.left {left:-105px;}

@@ -24,7 +24,7 @@
 	float:left;
 	display:inline;
 
-	background-color: red;
+	/*background-color: red;*/
 }
 
 .logo{
@@ -32,10 +32,10 @@
 	float:left;
 	width: 150px;
 	/*display:inline;*/
-	/*top:20px;*/
+	top:20px;
 	/*z-index:10;*/
 	/*margin-left: -200px;*/
-	background-color: red;
+	/*background-color: red;*/
 }
 
 
