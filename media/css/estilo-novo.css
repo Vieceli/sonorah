@@ -354,7 +354,7 @@ h2.links_home_titulo{
 	position:relative;
 	/*position:absolute;*/
 	clear: both;
-	bottom: 0px;
+	/*bottom: 0px;*/
 	width:100%;
 	height:150px;
 	background-color:#000;
@@ -367,7 +367,7 @@ h2.links_home_titulo{
 	text-align:justify;
 	position:relative;
 	float:left;
-	padding-left:22%;
+	padding-left:20%;
 	padding-top:40px;
 }
 .links_rodape{
@@ -401,6 +401,8 @@ h2.links_home_titulo{
 	float:left;
 	width:920px;
 	top: -200px;
+	margin-bottom:-150px;
+	
 }
 .empresa_box p{
 font-family: "Franklin Gothic Book";font-size:14px;text-indent:20px;
@@ -872,10 +874,11 @@ textarea {
 	color:#131315;
 	margin-left:-5px;
 	margin-right:-2px;
-/*	margin-top: -330px;	*/
+	margin-bottom: 120px;
 	width: 480px;
-	display:block;
+	/*display:block;*/
 	top:30px;
+	
 	/*height: 400px;*/
 }
 .efeito_enviar_contato{
