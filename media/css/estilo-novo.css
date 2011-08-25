@@ -23,7 +23,7 @@ body{
 	background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 100px;
+	background-position: center 104px;
 }
 
 .empresa { 
@@ -128,7 +128,7 @@ h3{
 
 .conteudo_home{
 	position: relative;
-	margin-top:320px;
+	margin-top:380px;
 	
 	float:left;
 	text-align:justify;
