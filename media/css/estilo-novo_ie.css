@@ -7,17 +7,96 @@ body{
 	margin:0;
 	color:#6d6d6d;
 	font:16px "Franklin Gothic Book", "Franklin Gothic Heavy", "Franklin Gothic Medium";
-	background:#131315;
-	font-weight:300;
+	/*background:#131315 ;*/
+	font-weight:300;/*
+	background-color:#131315;
+	background-image: url(/media/images/home/fundo_banner_inter.png);
+	background-repeat: no-repeat;
+	background-position: center 119.5px;*/
+	
+	/*background-attachment:fixed;*/
+	/*background-position: 30% 125.5%;*/ 
 	list-style: none;
 }
-	
+.bg0{
+	background-color:#131315;
+	background-image: url(/media/images/home/fundo_banner_inter.png);
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 104px;
+}
+
+.empresa { 
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.portfolio{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.portfolios{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.artistas { 
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.artista { 
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+
+.noticia{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.noticias{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.parceiros{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
+.contato{
+	background-color:#131315;
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: center 70px;
+	background-image: url(/media/images/banner_meio_paginas.png);
+}
 img{border-style:none;}
 
 a{
 	text-decoration:none;
 	color:#ff5a00;
 }
+
 a:hover{text-decoration:underline;}
 
 li{
@@ -25,6 +104,7 @@ li{
 	list-style-position: inside;
 	display: table;
 }
+
 p{
 font-family:"Franklin Gothic Book";
 	font-size:18px;
@@ -37,28 +117,32 @@ font-size:24px;
 h3{
 	font-size:16px;	
 }
-/*Conteiners*/
-
+/*CONTEINERS*/
 .conteiner{
-	width:100%;
-	position:relative;  /*Contexto de posicionamento */
+	width:1000px;
 	margin:0 auto;
 	text-align:left;
-	min-height:100%;
-	background-color:#131315;
-
+	/*min-height:100%;*/
+	/*margin-bottom:50px;*/
 }
 
-
-
-.conteudo{
-	margin-left:70px;
+.conteudo_home{
+	position: relative;
+	margin-top:380px;
+	
 	float:left;
-	padding-top:10px;
 	text-align:justify;
-	background-color:#131315;
-	width:1600px;
+	width:100%;
 }
+.empresa_box{
+	position: relative;
+	margin-top:250px;
+	float:left;
+	text-align:justify;
+	/*width:1200px;*/
+}
+
+
 /*Caixa de noticias*/
 .noticias_home_box{
 	position:  relative;
@@ -83,7 +167,7 @@ h3{
 h2.noticias_home_titulo{
 	background-color:#FF5A00;
 	width:120px;
-	padding-left:20px;
+	/*padding-left:20px;*/
 	color:#000;
 	font-size:18pt;	
 	font-family: "Franklin Gothic Heavy";
@@ -99,7 +183,7 @@ h2.noticias_home_titulo{
 	padding-left:165px;
 }
 .noticia_lista_inicial{
-		margin-left:380px;
+	/*	margin-left:380px;*/
 		position:relative;
 		float:left;
 		width:500px;				
@@ -134,7 +218,7 @@ h2.noticias_home_titulo{
 }
 .twitter{
 	position: relative;
-	float:left;
+	float:right;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
 	width: 500px;
@@ -164,8 +248,8 @@ h2.twitter_titulo{
 
 .botoes_twitter{
 	position:relative;
-	float:left;
-	margin-left:-465px;
+	float:right;
+	right: 215px;
 }
 .botoes_twitter a{
 	font-family:"Franklin Gothic Heavy";
@@ -177,11 +261,10 @@ h2.twitter_titulo{
 
 /*Caixa de links*/
 .link_lista_inicial{
-/*		margin-left:-500px;*/
-		position:relative;
-		float:left;
-		width:500px;		
-		margin-left:380px;
+/*	margin-left:-500px;*/
+	position:relative;
+	float:left;
+	width:500px;		
 }
 h2.links_home_titulo{
 	width:120px;
@@ -212,7 +295,6 @@ h2.links_home_titulo{
 	width: 460px;
 }
 
-
 .item_home_link:hover{
 	background-color: #333;
 }
@@ -221,7 +303,6 @@ h2.links_home_titulo{
 .separador_youtube_topo{
 	position:relative;
 	/*margin-left:750px;	*/
-	
 	float:left;
 	height:2px;
 }
@@ -230,24 +311,29 @@ h2.links_home_titulo{
 	/*margin-left:750px;*/
 	margin-top:20px;
 	position:relative;
-	float:left;
+	float:right;
+	right: 120px;
+	margin-bottom: 30px;
 }
 
 
 /*rodape*/
+/*
 .sep_rodape{
-
-position:relative;
-bottom:0px;
-background-image: url(/images/home/sep_rodape.png);
-background-repeat:repeat-y;
-left:-400px;
-width: 100%;
-	
+	position:relative;
+	clear: both;
+	height:10px;
+	background-image: url(/images/home/sep_rodape.png);
+	background-color: #131315;
+	background-repeat:repeat-y;
+	width: 900px;
 }
+*/
 .rodape{
 	position:relative;
-	clear:both;
+	/*position:absolute;*/
+	clear: both;
+	/*bottom: 0px;*/
 	width:100%;
 	height:150px;
 	background-color:#000;
@@ -260,7 +346,7 @@ width: 100%;
 	text-align:justify;
 	position:relative;
 	float:left;
-	padding-left:561px;
+	padding-left:20%;
 	padding-top:40px;
 }
 .links_rodape{
@@ -288,14 +374,112 @@ width: 100%;
 	padding-top:40px;
 }
 
+/*EMPRESA*/
+.empresa_box{
+	position:relative;
+	float:left;
+	width:920px;
+	top: -200px;
+	margin-bottom:-150px;
+	
+}
+.empresa_box p{
+font-family: "Franklin Gothic Book";font-size:14px;text-indent:20px;
+}
+
+.servicos{
+		font-family: "Franklin Gothic Demi";font-size:8px;text-indent:20px;
+		/*padding-bottom:60px;*/
+}
+.separador_empresa{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+h2.assesoria_img{ cursor: pointer; }
+div.assesoria_img{ display: none; }
+h2.assesoria_imp{ cursor: pointer; }
+div.assesoria_imp{ display: none; }
+h2.producao_m{ cursor: pointer; }
+div.producao_m{ display: none; }
+h2.producao_a{ cursor: pointer; }
+div.producao_a{ display: none; }
+h2.estrategia{ cursor: pointer; }
+div.estrategia{ display: none; }
+h2.fono{ cursor: pointer; }
+div.fono{ display: none; }
+h2.tecnicas{ cursor: pointer; }
+div.tecnicas{ display: none; }
+h2.presenca{ cursor: pointer; }
+div.presenca{ display: none; }
+
+/*PORTFOLIO LISTA*/
+
+.portfolio_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-top: 36px;	
+	display: inline-block;
+}
+.portfolio_box a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+}
+.separador_portfolio{
+	position:relative;
+	float:left;
+	padding-top:20px;
+	padding-bottom:20px;	
+}
+
+/* PORTFOLIO ATIVO*/
+
+.portfolio_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-top: 60px;	
+	width: 1200px;
+	display: inline-block;
+}
+
+/*ARTISTAS*/
+
+.artista_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-top: 60px;	
+	width: 1200px;
+	display: inline-block;
+	
+}
+
+.artista_box p{
+	font-family:"Franklin Gothic Heavy";
+	font-size:12pt;
+	color:#666;
+}
+
+.rede_social_artista{
+	position: relative;
+	float: right;
+	right: 260px;
+	top: -30px;
+}
 /*NOTICIAS*/
 .noticias_box{
 	position: relative;
 	float:left;
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
-	margin-left:220px;
-/*	margin-top: -330px;	*/
+	margin-top: 30px;	
+	margin-left: -80px;
+	margin-bottom:30px;
 	width: 1200px;
 	display: inline-block;
 }
@@ -310,27 +494,19 @@ width: 100%;
 	padding-right: 100px;
 	padding-top: 30px;
 }
-.texto_parceiro{
-	font-family:"Franklin Gothic Book";
-	font-size: 18px;
-	text-indent: 40px;
-	color:#6d6d6d;
-	position: absolute;
-	margin-left: 180px;
-	margin-top: 50px;	
-	width: 1000px;
-	text-align: justify;
-}
+
 .noticia_link{
 	color:#6d6d6d;
 }
+
+
 /*PAGINA DA NOTICIA*/
-.noticia{
+.noticia_box{
 	position:relative;
 	float:left;
-	left:312px;
-	top: 30px;
-	width:920px;
+	margin-top: 60px;	
+	/*margin-left: -80px;*/
+	
 }
 .noticia_criado_em{
 
@@ -338,9 +514,8 @@ width: 100%;
 }
 
 h1.noticia_titulo{
-
-		color:#6d6d6d;
-		padding-top:230px;
+	#color:6d6d6d;
+	padding-top:230px;
 }
 
 .noticia_subtitulo{
@@ -359,11 +534,24 @@ h1.noticia_titulo{
 .rede_social_noticia{
 	position: relative;
 	clear: both;
-	padding-top: 60px;
-	padding-left: 312px;
+	padding-top: 40px;
+}
+.imprimir_noticia a{
+	font-family:"Franklin Gothic Heavy";
+	font-size:14px;
+	color:#666;
+
+}
+.imprimir_noticia{
+	position: relative;
+	float: left;
+	/*clear: both;*/
+	margin-left: 300px;
+	margin-top: -20px;
+	
 }
 div#sharebtn {
-	font-family:arial,helvetica,sans-serif; 
+	font-family:"Franklin Gothic Book";
 	font-size:12px;
 	border:1px solid #999;
 	padding:4px 4px 2px 2px;
@@ -378,16 +566,402 @@ div#sharebtn a {
 	background-image:none;
 	background-color:transparent;
 }
+/*PARCEIROS*/
+.parceiro_box{
+	position:relative;
+	float:left;
+	margin-top: 60px;
+}
+.texto_parceiro{
+	position: relative;	
+	float:left;
+	top:30px;
+	font-family:"Franklin Gothic Book";
+	font-size: 18px;
+	text-indent: 40px;
+	color:#6d6d6d;
+	text-align: justify;
+	width: 940px;
+}
+.efeito_fundo_parceiro{
+	position:relative;
+	float:left;
+	margin-top:-20px;
+	z-index: 0;
+	opacity:0.4;filter:alpha(opacity=40);
+}
+.formularios_parceiros{
+	position:relative;
+	float:left;
+	margin-top: -280px;
+	z-index: 10;	
+}
+.parceiro_aba, .compositor_aba, .radialista_aba, .contratante_aba{margin-left: 60px;}
+
+/*conteudo dos forms*/
+.parceiro{
+	/*background-color:#19191a;*/
+	position: relative;
+	float:left;
+	background-color:#19191a;
+	margin-top: -5px;
+	width: 940px;
+	margin-left:2px;
+	margin-bottom:80px;
+}
+.compositor{
+	position:relative;
+	float:left;
+	background:#19191a;
+	margin-top:-5px;
+	width:940px;
+	margin-left:2px;
+	margin-bottom:80px;
+}
+.radialista{
+	position:relative;
+	float:left;
+	background:#19191a;
+	margin-top: -5px;
+	width:940px;
+	margin-left:2px;
+	margin-bottom:80px;
+}
+.contratante{
+	position: relative;
+	float:left;
+	background:#19191a;
+	margin-top:-5px;
+	width:940px;
+	margin-left:2px;
+	margin-bottom:80px;
+}
+label
+{
+	/*texto antes do input*/
+	font-family:"Franklin Gothic Book";
+	font-size: 16px;
+	position:relative;
+	width: 6.5em;
+	float: left;
+	color:#6d6d6d;
+	margin-top: 5px;
+}
+
+.fieldWrapper input
+{
+	border:0px;
+	color: #19191a;
+	background: #000;
+	height: 37px;
+	/*width:311px;*/
+	width:300px;
+	padding:0 5px;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; 
+}
+textarea {
+	border:0px;
+	color: #19191a;
+	background: #000;
+	width: 307px;
+	height: 140px;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+}
+.submit input{
+	color: #fff;
+	background: #ffffff;
+	
+	/*background-image: url("/media/images/enviar.png");*/
+	/*border: 2px outset #d7b9c9*/
+}
+
 .enviar{
+	position: relative;
+	/*clear: both;*/
+	float:left;
+	bottom:-50px;
 	background: url(/media/images/enviar.png) 20% 20% no-repeat;
-	margin-top:0px;
-	margin-left: 700px;
-	padding-right:100px;
-	padding-bottom:50px;
+	right: -706px;
+	/*margin-left: 700px;*/
+	padding-right:94px;
+	padding-bottom:42px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+	
+}
+.efeito_enviar{
+	position: relative;
+	/*clear: both;*/
+	float: right;
+	bottom:80px;
+	right:-55px;
+	width: 500px;
+}
+
+.fieldWrapper{
+	margin-top: 15px;
+/*espaco entre os campos*/	
+}
+.errorlist{
+	margin-left: 130px;
+	margin-bottom: 10px;
+	color: #ff5a00;
+}
+
+/*FORMULARIOS PARCEIRO*/
+.parceiro_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+}
+.parceiro_esquerda{
+	position: relative;
+	float: right;
+	right: 0px;
+}
+.mensagem_parceiro{
+	margin-left:97px;
+	left: 80px;
+	padding-left: 15px;
+}
+.enviar_parceiro{
+	position: relative;
+	/*clear: both;*/
+	float: left;
+	bottom:0;
+	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
+	left: 311px;
+	padding-right:0px;
+	padding-bottom:72px;
+	top:309px;
+	right:-296px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+	border-style:none;
+	
+}
+/*FORMULARIOS COMPOSITOR*/
+.compositor_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+	
+}
+.compositor_esquerda{
+	position: relative;
+	float: right;
+	left: 0px;
+	
+}
+.mensagem_compositor{
+	margin-left:97px;
+	left: 80px;
+	padding-left: 15px;
+}
+.enviar_compositor{
+	position: relative;
+	/*clear: both;*/
+	float: right;
+	bottom:0px;
+	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
+	left: 270px;
+	top:215px;
+	padding-right:0px;
+	padding-bottom:71px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+	border-style: none;
+}
+/*FORMULARIOS Radialista*/
+.radialista_direita{
+	position: relative;
+	float: left;
+	left: 0px;
+			
+}
+
+.radialista_esquerda{
+	position: relative;
+	float: right;
+	right: 0px;
+}
+
+.mensagem_radialista{
+	margin-left:97px;
+	left: 80px;
+	padding-left: 15px;
+}
+.enviar_radialista{
+	position: relative;
+	/*clear: both;*/
+	float: right;
+	bottom:0px;
+	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
+	left: 267px;
+	top:517px;
+	padding-right:0px;
+	padding-bottom:71px;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+	border-style: none;
+}
+/*FORMULARIOS Contratante*/
+.contratante_direita{
+	position: relative;
+	float: left;
+	left: 0px;	
+}
+
+.contratante_esquerda{
+	position: relative;
+	float: right;
+	right: 0px;
+}
+
+.mensagem_contratante{
+	margin-left:97px;
+	left: 80px;
+	padding-left: 15px;
+}
+.enviar_contratante{
+	position: relative;
+	/*clear: both;*/
+	float: left;
+	bottom:0px;
+	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
+	left: 305px;
+	top:310px;
+	padding-right:0px;
+	padding-bottom:35px;
+	border-style:none;
+	color: #3d3d3d;
+	font-family: "Franklin Gothic Heavy";
+	font-size: 1.5em;
+}
+
+/*CONTATO
+ */
+.contato_box{
+	position: relative;
+	float:left;
+	font-family:"Franklin Gothic Heavy";
+	color:#131315;
+	margin-left:-5px;
+	margin-right:-2px;
+	margin-bottom: 120px;
+	width: 480px;
+	/*display:block;*/
+	top:30px;
+	
+	/*height: 400px;*/
+}
+.efeito_enviar_contato{
+	position: relative;
+	clear: both;
+	bottom:35px;
+	left:70px;
+	width: 500px;
+}
+.enviar_contato{
+	position: relative;
+	/*clear: both;*/
+	float: left;
+	padding-top:0px;
+	left: 240px;
+	/*border: 1px solid #006;*/
+	/*
+	padding-right:90px;
+	padding-bottom:60px;*/
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
 	font-size: 1em;
 	
 }
-
+input.enviar_contato{
+	height: 60px;
+	float:none; 
+	background: url(/media/images/enviar_contato.png) 50% no-repeat;
+}
+input.enviar_contato:hover	{	
+	cursor: pointer;
+	color:#CCCCCC;
+	background-color: #ff5a00;
 	
+}
+
+.detalhe_direito_contato{
+	position: relative;
+	float: left;
+	top: -20px;
+	/*left:50px;*/
+	/*background-color: #fff;*/
+}
+.contato_direito{
+	position: relative;
+	float: left; 
+	top: 45px;
+	left: 50px;
+}
+.mapa_google{
+	position: relative;
+	float: left;
+	top: 20px;
+}
+
+/*#id_arquivo {
+	position:relative;
+	float:left;
+	top:2px;
+	right:30px;
+	opacity:1.0;
+	-moz-opacity:1.0;
+	z-index:2; 
+	width:100px;
+	height:39px;
+	margin-top: 5px;
+	margin-left: 11px;
+	margin-bottom:15px;
+	background-color: #000000;
+
+/*url(/media/images/enviar.png) 10% 10% no-repeat;
+form .fakeupload {
+	background:url(/media/images/buscar_arquivo_fundo.png) no-repeat center center;
+	width:20px;
+	height:24px;
+	background-color: red;
+	display: block;
+}
+form .fakeupload input {
+	width:20px;
+}
+*/
+
+
+body {
+		background: #1F1F1F;
+	}
+
+	.fieldWrapper span {
+		margin: -25px 0 0 0;
+		float:left;
+	}
+	#file {
+		height:50px;
+		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		}
+	.fieldWrapper input[type='file']{
+		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		float: right;
+		height: 38px;
+		opacity:0;
+	}

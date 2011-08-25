@@ -23,23 +23,19 @@
 	position:relative;
 	float:left;
 	display:inline;
-	/*background-color:#131315;*/
-	
+
+	background-color: red;
 }
+
 .logo{
 	position:relative;
 	float:left;
-	display:inline;
-	top:20px;
-	z-index:10;
-	/*margin-left:380px;*/
-}
-
-.animacao{
-	position:relative;
-	float:left;
-	/*background:#131315;*/
-	
+	width: 150px;
+	/*display:inline;*/
+	/*top:20px;*/
+	/*z-index:10;*/
+	/*margin-left: -200px;*/
+	background-color: red;
 }
 
 

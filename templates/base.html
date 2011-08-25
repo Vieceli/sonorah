@@ -18,15 +18,25 @@
       <link href="/media/css/thickbox.css" rel="stylesheet" type="text/css"/>
       <link rel="stylesheet" href="print.css" type="text/css" media="print" /> 
 <!--  <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />-->
-      <link type="text/css" rel="stylesheet" href="/media/css/estilo-novo.css" />
-      <link type="text/css" rel="stylesheet" href="/media/css/dropdown.css" />
-      <link type="text/css" rel="stylesheet" href="/media/css/cabecalho.css" />
       <link type="text/css" rel="stylesheet" href="/media/css/jquery.lightbox-0.5.css" />
-      <!--[if IE]>
-      <link type="text/css" rel="stylesheet" href="/media/css/cabecalho_ie.css" />
-      <link type="text/css" rel="stylesheet" href="/media/css/dropdown_ie.css" />
-      <link type="text/css" rel="stylesheet" href="/media/css/estilo_novo_ie.css" />
+      
+		
+      	<!--[if IE]>
+      		<link type="text/css" rel="stylesheet" href="/media/css/cabecalho_ie.css" />
+      		<link type="text/css" rel="stylesheet" href="/media/css/estilo-novo_ie.css" />
+      		<link type="text/css" rel="stylesheet" href="/media/css/dropdown_ie.css" />
       <![endif]-->
+      
+      
+       <!--[if !condition]><![IGNORE[--><![IGNORE[]]> 
+      	 <link type="text/css" rel="stylesheet" href="/media/css/cabecalho.css" />
+			<link type="text/css" rel="stylesheet" href="/media/css/estilo-novo.css" />
+      		<link type="text/css" rel="stylesheet" href="/media/css/dropdown.css" />
+       
+       
+       <!--<![endif]-->
+     
+     
       {% block extralinks %}
       {% endblock extralinks %}
       <style type="text/css">
