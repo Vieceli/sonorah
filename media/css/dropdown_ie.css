@@ -8,38 +8,57 @@ This stylesheet and the assocaited (x)html may be modified in any
 way to fit your requirements.
 =================================================================== */
 /* common styling */
-
-
 .menu {
-	position:relative;
-	float:left;
 	font-family: "Franklin Gothic Medium";
 	/*width:750px; */
-	top:75px;
-	left:30px;
-	height:130px; 
-	z-index:100;
+	/*top:75px;*/
+	margin-top: -5px;
+	margin-left: 200px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	behavior: url('/media/border-radius.htc');
-
-	 }
-.menu ul li a, .menu ul li a:visited {
-	display:block; 
-	text-decoration:none; 
-	color:#131315;
-	width:125px; 
-	text-align:center; 
-	color:#FF5A00; 
-	/*border:1px thin #333;*/ 
-	background:#131315; 
-
-	font-size:18px; 
-	overflow:hidden;
-
-
+	z-index: 100;
+	background-color: #131315;
+	display: block;
+	/*position: static;*/
+	/*position: relative;*/
+	float:left;
+	height: 66px;
+	
 }
+
+.menu ul li a, .menu ul li a:visited {
+	display:block;
+	text-decoration:none;
+	color:#FF5A00;
+	width:125px;
+	text-align:center;
+	/*background:#131315;*/
+	font-size:18px;
+	overflow:hidden;
+	}
+
+.menu ul {padding:0; margin:0; list-style: none; }
+.menu ul li {float:left; position:relative;}
+.menu ul li ul {display: none;}
+
+.menu ul li a.hide, .menu ul li a:visited.hide {display:none;}
+.menu ul li a:hover ul li a.hide {display:none;}
+
+.menu ul li a:hover {color:#FF5A00;  background:#262629; }
+.menu ul li a:hover ul {display: inline; position:absolute; top:21px; color:#FF5A00;left:0; background:#020202;visibility: visible;}
+.menu ul li a:hover ul li a.sub {background:#6a3;}
+.menu ul li a:hover ul li a {display:block;color:#FF5A00;}
+.menu ul li a:hover ul li a ul {visibility:hidden;}
+.menu ul li a:hover ul li a:hover {color:#FF5A00;}
+.menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:105px; top:0; color:#FF5A00;}
+.menu ul li a:hover ul li a:hover ul.left {left:-105px;}
+
+/*.menu ul li {float:left;height:30px;display: inline;position: relative;}*/
+/*.menu ul li ul {display: none;position: absolute;}*/
+/*.menu ul li:hover a {color:#FF5A00; background:#020202;}*/
+/*.menu ul li:hover ul {display: inline;	position:absolute;	top:21px;	left:0;	width:125px; background:#020202;visibility: visible;}*/
 
 .menu ul li a#empresa_menu{ height: 66px;background:#131315;}
 .menu ul li a#portfolio_menu{height: 66px;background:#131315;}
@@ -48,11 +67,47 @@ way to fit your requirements.
 .menu ul li a#parceiros_menu{height: 66px;background:#131315;}
 .menu ul li a#contato_menu{height: 66px;background:#131315;}
 .menu ul li a#empresa_menu:hover{background:#000;}
-.menu ul li a#portfolio_menu:hover{background:#000;}/*PASSAR O MOUSE*/
-.menu ul li a#artistas_menu:hover{background:#000;}
+/*	.menu ul li a#empresa_menu:sfhover {background:#000;}*/
+.menu ul li a#portfolio_menu:hover {background:#000;}
+	/*.menu ul li a#portfolio_menu:sfhover{background:#000;}/*PASSAR O MOUSE*/
+.menu ul li:hover a#artistas_menu {height:140px;background-color: #000;}
+.menu ul li a#parceiros_menu:hover{	height:140px;background:#000;}
+
+	/*.menu ul li a#artistas_menu:sfhover{background:#000;}*/
 .menu ul li a#noticias_menu:hover{background:#000;}
-.menu ul li a#parceiros_menu:hover{	height: 66px;background:#000;}
-.menu ul li a#contato_menu:hover{	height: 66px;background:#000;}
+	/*.menu ul li a#noticias_menu:sfhover{background:#000;}*/
+
+	/*.menu ul li a#parceiros_menu:sfhover{height:66px;background:#000;}*/
+.menu ul li a#contato_menu:hover{height: 66px;background:#000;}
+	/*.menu ul li a#contato_menu:sfhover{height: 66px;background:#000;}*/
+	
+	
+/*cor do fundo dos itens*/
+/*
+.menu ul {
+	padding:0; 
+	margin:0; 
+	list-style: none;
+	position: relative;
+}*/
+/*
+.menu ul li:hover ul li a:hover {
+	background:#262629;/*cor do fundo dos itens*/*
+	/*
+	color:#FF5A00;
+	height: 30px;
+}*/
+
+/*
+.menu ul li:sfhover ul {
+	display:block; 
+	position:absolute; 
+	top:21px; 
+	left:0; 
+	width:125px; 
+	background:#020202;
+}*/
+
 
 
 
@@ -82,39 +137,10 @@ way to fit your requirements.
 }
 
 
-.menu ul {
-	padding:0; 
-	margin:0; 
-	list-style: none;
 
-}
-.menu ul li {
-	float:left;
-	position:relative;
-	height:30px; 
-	display:block;
-	 }
-.menu ul li ul {
-	display: none;
-	
-	}
 
 /* specific to non IE browsers */
-.menu ul li:hover ul li a:hover {
-	background:#262629;/*cor do fundo dos itens*/
-	color:#FF5A00;
-	height: 30px;
-}
-.menu ul li:hover a {color:#FF5A00; background:#020202;}
-.menu ul li:hover a#artistas_menu {background-color: #000;}
-.menu ul li:hover ul {
-	display:list-item; 
-	position:absolute; 
-	top:21px; 
-	left:0; 
-	width:125px; 
-	background:#020202;
-}/*
+/*
 .menu ul li:hover ul li a.hide {
 	background:#131315; 
 	}
