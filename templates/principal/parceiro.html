@@ -189,7 +189,7 @@
 						{{ compositor_form.nome }}
 					</div>
 						<div class="fieldWrapper">
-							<div id="file">
+							<div id="filearquivo">
 							{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
 							{{ compositor_form.arquivo }}
 						</div>
@@ -262,8 +262,10 @@
 						{{ radialista_form.estado }}
 					</div>
 					<div class="fieldWrapper">
+						<div id="fileanexo">
 						{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">Anexo: </label>
 							{{ radialista_form.anexo }}
+							</div>
 					</div>
 					<div class="fieldWrapper">
 						{{ radialista_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>

@@ -857,9 +857,8 @@ textarea {
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
 	margin-left:-5px;
-	margin-right:-2px;
 	margin-bottom: 120px;
-	width: 480px;
+	width: 415px;
 	/*display:block;*/
 	top:30px;
 	
@@ -909,13 +908,15 @@ input.enviar_contato:hover	{
 .contato_direito{
 	position: relative;
 	float: left; 
-	top: 45px;
-	left: 50px;
+	top: 40px;
+	left: 140px;
 }
 .mapa_google{
 	position: relative;
 	float: left;
 	top: 20px;
+	margin-top: -5px;
+	margin-bottom: 20px;
 }
 
 /*#id_arquivo {
@@ -955,10 +956,16 @@ body {
 		margin: -25px 0 0 0;
 		float:left;
 	}
-	#file {
-		height:50px;
+	#filearquivo {
+		height:30px;
 		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
 		}
+		
+	#fileanexo {
+		height:30px;
+		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		}
+			
 	.fieldWrapper input[type='file']{
 		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
 		float: right;
