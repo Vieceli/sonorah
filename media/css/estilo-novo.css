@@ -733,12 +733,9 @@ textarea {
 	position: relative;
 	/*clear: both;*/
 	float: left;
-	bottom:0;
 	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
 	left: 311px;
-	padding-right:0px;
-	padding-bottom:72px;
-	top:309px;
+	top:298px;
 	right:-296px;
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
@@ -971,7 +968,6 @@ body {
 	}
 	
 
-
 body {
 		background: #1F1F1F;
 	}
@@ -986,7 +982,7 @@ body {
 		margin:0 0 15px 0px;
 		width:300px;
 		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) 166px 1px  no-repeat;
-		}
+	}*/
 		
 	.fieldWrapper input[type='file']{
 		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
