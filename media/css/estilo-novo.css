@@ -23,7 +23,7 @@ body{
 	background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
 	/*background-position: center center;*/
-	background-position: center 104px;
+	background-position: center 100px;
 }
 
 .empresa { 
@@ -128,7 +128,7 @@ h3{
 
 .conteudo_home{
 	position: relative;
-	margin-top:380px;
+	margin-top:320px;
 	
 	float:left;
 	text-align:justify;
@@ -333,7 +333,7 @@ h2.links_home_titulo{
 	position:relative;
 	/*position:absolute;*/
 	clear: both;
-	/*bottom: 0px;*/
+	bottom: 0px;
 	width:100%;
 	height:150px;
 	background-color:#000;
@@ -346,7 +346,7 @@ h2.links_home_titulo{
 	text-align:justify;
 	position:relative;
 	float:left;
-	padding-left:20%;
+	padding-left:22%;
 	padding-top:40px;
 }
 .links_rodape{
@@ -380,8 +380,6 @@ h2.links_home_titulo{
 	float:left;
 	width:920px;
 	top: -200px;
-	margin-bottom:-150px;
-	
 }
 .empresa_box p{
 font-family: "Franklin Gothic Book";font-size:14px;text-indent:20px;
@@ -857,16 +855,17 @@ textarea {
 	font-family:"Franklin Gothic Heavy";
 	color:#131315;
 	margin-left:-5px;
-	margin-bottom: 120px;
-	width: 415px;
-	/*display:block;*/
+	margin-right:-2px;
+/*	margin-top: -330px;	*/
+	width: 480px;
+	display:block;
 	top:30px;
-	
 	/*height: 400px;*/
 }
 .efeito_enviar_contato{
 	position: relative;
 	clear: both;
+	
 	bottom:35px;
 	left:70px;
 	width: 500px;
@@ -875,6 +874,7 @@ textarea {
 	position: relative;
 	/*clear: both;*/
 	float: left;
+	
 	padding-top:0px;
 	left: 240px;
 	/*border: 1px solid #006;*/
@@ -908,15 +908,13 @@ input.enviar_contato:hover	{
 .contato_direito{
 	position: relative;
 	float: left; 
-	top: 40px;
-	left: 140px;
+	top: 45px;
+	left: 50px;
 }
 .mapa_google{
 	position: relative;
 	float: left;
 	top: 20px;
-	margin-top: -5px;
-	margin-bottom: 20px;
 }
 
 /*#id_arquivo {
@@ -950,25 +948,49 @@ form .fakeupload input {
 
 body {
 		background: #1F1F1F;
-		}
-
-	.fieldWrapper span {
-		margin: -25px 0 0 0;
-		float:left;
 	}
-	#filearquivo {
-		height:30px;
-		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+#radialista_esquerda .filearquivo span, 
+	#compositor_direita .filearquivo span {
+		float:left;
+		margin:-28px 0 0 7px;
+	}
+	#radialista_esquerda .filearquivo,
+	#compositor_direita .filearquivo {
+		height:36px;
+		float:left;
+		margin:0 0 15px 0px;
+		width:310px;
+		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
 		}
 		
-	#fileanexo {
-		height:30px;
-		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
-		}
-			
 	.fieldWrapper input[type='file']{
 		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
 		float: right;
 		height: 38px;
-		opacity:0;
+		opacity: 0;
+	}
+	
+
+
+body {
+		background: #1F1F1F;
+	}
+#contato_box .filearquivo span, 
+	#compositor_direita .filearquivo span {
+		float:left;
+		margin:-28px 0 0 7px;
+	}
+	#contato_box .filearquivo {
+		height:36px;
+		float:left;
+		margin:0 0 15px 0px;
+		width:300px;
+		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) 166px 1px  no-repeat;
+		}
+		
+	.fieldWrapper input[type='file']{
+		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		float: right;
+		height: 38px;
+		opacity: 0;
 	}

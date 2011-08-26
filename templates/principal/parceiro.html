@@ -42,7 +42,8 @@
         $(".fieldWrapper input[type='file']").change(
                 function()
                 {
-			$(".fieldWrapper span").remove();
+			//$(".filearquivo span").remove();
+			$(this).parent().find('span').remove();
 
 		    var text = $(this).val();
 		    text = text.length > 30 ? text.substring( 0, 30 ) + '...' : text;
@@ -50,7 +51,8 @@
 
 			$(span).html( text );
 		
-                    $(".fieldWrapper").append( span  );
+                    //$(".filearquivo").append( span  );
+                   $(this).parent().append( span );
                 }
             );
         }
@@ -189,8 +191,8 @@
 						{{ compositor_form.nome }}
 					</div>
 						<div class="fieldWrapper">
-							<div id="filearquivo">
 							{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+							<div class="filearquivo">
 							{{ compositor_form.arquivo }}
 						</div>
 						</div>
@@ -262,11 +264,11 @@
 						{{ radialista_form.estado }}
 					</div>
 					<div class="fieldWrapper">
-						<div id="fileanexo">
-						{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">Anexo: </label>
+							{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">*Anexo: </label>
+							<div class="filearquivo">
 							{{ radialista_form.anexo }}
-							</div>
-					</div>
+						</div>
+						</div>
 					<div class="fieldWrapper">
 						{{ radialista_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
 						{{ radialista_form.site }}

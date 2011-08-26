@@ -17,6 +17,31 @@
 
 
 {% block js_ready %}
+
+$(document).ready(
+    function()
+    {
+        // bind click file to div fake
+        $(".fieldWrapper input[type='file']").change(
+                function()
+                {
+			//$(".filearquivo span").remove();
+			$(this).parent().find('span').remove();
+
+		    var text = $(this).val();
+		    text = text.length > 30 ? text.substring( 0, 30 ) + '...' : text;
+			var span = $('<span>');
+
+			$(span).html( text );
+		
+                    //$(".filearquivo").append( span  );
+                   $(this).parent().append( span );
+                }
+            );
+          }
+        );
+
+
  {{ block.super }}
  $('body').addClass('contato'); 	   
 {% endblock %}
@@ -48,15 +73,15 @@
 				{{ contato_form.telefone }}
 			</div>
 			<div class="fieldWrapper">
-				<div id="filearquivo">
 				{{ contato_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+				<div class="filearquivo">
 				<!--<div class="fakeupload">
 					<input type="text" name="fakeupload" />
 				<input type="file" name="arquivo" id="arquivo_id" class="arquivo_id"  onchange="this.form.fakeupload.value = this.value;" /> -->
 				{{ contato_form.arquivo }}
 				<!--<input type="hidden" id="X-Progress-ID" name="X-Progress-ID" value=""/>
 				<input type="hidden" id="id" name="id" value=""/>-->
-				</div>
+			</div>
 			</div>
 			<div class="fieldWrapper">
 				{{ contato_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
