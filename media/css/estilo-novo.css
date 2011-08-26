@@ -887,15 +887,20 @@ textarea {
 	
 }
 input.enviar_contato{
-	height: 60px;
+	margin-left: 43px;
+	height: 70px;
 	float:none; 
-	background: url(/media/images/enviar_contato.png) 50% no-repeat;
+	width: 150px;
+	background: url(/media/images/enviar_contato.png) no-repeat;
+	border-style: hidden;
 }
 input.enviar_contato:hover	{	
 	cursor: pointer;
-	color:#CCCCCC;
-	background-color: #ff5a00;
-	
+	/*color:#CCCCCC;*/
+	/*background-color: #ff5a00;*/
+	width: 150px;
+	height: 70px;
+	border-style: hidden;
 }
 
 .detalhe_direito_contato{
@@ -944,6 +949,7 @@ form .fakeupload input {
 	width:20px;
 }
 */
+
 
 
 

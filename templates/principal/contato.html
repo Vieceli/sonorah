@@ -1,12 +1,36 @@
 {% extends "base.html" %}
 
-{% block titulo %}Noticia - {{ noticia.titulo }}{% endblock %}
+{% block titulo %}Contato {% endblock %}
 
 {% block extralinks %}
 	{{ block.super }}
 
 {% endblock %}
 {% block extracss %}
+#progress_container {
+    font-size: .9em;
+    width: 100%;
+    height: 1.25em;
+    position: relative;
+    margin: 3em 0;
+    display: none;
+}
+
+#progress_filename {
+    font-size: .9em;
+    width: 100%;
+}
+
+#progress_bar {
+    width: 100%;
+    border: 1px solid #999;
+}
+
+#progress_indicator {
+    background: #8a9;
+    width: 0;
+    height: 4px;
+}
 	{{ block.super }}
 {% endblock %}
 
@@ -38,13 +62,38 @@
     );
  {{ block.super }}
  $('body').addClass('contato'); 
- 	   
+ 
+  $(function() {
+        $('#upload_form').uploadProgress({
+            jqueryPath: "/media/js/jquery.js",
+            progressBar: '#progress_indicator',
+            progressUrl: '/upload_progress/',
+            start: function() {
+                $("#upload_form").hide();
+                filename = $("#id_arquivo").val().split(/[\/\\]/).pop();
+                $("#progress_filename").html('Enviando ' + filename + "...");
+                $("#progress_container").show();
+            },
+            uploadProgressPath: "/media/js/jquery.uploadProgress.js",
+            uploading: function(upload) {
+                if (upload.percents == 100) {
+                    window.clearTimeout(this.timer);
+                    $("#progress_filename").html('Enviando ' + filename + "...");
+                } else {
+                    $("#progress_filename").html('Enviado ' + filename + ': ' + upload.percents + '%');
+                }
+            },
+            interval: 1000
+        });
+    });
+ 
+ 
 {% endblock %}
 
 
 {% block extrajs %}
 	{{ block.super }}
-	
+
 {% endblock extrajs %}
 
 
@@ -55,6 +104,12 @@
 <div id="contato_box" class="contato_box">
 	<form enctype="multipart/form-data" action="{% url contato %}" method="post" id="form_upload">
 			{% csrf_token %}
+			<div id="progress_container">
+			    <div id="progress_filename"></div>
+			    <div id="progress_bar">
+			        <div id="progress_indicator"></div>
+			    </div>
+			</div>
 			<div class="fieldWrapper">
 				{{ contato_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
 				{{ contato_form.nome }}
@@ -70,22 +125,22 @@
 			<div class="fieldWrapper">
 				{{ contato_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
 				<div class="filearquivo">
-				<!--<div class="fakeupload">
-					<input type="text" name="fakeupload" />
-				<input type="file" name="arquivo" id="arquivo_id" class="arquivo_id"  onchange="this.form.fakeupload.value = this.value;" /> -->
 					{{ contato_form.arquivo }}
-				<!--<input type="hidden" id="X-Progress-ID" name="X-Progress-ID" value=""/>
-				<input type="hidden" id="id" name="id" value=""/>-->
 				</div>
 			</div>
 			<div class="fieldWrapper">
-				{{ contato_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+				<label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+				
 				<div id="mensagem_contato" class="mensagem_contato">
-					{{ contato_form.mensagem }}
+					{{ contato_form.mensagem }}{{ contato_form.mensagem.errors }} 
 				</div>
 			</div>
 			<input name="MAX_FILE_SIZE" value="1048576" type="hidden" >
+
+
 			<input type="submit" value="Enviar"  class="enviar_contato"/>
+			
+			
 		</form>
 	<div id="efeito_enviar_contato" class="efeito_enviar_contato">
 		<img src="/media/images/parceiros_efeito_enviar.png"/>

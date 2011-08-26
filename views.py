@@ -13,4 +13,3 @@ def server_error_500(request):
     page_title = u'Erro no Servidor'
     return render_to_response('500.html', locals(),
                               context_instance=RequestContext(request))   
-    

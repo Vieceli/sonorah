@@ -14,13 +14,13 @@ def parceiros(request,template_name):
     
     if request.method == 'POST': 
         POST=request.POST
-        contratante_form = ContratantesForm(request.POST)
-        compositor_form = CompositoresForm(request.POST)
-        radialista_form = RadialistaForm(request.POST)
-        parceiro_form = ParceiroForm(request.POST)
+        contratante_form = ContratantesForm(request.POST,request.FILES)
+        compositor_form = CompositoresForm(request.POST,request.FILES)
+        radialista_form = RadialistaForm(request.POST,request.FILES)
+        parceiro_form = ParceiroForm(request.POST,request.FILES)
         
         if POST.has_key('contratante'):
-            print "POST['contratante']"       
+            #print "POST['contratante']"       
             if contratante_form.is_valid(): 
                 contratante_form.save()
                 return HttpResponseRedirect('/Obrigado/')
@@ -29,7 +29,7 @@ def parceiros(request,template_name):
                 opcao="contratante"
                 contratante_form = ContratantesForm(request.POST)
         elif POST.has_key('compositor'):
-            print "POST['compositor']"
+            #print "POST['compositor']"
             if compositor_form.is_valid(): 
                 compositor_form.save()
                 return HttpResponseRedirect('/Obrigado/')
@@ -38,7 +38,7 @@ def parceiros(request,template_name):
                 opcao="compositor"
                 compositor_form = CompositoresForm(request.POST)
         elif POST.has_key('radialista'):
-            print "POST['radialista']"
+            #print "POST['radialista']"
             if radialista_form.is_valid(): 
                 radialista_form.save()
                 return HttpResponseRedirect('/Obrigado/')
@@ -47,7 +47,7 @@ def parceiros(request,template_name):
                 opcao="radialista"
                 radialista_form = RadialistaForm(request.POST)
         elif POST.has_key('parceiro'):
-            print "POST['parceiro']"
+            #print "POST['parceiro']"
             if parceiro_form.is_valid(): 
                 parceiro_form.save()
                 return HttpResponseRedirect('/Obrigado/')

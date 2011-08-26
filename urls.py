@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     
                           
     (r'^radio/$', 'principal.views.radio', {'template_name':'principal/radio.html'}, 'radio'),
+    (r'^upload_progress/$', 'contato.views.upload_progress', 'upload_progress'),
 
                     
      #includes

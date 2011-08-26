@@ -43,7 +43,7 @@
 			$(this).parent().find('span').remove();
 
 		    var text = $(this).val();
-		    text = text.length > 30 ? text.substring( 0, 30 ) + '...' : text;
+		    text = text.length > 15 ? text.substring( 0, 15 ) + '...' : text;
 			var span = $('<span>');
 
 			$(span).html( text );
@@ -52,7 +52,7 @@
                    $(this).parent().append( span );
                 }
             );
-
+  $(function() {
 	$.fn.extend({
 
 		customStyle: function (options) {
@@ -78,11 +78,10 @@
 			}
 		}
 	});
-	$(function(){
- 
+  });
+$(function(){
 	$('select').customStyle();
-	 
-	});
+});
 
     	
 {% endblock %}
@@ -191,8 +190,8 @@
 						<div class="fieldWrapper">
 							{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
 							<div class="filearquivo">
-							{{ compositor_form.arquivo }}
-						</div>
+								{{ compositor_form.arquivo }}
+							</div>
 						</div>
 						<div class="fieldWrapper">
 						{{ compositor_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
