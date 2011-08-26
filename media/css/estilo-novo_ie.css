@@ -958,11 +958,11 @@ body {
 		float:left;
 		margin:0 0 15px 0px;
 		width:300px;
-		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) 166px 1px  no-repeat;
+		background:#000 url(/media/images/arquivos.gif) 166px 1px  no-repeat;
 		}
 		
 	.fieldWrapper input[type='file']{
-		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		background: url(/media/images/arquivos.gif) right no-repeat;
 		float: right;
 		height: 38px;
 		opacity: 0;

@@ -27,7 +27,7 @@
 			$(this).parent().find('span').remove();
 
 		    var text = $(this).val();
-		    text = text.length > 30 ? text.substring( 0, 30 ) + '...' : text;
+		    text = text.length > 15 ? text.substring( 0, 15 ) + '...' : text;
 			var span = $('<span>');
 
 			$(span).html( text );
@@ -73,7 +73,7 @@
 				<!--<div class="fakeupload">
 					<input type="text" name="fakeupload" />
 				<input type="file" name="arquivo" id="arquivo_id" class="arquivo_id"  onchange="this.form.fakeupload.value = this.value;" /> -->
-				{{ contato_form.arquivo }}
+					{{ contato_form.arquivo }}
 				<!--<input type="hidden" id="X-Progress-ID" name="X-Progress-ID" value=""/>
 				<input type="hidden" id="id" name="id" value=""/>-->
 				</div>

@@ -17,7 +17,7 @@ way to fit your requirements.
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	behavior: url('/media/border-radius.htc');
+	/*behavior: url('/media/border-radius.htc');*/
 	z-index: 100;
 	background-color: #131315;
 	display: block;
