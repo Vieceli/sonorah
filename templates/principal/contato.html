@@ -18,13 +18,11 @@
 
 {% block js_ready %}
 
-$(document).ready(
-    function()
-    {
+
+  
         // bind click file to div fake
-        $(".fieldWrapper input[type='file']").change(
-                function()
-                {
+   $(".fieldWrapper input[type='file']").change(
+        function(){
 			//$(".filearquivo span").remove();
 			$(this).parent().find('span').remove();
 
@@ -34,16 +32,13 @@ $(document).ready(
 
 			$(span).html( text );
 		
-                    //$(".filearquivo").append( span  );
-                   $(this).parent().append( span );
-                }
-            );
-          }
-        );
-
-
+            //$(".filearquivo").append( span  );
+            $(this).parent().append( span );
+        }
+    );
  {{ block.super }}
- $('body').addClass('contato'); 	   
+ $('body').addClass('contato'); 
+ 	   
 {% endblock %}
 
 

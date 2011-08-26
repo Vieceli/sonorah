@@ -35,9 +35,6 @@
 		}
 	});
 	
-	$(document).ready(
-    function()
-    {
         // bind click file to div fake
         $(".fieldWrapper input[type='file']").change(
                 function()
@@ -55,11 +52,7 @@
                    $(this).parent().append( span );
                 }
             );
-        }
-);
 
-	
-	(function ($) {
 	$.fn.extend({
 
 		customStyle: function (options) {
@@ -85,7 +78,7 @@
 			}
 		}
 	});
-})(jQuery);
+
     	
 {% endblock %}
     	

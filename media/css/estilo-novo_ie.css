@@ -945,18 +945,26 @@ form .fakeupload input {
 	width:20px;
 }
 */
-
-	.fieldWrapper span {
-		margin: -25px 0 0 0;
-		float:left;
+body {
+		background: #1F1F1F;
 	}
-	#file {
-		height:50px;
-		background:url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+#contato_box .filearquivo span,#compositor_direita .filearquivo span {
+		float:left;
+		margin:-28px 0 0 7px;
+		/*background-color: red;*/
+	}
+	#contato_box .filearquivo {
+		height:36px;
+		float:left;
+		margin:0 0 15px 0px;
+		width:300px;
+		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) 166px 1px  no-repeat;
 		}
+		
 	.fieldWrapper input[type='file']{
 		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
 		float: right;
 		height: 38px;
-		opacity:0;
+		opacity: 0;
+		filter: alpha(opacity = 0);
 	}
