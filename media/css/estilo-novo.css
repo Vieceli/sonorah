@@ -946,31 +946,6 @@ form .fakeupload input {
 */
 
 
-body {
-		background: #1F1F1F;
-	}
-#radialista_esquerda .filearquivo span, 
-	#compositor_direita .filearquivo span {
-		float:left;
-		margin:-28px 0 0 7px;
-	}
-	#radialista_esquerda .filearquivo,
-	#compositor_direita .filearquivo {
-		height:36px;
-		float:left;
-		margin:0 0 15px 0px;
-		width:310px;
-		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
-		}
-		
-	.fieldWrapper input[type='file']{
-		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
-		float: right;
-		height: 38px;
-		opacity: 0;
-	}
-	
-
 
 body {
 		background: #1F1F1F;
@@ -985,11 +960,11 @@ body {
 		float:left;
 		margin:0 0 15px 0px;
 		width:300px;
-		background:#000 url(http://127.0.0.1:8000/media/images/arquivos.gif) 166px 1px  no-repeat;
+		background:#000 url(/media/images/arquivos.gif) 166px 1px  no-repeat;
 		}
 		
 	.fieldWrapper input[type='file']{
-		background: url(http://127.0.0.1:8000/media/images/arquivos.gif) right no-repeat;
+		background: url(/media/images/arquivos.gif) right no-repeat;
 		float: right;
 		height: 38px;
 		opacity: 0;

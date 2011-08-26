@@ -14,14 +14,12 @@ def contato(request,template_name):
 #        GET = request.GET  
 #        if GET.has_key('a'):  
 #            form = ArtistaForm(request.GET'  
-    contato_form = ContatoForm(request.POST)
     if request.method == 'POST': 
         POST=request.POST
-        if POST.has_key('contato'):
-            contato_form = ContatoForm(request.POST)
-            if contato_form.is_valid(): 
-                contato_form.save()
-                return HttpResponseRedirect('/Obrigado/')
+        contato_form = ContatoForm(request.POST)
+        if contato_form.is_valid(): 
+            contato_form.save()
+            return HttpResponseRedirect('/Obrigado/')
     else:
         contato_form = ContatoForm()
 
