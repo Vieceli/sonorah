@@ -9,6 +9,7 @@
       <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
       <meta content="{{ meta_keywords }}" name="Keywords"/>
       <meta content="{{ meta_description }}" name="Description"/>
+      
       <meta content="pt-br" http-equiv="Content-Language"/>
       <meta name="verify-v1" content="l4Z4jgwG5X58psxFkH3eILv9ua3nJKYrq5zGFZC0xj0=" />
       <meta name="google-site-verification" content="Ntmm7v_b9WRnWCY6qZlD1Z32hC80m4d1crcI_7jLOqU" />
@@ -16,7 +17,7 @@
       {% endblock metadata %}
   	  <link href="/media/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css"/>
       <link href="/media/css/thickbox.css" rel="stylesheet" type="text/css"/>
-      <link rel="stylesheet" href="print.css" type="text/css" media="print" /> 
+      <link rel="stylesheet" href="/media/css/print.css" type="text/css" media="print" /> 
 <!--  <link type="text/css" rel="stylesheet" href="/media/css/estilo.css" />-->
       <link type="text/css" rel="stylesheet" href="/media/css/jquery.lightbox-0.5.css" />
       
@@ -42,7 +43,7 @@
           {% block extracss %}
           {% endblock extracss %}
       </style>
-     <script type="text/javascript" src="/media/js/jquery-1.5.1.min.js" charset="utf-8"></script>
+     <script type="text/javascript" src="/media/js/jquery-1.6.2.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/jquery-ui-1.8.14.custom.min.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/jquery.form.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/jquery.progressbar.js" charset="utf-8"></script>
@@ -72,26 +73,17 @@
 		function to_old_win(url){
 				opener.location.href = url;
 			}
-		function  sfHover () {
-			var sfEls = document.getElementById("menu").getElementsByTagName("li");
-			for (var i=0; i<sfEls.length; i++) {
-				sfEls[i].onmouseover=function() {
-					this.className+=" hover";
-				}
-				sfEls[i].onmouseout=function() {
-					this.className=this.className.replace(new RegExp(" hover\\b"), "");
-				}
-			}
-		}		
+		
 	      {% block extrajs %}
 	      
 	      {% endblock extrajs %}
-	      
+	     
 	       $(document).ready(function(){
+	       	
 	        	{% block js_ready %}	        
 		        {% endblock js_ready %}
 		   
-				if (window.attachEvent) window.attachEvent("onload", sfHover);
+				/*if (window.attachEvent) window.attachEvent("onload", sfHover);*/
          	 /*SELECIONA aba do parceiro pelo menu teste*/
 				$('a#contratante').click(function (){
 					$tabs.tabs('select', 2);
@@ -105,7 +97,7 @@
 	</script>
 </head>
   
-<body class="bg0">
+<body class="fundo1">
 	  	  {% block cabecalho_superior %}
 				{% include "includes/cabecalho_superior.html" %}
 	      {% endblock cabecalho_superior %}

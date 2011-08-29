@@ -16,7 +16,9 @@
 {% block js_ready %}
  {{ block.super }}
  	  	//*usar chama de funcao de tempo com fade*/
-		     	$('a#fundo1').click(function (){
+		     	
+	    
+	  			$('a#fundo1').click(function (){
 		     		$('body').removeClass("fundo2");
 		     		$('body').removeClass("fundo3");
 		     		$('body').addClass("fundo1"); 
@@ -39,52 +41,42 @@
 		    	$.blockUI({ css: { border:'0px solid #131315'} });  	
 		    	$.blockUI({ css: { backgroundColor:'#131315'} });
 		    	$.blockUI({ css: { color:'#ff5a00'} });  	
-	            
+	           
 	            $.ajax({ 
 	                url: '/', 
 	                cache: false, 
 	                context: document.body,
 	                success: function() { 
 	                    // unblock when remote call returns 	                    
-	                    $.unblockUI();/*
-	                    $('#book').fadeOut('slow', function() {
-						    // Animation complete.
-						});*/
-						
-						/*Animacao por tempo do conteudo*/
-	                    pulse1();
-	                    pulse2();
-	                    pulse3();
+	                    $.unblockUI();
+	                    
+		              
 	                    function pulse1() {
-	                    	/*alert('pulse1');*/
-								$('body').removeClass('fundo3', 2000, function() {
-									/*alert('remove_fundo3');*/
-									$('body').addClass('fundo1', 2000, pulse1)
-									/*alert('adiciona_fundo1');*/
-								});
-							}
+							$('body').removeClass('fundo3', 6000, function() {
+								$('body').addClass('fundo1', 0, pulse1)
+								//pulse2();
+							});
+							pulse2();
+						}
 						
 						function pulse2() {
-							/*alert('pulse2');*/
-							$('body').removeClass('fundo1', 3000, function() {
-								/*alert('remove_fundo1');*/
-									$('body').addClass('fundo2', 4000, pulse2)
-									/*alert('adiciona_fundo2');*/
-								});
+							$('body').removeClass('fundo1', 6000, function() {
+								$('body').addClass('fundo2', 0, pulse2)
+							//pulse3();
+							});
+							pulse3();
 						}
+						
 						function pulse3() {
-							/*alert('pulse3');*/
-								$('body').removeClass('fundo2', 3000, function() {
-									/*alert('remove_fundo2');*/
-									$('body').addClass('fundo3', 4000, pulse3)
-									/*alert('adiciona_fundo3');*/
-								});
-						} 
-	                    /*alert('ola');*/ 
+							$('body').removeClass('fundo2', 6000, function() {
+								$('body').addClass('fundo3', 0, pulse3)
+							//pulse1();
+							});
+							pulse1();
+						}
+						pulse1();                   
 	                } 
 	            });
-	    
-	  
 	              
 {% endblock %}
 	         

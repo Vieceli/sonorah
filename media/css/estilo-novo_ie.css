@@ -8,9 +8,9 @@ body{
 	color:#6d6d6d;
 	font:16px "Franklin Gothic Book", "Franklin Gothic Heavy", "Franklin Gothic Medium";
 	/*background:#131315 ;*/
-	font-weight:300;/*
+	font-weight:300;
 	background-color:#131315;
-	background-image: url(/media/images/home/fundo_banner_inter.png);
+	/*background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
 	background-position: center 119.5px;*/
 	
@@ -18,14 +18,15 @@ body{
 	/*background-position: 30% 125.5%;*/ 
 	list-style: none;
 }
+/*
 .bg0{
 	background-color:#131315;
 	background-image: url(/media/images/home/fundo_banner_inter.png);
 	background-repeat: no-repeat;
-	/*background-position: center center;*/
+	background-position: center center;
 	background-position: center 104px;
 }
-
+*/
 .empresa { 
 	background-color:#131315;
 	background-repeat: no-repeat;
@@ -945,9 +946,7 @@ form .fakeupload input {
 	width:20px;
 }
 */
-body {
-		background: #1F1F1F;
-	}
+
 #contato_box .filearquivo span,#compositor_direita .filearquivo span {
 		float:left;
 		margin:-28px 0 0 7px;
