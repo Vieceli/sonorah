@@ -650,7 +650,7 @@ label
 .fieldWrapper input
 {
 	border:0px;
-	color: #19191a;
+	color:#6d6d6d;
 	background: #000;
 	height: 37px;
 	/*width:311px;*/
@@ -663,7 +663,7 @@ label
 }
 textarea {
 	border:0px;
-	color: #19191a;
+	color:#6d6d6d;
 	background: #000;
 	width: 307px;
 	height: 140px;
@@ -1067,14 +1067,14 @@ select{
 	
 }
 
-#radialista_esquerda .filearquivo {
+#radialista_direita .filearquivo {
 	height:36px;
 	float:left;
 	margin:0 0 15px 0px;
 	width:310px;
 	background:#000 url(/media/images/arquivos.gif) right no-repeat;
 }
-#compositor_direita .filearquivo{
+#radialista_direita .filearquivo{
 	height:36px;
 	float:left;
 	margin:0 0 15px 0px;

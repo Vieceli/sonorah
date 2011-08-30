@@ -184,16 +184,17 @@ $(function(){
 						{{ compositor_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
 						{{ compositor_form.nome }}
 					</div>
-						<div class="fieldWrapper">
+					<div class="fieldWrapper">
+						{{ compositor_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
+						{{ compositor_form.email }}
+					</div>
+					<div class="fieldWrapper">
 							{{ compositor_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
 							<div class="filearquivo">
 								{{ compositor_form.arquivo }}
 							</div>
-						</div>
-						<div class="fieldWrapper">
-						{{ compositor_form.email.errors }} <label for="id_email" class="id_email">*E-mail: </label>
-						{{ compositor_form.email }}
 					</div>
+					
 				</div>
 				<div id="compositor_esquerda" class="compositor_esquerda">
 					<div class="fieldWrapper">
@@ -244,21 +245,24 @@ $(function(){
 						{{ radialista_form.telefone }}
 					</div>
 					<div class="fieldWrapper">
-						{{ radialista_form.endereco.errors }} <label for="id_endereco" class="id_endereco">*Endereco: </label>
-						{{ radialista_form.endereco }}
-					</div>
-				</div>
-				<div id="radialista_esquerda" class="radialista_esquerda">
-					<div class="fieldWrapper">
-							{{ radialista_form.cidade }}
-					</div>
-					
-					<div class="fieldWrapper">
 							{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">*Anexo: </label>
 						<div class="filearquivo">
 							{{ radialista_form.anexo }}
 						</div>
+						
 					</div>
+					
+				</div>
+				<div id="radialista_esquerda" class="radialista_esquerda">
+					<div class="fieldWrapper">
+						{{ radialista_form.endereco.errors }} <label for="id_endereco" class="id_endereco">*Endereco: </label>
+						{{ radialista_form.endereco }}
+					</div>
+					<div class="fieldWrapper">
+							{{ radialista_form.cidade }}
+					</div>
+					
+					
 					<div class="fieldWrapper">
 						{{ radialista_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
 						{{ radialista_form.site }}
@@ -275,12 +279,14 @@ $(function(){
 						{{ radialista_form.youtube.errors }} <label for="id_youtube" class="id_youtube">Youtube: </label>
 						{{ radialista_form.youtube }}
 					</div>
+					
 					<div class="fieldWrapper">
 						{{ radialista_form.mensagem.errors }} <label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
 						<div id="mensagem_radialista" class="mensagem_radialista">
 							{{ radialista_form.mensagem }}
 						</div>
 					</div>
+					
 				</div>
 				
 

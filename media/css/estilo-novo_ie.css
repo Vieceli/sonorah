@@ -654,8 +654,10 @@ label
 
 .fieldWrapper input
 {
+	
 	border:0px;
-	color: #19191a;
+	color: #6d6d6d;
+	font-size: 16px;
 	background: #000;
 	height: 37px;
 	/*width:311px;*/
@@ -668,7 +670,7 @@ label
 }
 textarea {
 	border:0px;
-	color: #19191a;
+	color: #6d6d6d;
 	background: #000;
 	width: 307px;
 	height: 140px;
@@ -737,20 +739,16 @@ textarea {
 }
 .enviar_parceiro{
 	position: relative;
-	/*clear: both;*/
-	float: left;
-	bottom:0;
-	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 311px;
-	padding-right:0px;
-	padding-bottom:72px;
-	top:309px;
-	right:-296px;
+	clear: both;
+	float: right;
+	background: url(/media/images/enviar.png) center no-repeat;
+	right:102px;
+	top:30px;
+	width:150px;
 	color: #3d3d3d;
 	font-family: "Franklin Gothic Heavy";
 	font-size: 1.5em;
 	border-style:none;
-	
 }
 /*FORMULARIOS COMPOSITOR*/
 .compositor_direita{
@@ -766,25 +764,11 @@ textarea {
 	
 }
 .mensagem_compositor{
-	margin-left:97px;
+	margin-left:90px;
 	left: 80px;
 	padding-left: 15px;
 }
-.enviar_compositor{
-	position: relative;
-	/*clear: both;*/
-	float: right;
-	bottom:0px;
-	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 270px;
-	top:215px;
-	padding-right:0px;
-	padding-bottom:71px;
-	color: #3d3d3d;
-	font-family: "Franklin Gothic Heavy";
-	font-size: 1.5em;
-	border-style: none;
-}
+
 /*FORMULARIOS Radialista*/
 .radialista_direita{
 	position: relative;
@@ -800,25 +784,11 @@ textarea {
 }
 
 .mensagem_radialista{
-	margin-left:97px;
+	margin-left:90px;
 	left: 80px;
 	padding-left: 15px;
 }
-.enviar_radialista{
-	position: relative;
-	/*clear: both;*/
-	float: right;
-	bottom:0px;
-	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 267px;
-	top:517px;
-	padding-right:0px;
-	padding-bottom:71px;
-	color: #3d3d3d;
-	font-family: "Franklin Gothic Heavy";
-	font-size: 1.5em;
-	border-style: none;
-}
+
 /*FORMULARIOS Contratante*/
 .contratante_direita{
 	position: relative;
@@ -833,25 +803,11 @@ textarea {
 }
 
 .mensagem_contratante{
-	margin-left:97px;
+	margin-left:90px;
 	left: 80px;
 	padding-left: 15px;
 }
-.enviar_contratante{
-	position: relative;
-	/*clear: both;*/
-	float: left;
-	bottom:0px;
-	background: url(/media/images/enviar_parceiro.png) 20% 20% no-repeat;
-	left: 305px;
-	top:310px;
-	padding-right:0px;
-	padding-bottom:35px;
-	border-style:none;
-	color: #3d3d3d;
-	font-family: "Franklin Gothic Heavy";
-	font-size: 1.5em;
-}
+
 
 /*CONTATO
  */
@@ -949,7 +905,6 @@ form .fakeupload input {
 	width:20px;
 }
 */
-
 .fieldWrapper input[type='file']{
 	background: url(/media/images/arquivos.gif) right no-repeat;
 	float: right;
@@ -959,8 +914,95 @@ form .fakeupload input {
 	-moz-opacity:0;
 	
 }
+.estado select{
 
-#radialista_esquerda .filearquivo span{
+	height: 38px;
+	background:#000;
+	border: 0;
+	width: 70px;
+	color: #6d6d6d;
+	font-size: 14px; 
+	padding-top:7px;
+	margin-top: -5px;
+	/*opacity:0;filter:alpha(opacity=0);-moz-opacity:0;*/
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+
+}
+.estado option{
+	
+	border: 0;
+	background:#000;
+	left: -50px;
+}
+
+.cidade select{
+	position:relative;
+	float: right;
+	height: 38px;
+	/*opacity:0;filter:alpha(opacity=0);-moz-opacity:0;*/
+	background:#000;
+	border: 0;
+	color: #6d6d6d;
+	font-size: 14px; 
+	padding-top:7px;
+	margin-top: -40px;
+	margin-bottom: 10px;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+
+}
+
+/*
+.estado{
+	position:relative;
+	float: left;
+	margin-left:100px;
+	height: 38px;
+	width:60px;
+	border: 0;
+	color: #6d6d6d;
+	font-size: 14px; 
+	margin-top: -35px;
+	
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+	background:#000 url(/media/images/flecha.gif) right no-repeat;
+}
+*/
+
+	/*margin:0 0 15px 0px;
+.cidade_uf select{
+	height:36px;
+	float:left;
+
+	width:310px;
+	
+	
+}
+
+.estado select{
+
+}
+/*
+.cidade_uf {
+	height:36px;
+	float:left;
+	margin:0 0 15px 0px;
+	width:310px;
+	background:#000 url(/media/images/flecha.gif) right no-repeat;
+}
+
+.cidade_uf select{
+	position:relative;
+	float:left;
+	margin-left: 180px;
+	
+}
+#radialista_esquerda .estado select{
+	float:left;
+	margin:-28px 0 0 7px;
+}*/
+
+
+#radialista_direita .filearquivo span{
 	float:left;
 	margin:-28px 0 0 7px;
 }
@@ -971,9 +1013,10 @@ form .fakeupload input {
 #contato_box .filearquivo span{
 	float:left;
 	margin:-28px 0 0 7px;
+	
 }
 
-#radialista_esquerda .filearquivo {
+#radialista_direita .filearquivo {
 	height:36px;
 	float:left;
 	margin:0 0 15px 0px;
