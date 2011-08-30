@@ -71,7 +71,7 @@ way to fit your requirements.
 .menu ul li a#portfolio_menu:hover {background:#000;}
 	/*.menu ul li a#portfolio_menu:sfhover{background:#000;}/*PASSAR O MOUSE*/
 .menu ul li:hover a#artistas_menu {height:140px;background-color: #000;}
-.menu ul li a#parceiros_menu:hover{	height:140px;background:#000;}
+.menu ul li a#parceiros_menu:hover{	height:150px;background:#000;}
 
 	/*.menu ul li a#artistas_menu:sfhover{background:#000;}*/
 .menu ul li a#noticias_menu:hover{background:#000;}
