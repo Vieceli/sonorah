@@ -15,7 +15,7 @@ function changeUF(the_select){
 			reg_el.load(site_root + 'ajax/regiao/'+uf+'/');
 		}		
 	} else {
-		jQuery(id).html('<option value="">--</option>');
-		reg_el.html("--");
+		jQuery(id).html('<option value="">Estado</option>');
+		reg_el.html("Estado");
 	}
 }

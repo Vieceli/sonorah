@@ -21,16 +21,16 @@ class SelectMunicipioWidget(Widget):
         
         output = []
         uf_val = ''
-        uf_choices = [('','--')]+[(uf.pk,uf.uf) for uf in UF.objects.order_by('uf')]
+        uf_choices = [('','Estado')]+[(uf.pk,uf.uf) for uf in UF.objects.order_by('uf')]
         uf_select = Select(choices=uf_choices)
-        municipio_select = Select(choices=(('','--'),))
+        municipio_select = Select(choices=(('','Cidades'),))
         
         if value:
             try:
                 municipio = Municipio.objects.get(pk=value)
                 uf_val = municipio.uf
                 mun_choices = [(m.pk, m.nome) for m in Municipio.objects.filter(uf=uf_val).order_by('nome')]
-                municipio_select = Select(choices=[('','- Selecione -')]+mun_choices)
+                municipio_select = Select(choices=[('','Cidades')]+mun_choices)
             except Municipio.DoesNotExist:
                 pass
         uf_attrs = self.attrs.copy()
@@ -39,12 +39,12 @@ class SelectMunicipioWidget(Widget):
         required = False
         if 'class' in self.attrs:
             required = self.attrs['class'] == 'required'
-        output.append(u'<div class="field"><label%s>Estado</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
+        output.append(u'<label>*Local</label><div class="estado">%s%s</div>' % (required and ' class="required"' or '', select_html))#background:url(/media/images/flecha.gif) right no-repeat
         
         munic_attrs = self.attrs.copy()
-        munic_attrs['style']="width:250px;"
+        munic_attrs['style']="width:230px;"
         select_html = municipio_select.render(name, value, munic_attrs)
-        output.append(u'<div class="field"><label%s>Cidade</label><br />%s</div>' % (required and ' class="required"' or '', select_html))
+        output.append(u'<div class="cidade">%s%s</div>' % (required and ' class="required"' or '', select_html))
         return mark_safe(u'\n'.join(output))
     
     class Media:

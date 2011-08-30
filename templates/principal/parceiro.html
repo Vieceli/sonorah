@@ -52,9 +52,9 @@
                    $(this).parent().append( span );
                 }
             );
+            /*
   $(function() {
 	$.fn.extend({
-
 		customStyle: function (options) {
 			if (!$.browser.msie || ($.browser.msie && $.browser.version > 6)) {
 				return this.each(function () {
@@ -82,7 +82,7 @@
 $(function(){
 	$('select').customStyle();
 });
-
+*/
     	
 {% endblock %}
     	
@@ -155,11 +155,7 @@ $(function(){
 					</div>
 					<div id="parceiro_esquerda" class="parceiro_esquerda">
 						<div class="fieldWrapper">
-							
 							{{ parceiro_form.cidade }}
-						</div>
-						<div class="fieldWrapper">
-							{{ parceiro_form.estado }}
 						</div>
 						<div class="fieldWrapper">
 							{{ parceiro_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
@@ -173,7 +169,8 @@ $(function(){
 						</div>
 					</div>
 					
-						<input type="submit" value="Enviar" name="parceiro" class="enviar_parceiro"/>
+					<input type="submit" value="Enviar" name="parceiro" class="enviar_parceiro"/>
+					
 					
 			</div>
 			</form>
@@ -210,7 +207,7 @@ $(function(){
 						</div>
 					</div>
 				</div>
-				<input type="submit" value="Enviar" name="compositor"  class="enviar_compositor"/>
+				<input type="submit" value="Enviar" name="compositor"  class="enviar_parceiro"/>
 			</form>
 		</div>
 		<div id="radialista" class="radialista">
@@ -253,19 +250,15 @@ $(function(){
 				</div>
 				<div id="radialista_esquerda" class="radialista_esquerda">
 					<div class="fieldWrapper">
-						
-						{{ radialista_form.cidade }}
+							{{ radialista_form.cidade }}
 					</div>
-					<div class="fieldWrapper">
-						
-						{{ radialista_form.estado }}
-					</div>
+					
 					<div class="fieldWrapper">
 							{{ radialista_form.anexo.errors }} <label for="id_anexo" class="id_anexo">*Anexo: </label>
-							<div class="filearquivo">
+						<div class="filearquivo">
 							{{ radialista_form.anexo }}
 						</div>
-						</div>
+					</div>
 					<div class="fieldWrapper">
 						{{ radialista_form.site.errors }} <label for="id_site" class="id_site">*Site: </label>
 						{{ radialista_form.site }}
@@ -291,7 +284,7 @@ $(function(){
 				</div>
 				
 
-					<input type="submit" value="Enviar" name="radialista" class="enviar_radialista"/>
+					<input type="submit" value="Enviar" name="radialista" class="enviar_parceiro"/>
 			
 			</form>
 		</div>
@@ -326,10 +319,7 @@ $(function(){
 						
 						{{ contratante_form.cidade }}
 					</div>
-					<div class="fieldWrapper">
-						
-						{{ contratante_form.estado }}
-					</div>
+
 					<div class="fieldWrapper">
 						{{ contratante_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
 						{{ contratante_form.telefone }}
@@ -341,7 +331,7 @@ $(function(){
 						</div>
 					</div>
 				</div>
-					<input type="submit" value="Enviar" name="contratante" class="enviar_contratante" />
+					<input type="submit" value="Enviar" name="contratante" class="enviar_parceiro" />
 			</form>
 		</div>
 		<div id="efeito_enviar" class="efeito_enviar">

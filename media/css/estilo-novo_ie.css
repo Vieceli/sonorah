@@ -583,13 +583,16 @@ div#sharebtn a {
 	color:#6d6d6d;
 	text-align: justify;
 	width: 940px;
+	z-index: 1;
 }
 .efeito_fundo_parceiro{
 	position:relative;
 	float:left;
 	margin-top:-20px;
 	z-index: 0;
-	opacity:0.4;filter:alpha(opacity=40);
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	-moz-opacity:0.4;
 }
 .formularios_parceiros{
 	position:relative;
@@ -728,7 +731,7 @@ textarea {
 	right: 0px;
 }
 .mensagem_parceiro{
-	margin-left:97px;
+	margin-left:90px;
 	left: 80px;
 	padding-left: 15px;
 }
@@ -947,23 +950,48 @@ form .fakeupload input {
 }
 */
 
-#contato_box .filearquivo span,#compositor_direita .filearquivo span {
-		float:left;
-		margin:-28px 0 0 7px;
-		/*background-color: red;*/
-	}
-	#contato_box .filearquivo {
-		height:36px;
-		float:left;
-		margin:0 0 15px 0px;
-		width:300px;
-		background:#000 url(/media/images/arquivos.gif) 166px 1px  no-repeat;
-		}
+.fieldWrapper input[type='file']{
+	background: url(/media/images/arquivos.gif) right no-repeat;
+	float: right;
+	height: 38px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	
+}
+
+#radialista_esquerda .filearquivo span{
+	float:left;
+	margin:-28px 0 0 7px;
+}
+#compositor_direita .filearquivo span{
+	float:left;
+	margin:-28px 0 0 7px;
+}
+#contato_box .filearquivo span{
+	float:left;
+	margin:-28px 0 0 7px;
+}
+
+#radialista_esquerda .filearquivo {
+	height:36px;
+	float:left;
+	margin:0 0 15px 0px;
+	width:310px;
+	background:#000 url(/media/images/arquivos.gif) right no-repeat;
+}
+#compositor_direita .filearquivo{
+	height:36px;
+	float:left;
+	margin:0 0 15px 0px;
+	width:310px;
+	background:#000 url(/media/images/arquivos.gif) right no-repeat;
+}
+#contato_box .filearquivo {
+	height:36px;
+	float:left;
+	margin:0 0 15px 0px;
+	width:300px;
+	background:#000 url(/media/images/arquivos.gif) 166px 1px  no-repeat;
+}
 		
-	.fieldWrapper input[type='file']{
-		background: url(/media/images/arquivos.gif) right no-repeat;
-		float: right;
-		height: 38px;
-		opacity: 0;
-		filter: alpha(opacity = 0);
-	}
