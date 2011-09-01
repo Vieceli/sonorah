@@ -62,13 +62,16 @@
 	zoom: 1;
 	display: block;
 }
-#lightbox-nav-btnPrev { 
+#lightbox-nav-btnPrev {
+	margin-top:25%; 
 	left: 0; 
 	float: left;
 }
-#lightbox-nav-btnNext { 
+#lightbox-nav-btnNext {
+	margin-top:25%;
 	right: 0; 
 	float: right;
+	height: 100%;
 }
 #lightbox-container-image-data-box {
 	font: 10px Verdana, Helvetica, sans-serif;

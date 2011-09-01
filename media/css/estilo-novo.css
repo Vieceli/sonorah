@@ -437,6 +437,31 @@ div.presenca{ display: none; }
 	width: 1200px;
 	display: inline-block;
 }
+.portfolio_item{
+	position: relative;
+	float:left;
+	width: 460px;
+	padding-left: 30px;
+	 
+}
+.videos{
+	position: relative;
+	float:left;
+	width: 460px;
+	padding-left: 30px;
+}
+.site{
+	position: relative;
+	float:left;
+	width: 460px;
+	padding-left: 30px;
+}
+.fotos_extras{
+	position: relative;
+	float:left;
+	width: 460px;
+	padding-left: 30px;
+}
 
 /*ARTISTAS*/
 

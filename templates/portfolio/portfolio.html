@@ -43,42 +43,47 @@
 		<div id="portfolio_item" class="portfolio_item">
 			<div id="galerias" class="galerias"><!--todas as fotos das galerias -->
 				{% for foto in fotos %}
-					<p>{{ foto.tipo }}</p>
+					<!---<p>{{ foto.tipo }}</p>-->
 					<a href="/media/{{ foto.image }}">
 				{% endfor %}
 						<img src="/media/images/galeria_imagens.jpg" />
 					</a>
 			</div>
 		</div>
-		<div id="separador_portfolio" class="separador_portfolio">
-			<img src="/media/images/separador_portfolio.png" align="left"/>
-		</div>
+		
 		<div id="videos" class="videos">
 			{% for video in videos %}
-				<p>{{ video.tipo }}</p>
+				<!---<p>{{ video.tipo }}</p>-->
 				<a href="{{ video.url_video }}">
 			{% endfor %}
 					<img src="/media/images/portfolio_youtube.jpg" /> 
 				</a>
 		</div>
+		<div id="separador_portfolio" class="separador_portfolio">
+			<img src="/media/images/separador_portfolio.png" align="left"/>
+		</div>
 		<div id="site" class="site">
 			{% for site in sites %}
-				<p>{{ site.tipo }}</p>
+				<!---<p>{{ site.tipo }}</p>-->
 				
 				<a href="{{ site.url_site }}">
 			{% endfor %}
 					<img src="/media/images/url_externa.jpg" />
 				</a>
 		</div>
-		<div id="fotos_extras" class="fotos_extras">
+		
 			{% for fe in fotos_extras %}
-				<p>{{ fe.tipo }}</p>
-				
+				<!---<p>{{ fe.tipo }}</p>-->
+				<div id="fotos_extras" class="fotos_extras">
 				<a href="/media/{{ fe.foto.image }}">	
-					<img src="/media/{{ fe.foto.image }}" />
+					<img src="/media/{{ fe.foto.image }}" width="460px"/ height="209">
 				</a>
-				{% endfor %}
+				</div>
+				<div id="separador_portfolio" class="separador_portfolio">
+			<img src="/media/images/separador_portfolio.png" align="left"/>
 		</div>
+				{% endfor %}
+		
 	
 </div>
 	

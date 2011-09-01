@@ -26,11 +26,11 @@ def portfolio(request,template_name,portfolio_slug):
     videos=portfolio.video_set.all()
     fotos_extras = portfolio.foto_set.all()
     
-    print galerias
+    #print galerias
     fotos=[]
     for f in galerias:
         fotos = f.galeria.photos.all()            
-    print fotos
+    #print fotos
     
     #trabalhos = portfolio.trabalho.all().order_by('-atualizado_em')
     # galerias=""
