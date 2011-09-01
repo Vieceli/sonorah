@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}portfolio - {{ portfolio.nome }}{{ n{% endblock %}
+{% block titulo %}Portfolio - {{ portfolio.nome }}{% endblock %}
 
 {% block extralinks %}
 	{{ block.super }}
@@ -17,7 +17,9 @@
 
 {% block js_ready %}
  	{{ block.super }}
- 	$('body').addClass("portfolio"); 	 
+ 	
+ 	 $('body').addClass("paginas"); 
+ 		 
  	
  	$('#galerias a').lightBox();
  	$('#fotos_extras a').lightBox();
@@ -27,6 +29,7 @@
 
 {% block extrajs %}
 	{{ block.super }}
+
 {% endblock extrajs %}
 
 

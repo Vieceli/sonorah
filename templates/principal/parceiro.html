@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}Parceiros{% endblock %}
+{% block titulo %}Parceiros - {% endblock %}
 
 {% block extralinks %}
 	{{ block.super }}
@@ -16,8 +16,7 @@
 
 {% block js_ready %}
  	{{ block.super }} 
- 
- 	$('body').addClass('parceiros'); 
+
  	
  	$("#tabs").bind('tabsselect',function(event, ui) {
 	         	window.location.href=ui.tab;
@@ -83,13 +82,14 @@ $(function(){
 	$('select').customStyle();
 });
 */
-    	
+
+ 	 $('body').addClass("paginas");   	
 {% endblock %}
     	
 
 {% block extrajs %}
 	{{ block.super }}
-	
+	 
 {% endblock extrajs %}
 
 
@@ -98,6 +98,30 @@ $(function(){
 	{% block topo %}
 	{% include "includes/topo.html" %}
 	{% endblock topo %}
+
+{% if enviado %}
+	<div id="parceiro_box_final" class="parceiro_box_final">	
+		<div id="contato_final" class="contato_final">
+			<a href="/"><img src="/media/images/cabecalho/logo.png"></a>
+			<h1>Obrigado pelo contato, em breve retornaremos.</h1>	
+		</div>
+	</div>
+		<div id="detalhe_direito_contato_final" class="detalhe_direito_contato_final">
+			<img src="/media/images/detalhe_direito_contato.png"/>
+		</div>
+		<div id="contato_direito" class="contato_direito">
+			<p>Rua 89, Nº540 Setor Sul.</p>
+			<p>Goiânia - GO | CEP: 74093-140</p>
+		    <p><img src="/media/images/telefone_contato.png"/> (62) 3281-0311</p>
+		    <p><img src="/media/images/email_contato.png"/> contato@sonorah.com</p>
+		    
+		    <div id="mapa_google" class="mapa_google">
+		    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=350x232&maptype=roadmap&sensor=true" />    
+		    </div>
+		</div>
+	</div>
+	{% else %}
+
 
 <div id="parceiro_box" class="parceiro_box">
 <div id="texto_parceiro" class="texto_parceiro">
@@ -346,4 +370,6 @@ $(function(){
 	</div><!--fechamento das tabs -->
 </div><!--formularios_parceiros -->
 </div> <!--- box_parceiros-->
+
+{% endif %}
 {% endblock conteudo %} 

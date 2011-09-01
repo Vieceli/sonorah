@@ -67,7 +67,7 @@ DJBOLETO_MEDIA_URL = "/media/boletosimg/"
 from django.conf import global_settings
 
 FILE_UPLOAD_HANDLERS = ('uploadProgressCachedHandler.UploadProgressCachedHandler', ) + global_settings.FILE_UPLOAD_HANDLERS
-CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
+#CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 
 GEOIP_PATH = os.path.join(PROJECT_ROOT_PATH, 'geoip')
 
@@ -78,6 +78,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
+    
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
 )
@@ -109,8 +110,18 @@ TEMPLATE_DIRS = (
 GEOIP_PATH = os.path.join(PROJECT_ROOT_PATH, 'geoip')
 MUNICIPIOS_GEO = False
 
+#ADMIN_TOOLS_MENU = 'sonorah.menu.CustomMenu'
+#ADMIN_TOOLS_INDEX_DASHBOARD = 'sonorah.dashboard.CustomIndexDashboard'
+#ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'sonorah.dashboard.CustomAppIndexDashboard'
+#ADMIN_TOOLS_THEMING_CSS = 'admin_tools/css/theming.css'
 
 INSTALLED_APPS = (
+    
+   # 'admin_tools',
+   # 'admin_tools.theming',
+  #  'admin_tools.menu',
+   # 'admin_tools.dashboard',
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -129,6 +140,7 @@ INSTALLED_APPS = (
     'photologue',
     'parceiros',
     'municipios',
+    
 )
 
 AUTHENTICATION_BACKENDS = (

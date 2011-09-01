@@ -11,6 +11,7 @@ def parceiros(request,template_name):
     url=str(request.get_full_path())
     pagina=url[1:-1]
     valido=True
+    enviado=False
     
     if request.method == 'POST': 
         POST=request.POST
@@ -23,7 +24,7 @@ def parceiros(request,template_name):
             #print "POST['contratante']"       
             if contratante_form.is_valid(): 
                 contratante_form.save()
-                return HttpResponseRedirect('/Obrigado/')
+                enviado=True
             else:
                 valido=False
                 opcao="contratante"
@@ -32,7 +33,8 @@ def parceiros(request,template_name):
             #print "POST['compositor']"
             if compositor_form.is_valid(): 
                 compositor_form.save()
-                return HttpResponseRedirect('/Obrigado/')
+                enviado=True
+                #return HttpResponseRedirect('/Obrigado/')
             else:
                 valido=False
                 opcao="compositor"
@@ -41,7 +43,8 @@ def parceiros(request,template_name):
             #print "POST['radialista']"
             if radialista_form.is_valid(): 
                 radialista_form.save()
-                return HttpResponseRedirect('/Obrigado/')
+                enviado=True
+                #return HttpResponseRedirect('/Obrigado/')
             else:
                 valido=False
                 opcao="radialista"
@@ -50,7 +53,8 @@ def parceiros(request,template_name):
             #print "POST['parceiro']"
             if parceiro_form.is_valid(): 
                 parceiro_form.save()
-                return HttpResponseRedirect('/Obrigado/')
+                enviado=True
+               #return HttpResponseRedirect('/Obrigado/')
             else:
                 valido=False
                 opcao="parceiro"

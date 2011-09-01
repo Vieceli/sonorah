@@ -43,22 +43,30 @@ class Galeria(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(default=0, blank=True)
+    position            = models.PositiveSmallIntegerField("Position")
+    #ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='G')
     
     def __unicode__(self):
         return self.galeria.title
+    
+    class Meta:
+        ordering = ['position']
 
 class Foto(models.Model):
     foto                = models.ForeignKey(Photo)
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(default=0, blank=True)
+    position            = models.PositiveSmallIntegerField("Position")
+    #ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='F')
     
     def __unicode__(self):
         return self.foto.title
+    
+    class Meta:
+        ordering = ['position']
     
 class Site(models.Model):
     url_site            = models.URLField(u"Endereço na web",max_length=255,
@@ -66,11 +74,15 @@ class Site(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(default=0, blank=True)
+    position            = models.PositiveSmallIntegerField("Position")
+    #ordem               = models.IntegerField(default=0, blank=True)
     tipo                = models.CharField(max_length=1,default='S')
     
     def __unicode__(self):
         return self.url_site
+    
+    class Meta:
+        ordering = ['position']
     
 class Video(models.Model):
     url_video           = models.URLField(u"Link YouTube",max_length=255,
@@ -78,8 +90,12 @@ class Video(models.Model):
     portfolios          = models.ForeignKey(Portfolio)
     criado_em           = models.DateTimeField(auto_now_add=True)
     atualizado_em       = models.DateTimeField(auto_now=True)
-    ordem               = models.IntegerField(default=0, blank=True)
+    position            = models.PositiveSmallIntegerField("Position")
     tipo                = models.CharField(max_length=1,default='V')
     
     def __unicode__(self):
         return self.url_video
+
+    class Meta:
+        ordering = ['position']
+

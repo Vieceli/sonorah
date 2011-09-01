@@ -9,7 +9,7 @@ def contato(request,template_name):
     usuario=request.user
     url=str(request.get_full_path())
     pagina=url[1:-1]
-    
+    enviado=False
 #    if request.method == 'GET':
 #        GET = request.GET  
 #        if GET.has_key('a'):  
@@ -21,7 +21,8 @@ def contato(request,template_name):
             #handle_uploaded_file(request.FILES['file'])
             print contato_form
             contato_form.save()
-            return HttpResponseRedirect('/Obrigado/')
+            enviado=True
+            #return HttpResponseRedirect('/obrigado/')
     else:
         contato_form = ContatoForm()
 

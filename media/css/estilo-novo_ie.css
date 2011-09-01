@@ -123,6 +123,7 @@ h3{
 	width:1000px;
 	margin:0 auto;
 	text-align:left;
+	height: 100%;
 	/*min-height:100%;*/
 	/*margin-bottom:50px;*/
 }
@@ -663,7 +664,7 @@ label
 	/*width:311px;*/
 	width:300px;
 	padding-left:5px;
-	padding-top:15px;
+	padding-top:5px;
 	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
@@ -885,7 +886,43 @@ input.enviar_contato:hover	{
 	float: left;
 	top: 20px;
 }
-
+.contato_final h1{
+	font-family:"Franklin Gothic Heavy";
+	color:#6b6b6b;
+	margin-top: 15%;
+	text-align: center;
+	margin-left: 1%;
+	margin-right: 1%;
+	
+}
+.contato_final img{
+	margin-left: 30%;
+	margin-top: 5%;	
+}
+.contato_final{
+	position:relative;
+	float:left;
+	margin-left: 60px;
+	margin-top:60px;
+	width: 80%;
+	height: 300px;
+	/*margin-left: 20%;*/
+	/*margin-right: 20%;*/
+	border-style: solid;
+	border-width: thin;
+	border-color: #6b6b6b;
+	/*background-color:#000;*/
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+}
+.parceiro_box_final{
+	position:relative;
+	float:left;
+	width:50%;
+	/*margin-top: 60px;*/
+}
 /*#id_arquivo {
 	position:relative;
 	float:left;
@@ -920,7 +957,7 @@ form .fakeupload input {
 	opacity:0;
 	filter:alpha(opacity=0);
 	-moz-opacity:0;
-	
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 .estado select{
 
@@ -1012,7 +1049,7 @@ form .fakeupload input {
 
 #radialista_direita .filearquivo span{
 	float:left;
-	margin:-28px 0 0 7px;
+	/*margin:-28px 0 0 7px;*/
 }
 #compositor_direita .filearquivo span{
 	float:left;
@@ -1025,24 +1062,27 @@ form .fakeupload input {
 }
 
 #radialista_direita .filearquivo {
-	height:36px;
 	float:left;
+	height:38px;
 	margin:0 0 15px 0px;
-	width:310px;
+	width:300px;
 	background:#000 url(/media/images/arquivos.gif) right no-repeat;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 #compositor_direita .filearquivo{
-	height:36px;
+	height:38px;
 	float:left;
 	margin:0 0 15px 0px;
-	width:310px;
+	width:300px;
 	background:#000 url(/media/images/arquivos.gif) right no-repeat;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 #contato_box .filearquivo {
-	height:36px;
+	height:38px;
 	float:left;
 	margin:0 0 15px 0px;
 	width:300px;
 	background:#000 url(/media/images/arquivos.gif) 166px 1px  no-repeat;
+	-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 		

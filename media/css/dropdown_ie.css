@@ -9,22 +9,18 @@ way to fit your requirements.
 =================================================================== */
 /* common styling */
 .menu {
+	position:relative;
+	float:left;
 	font-family: "Franklin Gothic Medium";
 	/*width:750px; */
-	/*top:75px;*/
-	margin-top: -5px;
-	margin-left: 200px;
+	top:75px;
+	left:30px;
+	height:130px; 
+	z-index:100;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	/*behavior: url('/media/border-radius.htc');*/
-	z-index: 100;
-	background-color: #131315;
-	display: block;
-	/*position: static;*/
-	/*position: relative;*/
-	float:left;
-	height: 66px;
+	behavior: url(border-radius.htc);
 	
 }
 
@@ -37,11 +33,12 @@ way to fit your requirements.
 	/*background:#131315;*/
 	font-size:18px;
 	overflow:hidden;
+	
 	}
 
 .menu ul {padding:0; margin:0; list-style: none; }
-.menu ul li {float:left; position:relative;}
-.menu ul li ul {display: none;}
+.menu ul li {float:left; position:relative; }
+.menu ul li ul {display: none; }
 
 .menu ul li a.hide, .menu ul li a:visited.hide {display:none;}
 .menu ul li a:hover ul li a.hide {display:none;}
@@ -60,18 +57,18 @@ way to fit your requirements.
 /*.menu ul li:hover a {color:#FF5A00; background:#020202;}*/
 /*.menu ul li:hover ul {display: inline;	position:absolute;	top:21px;	left:0;	width:125px; background:#020202;visibility: visible;}*/
 
-.menu ul li a#empresa_menu{ height: 66px;background:#131315;}
-.menu ul li a#portfolio_menu{height: 66px;background:#131315;}
-.menu ul li a#artistas_menu{height: 66px;background:#131315;}/*ESTADO NORMAL DOS BOTOES*/
-.menu ul li a#noticias_menu{height: 66px;background:#131315;}
-.menu ul li a#parceiros_menu{height: 66px;background:#131315;}
-.menu ul li a#contato_menu{height: 66px;background:#131315;}
+.menu ul li a#empresa_menu{ height: 66px;background:#131315; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}
+.menu ul li a#portfolio_menu{height: 66px;background:#131315;-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}
+.menu ul li a#artistas_menu{height: 66px;background:#131315;-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}/*ESTADO NORMAL DOS BOTOES*/
+.menu ul li a#noticias_menu{height: 66px;background:#131315; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}
+.menu ul li a#parceiros_menu{height: 66px;background:#131315; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}
+.menu ul li a#contato_menu{height: 66px;background:#131315;-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -khtml-border-top-left-radius: 5px; border-top-left-radius: 5px;-moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; -khtml-border-top-right-radius: 5px; border-top-right-radius: 5px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; -khtml-border-bottom-left-radius:5px; border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; -khtml-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px;}
 .menu ul li a#empresa_menu:hover{background:#000;}
 /*	.menu ul li a#empresa_menu:sfhover {background:#000;}*/
 .menu ul li a#portfolio_menu:hover {background:#000;}
 	/*.menu ul li a#portfolio_menu:sfhover{background:#000;}/*PASSAR O MOUSE*/
-.menu ul li:hover a#artistas_menu {height:140px;background-color: #000;}
-.menu ul li a#parceiros_menu:hover{	height:150px;background:#000;}
+.menu ul li:hover a#artistas_menu {height:120px;background-color: #000;}
+.menu ul li a#parceiros_menu:hover{	height:120px;background:#000;}
 
 	/*.menu ul li a#artistas_menu:sfhover{background:#000;}*/
 .menu ul li a#noticias_menu:hover{background:#000;}

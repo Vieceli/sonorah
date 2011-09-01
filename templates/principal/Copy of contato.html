@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block titulo %}Contato {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+
+{% endblock %}
+{% block extracss %}
+#progress_container {
+    font-size: .9em;
+    width: 100%;
+    height: 1.25em;
+    position: relative;
+    margin: 3em 0;
+    display: none;
+}
+
+#progress_filename {
+    font-size: .9em;
+    width: 100%;
+}
+
+#progress_bar {
+    width: 100%;
+    border: 1px solid #999;
+}
+
+#progress_indicator {
+    background: #8a9;
+    width: 0;
+    height: 4px;
+}
+	{{ block.super }}
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+	
+{% endblock %}
+
+
+{% block js_ready %}
+ {{ block.super }}
+
+  
+        // bind click file to div fake
+   $(".fieldWrapper input[type='file']").change(
+        function(){
+			//$(".filearquivo span").remove();
+			$(this).parent().find('span').remove();
+
+		    var text = $(this).val();
+		    text = text.length > 15 ? text.substring( 0, 15 ) + '...' : text;
+			var span = $('<span>');
+
+			$(span).html( text );
+		
+            //$(".filearquivo").append( span  );
+            $(this).parent().append( span );
+        }
+    );
+
+/*
+ 
+  $(function() {
+        $('#form_upload').uploadProgress({
+            jqueryPath: "/media/js/jquery-1.6.2.js",
+            progressBar: '#progress_indicator',
+            progressUrl: '/beta/upload_progress/',
+            start: function() {
+                $("#upload_form").hide();
+                filename = $("#id_arquivo").val().split(/[\/\\]/).pop();
+                $("#progress_filename").html('Enviando ' + filename + "...");
+                $("#progress_container").show();
+            },
+            uploadProgressPath: "/media/js/jquery.uploadProgress.js",
+            uploading: function(upload) {
+                if (upload.percents == 100) {
+                    window.clearTimeout(this.timer);
+                    $("#progress_filename").html('Enviando ' + filename + "...");
+                } else {
+                    $("#progress_filename").html('Enviado ' + filename + ': ' + upload.percents + '%');
+                }
+            },
+            interval: 1000
+        });
+    });
+ */
+  $('body').removeClass('fundo1');
+ 	$('body').addClass('contato');
+{% endblock %}
+
+
+{% block extrajs %}
+	{{ block.super }}
+	 
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+	{% block topo %}
+	{% include "includes/topo.html" %}
+	{% endblock topo %}
+
+	{% if enviado %}
+	<div id="contato_final_box" class="contato_final_box">
+		
+		
+		
+		<div id="contato_final" class="contato_final">
+			<h1>Obrigado pelo contato, em breve retornaremos.</h1>
+			<p>Rua 89, Nº540 Setor Sul.</p>
+			<p>Goiânia - GO | CEP: 74093-140</p>
+		    <p><img src="/media/images/telefone_contato.png"/> (62) 3281-0311</p>
+		    <p><img src="/media/images/email_contato.png"/> contato@sonorah.com</p>
+		    
+		    <div id="mapa_google" class="mapa_google">
+		    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=350x232&maptype=roadmap&sensor=true" />    
+		    </div>
+		</div>
+	</div>
+	{% else %}
+<div id="contato_box" class="contato_box">
+	<form enctype="multipart/form-data" action="{% url contato %}" method="post" id="form_upload">
+			{% csrf_token %}
+			<div id="progress_container">
+			    <div id="progress_filename"></div>
+			    <div id="progress_bar">
+			        <div id="progress_indicator"></div>
+			    </div>
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.nome.errors }} <label for="id_nome" class="id_nome">*Nome: </label>
+				{{ contato_form.nome }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.email.errors }} <label for="id_email" class="id_email">*E-Mail: </label>
+				{{ contato_form.email }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.telefone.errors }} <label for="id_telefone" class="id_telefone">*Telefone: </label>
+				{{ contato_form.telefone }}
+			</div>
+			<div class="fieldWrapper">
+				{{ contato_form.arquivo.errors }} <label for="id_arquivo" class="id_arquivo">*Arquivo: </label>
+				<div class="filearquivo">
+					{{ contato_form.arquivo }}
+				</div>
+			</div>
+			<div class="fieldWrapper">
+				<label for="id_mensagem" class="id_mensagem">*Mensagem: </label>
+				
+				<div id="mensagem_contato" class="mensagem_contato">
+					{{ contato_form.mensagem }}{{ contato_form.mensagem.errors }} 
+				</div>
+			</div>
+			<input name="MAX_FILE_SIZE" value="1048576" type="hidden" >
+
+
+			<input type="submit" value="Enviar"  class="enviar_contato"/>
+			
+			
+		</form>
+	<div id="efeito_enviar_contato" class="efeito_enviar_contato">
+		<img src="/media/images/parceiros_efeito_enviar.png"/>
+	</div>
+	
+</div>
+	
+
+<div id="detalhe_direito_contato" class="detalhe_direito_contato">
+	<img src="/media/images/detalhe_direito_contato.png"/>
+</div>
+
+<div id="contato_direito" class="contato_direito">
+	<p>Rua 89, Nº540 Setor Sul.</p>
+	<p>Goiânia - GO | CEP: 74093-140</p>
+    <p><img src="/media/images/telefone_contato.png"/> (62) 3281-0311</p>
+    <p><img src="/media/images/email_contato.png"/> contato@sonorah.com</p>
+    
+    <div id="mapa_google" class="mapa_google">
+    	<img src="http://maps.google.com/maps/api/staticmap?center=-16.694384, -49.257358&zoom=15&size=350x232&maptype=roadmap&sensor=true" />    
+    </div>
+</div>
+{% endif %}
+
+{% endblock conteudo %}	

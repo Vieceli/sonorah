@@ -21,3 +21,9 @@ def radio(request, template_name):
     musicas = Musica.objects.all().order_by('-atualizado_em')[:5]
     return render_to_response(template_name, locals(), context_instance=RequestContext(request))
 
+def obrigado(request, template_name):
+    usuario=request.user
+    url=request.get_full_path
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+

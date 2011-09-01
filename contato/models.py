@@ -19,7 +19,7 @@ class Contato(models.Model):
     email           = models.EmailField()
     telefone        = models.CharField(u"Telefone",max_length=400,
                             help_text=u'Telefone',default='123456789', blank=True)
-    arquivo         = models.FileField(upload_to='contato_arquivo', max_length=200000,blank=True)
+    arquivo         = models.FileField(upload_to='contato_arquivo', blank=True)
     mensagem        = models.TextField()
     criado_em       = models.DateTimeField(auto_now_add=True)
     atualizado_em   = models.DateTimeField(auto_now=True)

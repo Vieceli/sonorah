@@ -21,10 +21,12 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     
-                          
+    (r'^admin_tools/', include('admin_tools.urls')),
+    (r'^grappelli/', include('grappelli.urls')),                    
     (r'^radio/$', 'principal.views.radio', {'template_name':'principal/radio.html'}, 'radio'),
-    (r'^upload_progress/$', 'contato.views.upload_progress', 'upload_progress'),
-
+    (r'^obrigado/$', 'principal.views.obrigado',{'template_name':'principal/obrigado.html'}, 'obrigado'),
+    
+    (r'^beta/upload_progress/$', 'contato.views.upload_progress', 'upload_progress'),
                     
      #includes
     (r'^$', 'views.manutencao'),

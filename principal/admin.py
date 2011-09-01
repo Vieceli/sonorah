@@ -30,13 +30,14 @@ class NoticiaAdmin(admin.ModelAdmin):
     list_filter = ('titulo', 'atualizado_em')
     list_per_page = 10
     search_fields = ['titulo',]
+    search_fields_verbose = ['Titulo']
     
     fieldsets = (
                     (None, {
                         'fields': ('titulo','subtitulo','texto','imagem','miniatura', )
                     }),
-                    (u'Opções Avançadas', {
-                        'classes': ('collapse',),
+                    (u'Opções Avançadas - Mostrar', {
+                        'classes': ('collapse closed',),
                         'fields': ('slug','meta_keywords', 'meta_description')
                     }),
                  )    
@@ -56,26 +57,31 @@ class LinkAdmin(admin.ModelAdmin):
     list_filter = ('titulo', 'atualizado_em')
     list_per_page = 10
     search_fields = ['titulo',]
+    search_fields_verbose = ['Titulo']
 
 class GaleriaAdminInline(admin.TabularInline):
     model = Galeria
     extra = 1
     exclude = ('tipo',)
+    sortable_field_name = "position"
 
 class FotoAdminInline(admin.TabularInline):
     model = Foto
     extra = 1
     exclude = ('tipo',)
+    sortable_field_name = "position"
     
 class UrlSiteAdminInline(admin.TabularInline):
     model = Site
     extra = 1
     exclude = ('tipo',)
+    sortable_field_name = "position"
     
 class UrlVideoAdminInline(admin.TabularInline):
     model = Video
     extra = 1
     exclude = ('tipo',)
+    sortable_field_name = "position"
     
 class PortfolioAdmin(admin.ModelAdmin):
     form = FormPortfolio
@@ -85,6 +91,7 @@ class PortfolioAdmin(admin.ModelAdmin):
     list_filter = ('titulo', 'atualizado_em')
     list_per_page = 10
     search_fields = ['titulo','trabalho']
+    search_fields_verbose = ['Titulo','Trabalho']
     inlines = [
         GaleriaAdminInline,FotoAdminInline,UrlSiteAdminInline,UrlVideoAdminInline
     ]
@@ -92,8 +99,8 @@ class PortfolioAdmin(admin.ModelAdmin):
                     (None, {
                         'fields': ('titulo', 'imagem', 'descricao' )
                     }),
-                    (u'Opções Avançadas', {
-                        'classes': ('collapse',),
+                    (u'Opções Avançadas - Mostrar', {
+                        'classes': ('collapse closed',),
                         'fields': ('ordem','slug','meta_keywords', 'meta_description')
                     }),
                  )
@@ -117,13 +124,14 @@ class ArtistaAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
     
     fieldsets = (
-                    (None, {
+                    ('', {
                         'fields': ('nome', 'imagem', 'site','facebook','twitter','myspace','youtube' )
                     }),
-                    (u'Opções Avançadas', {
-                        'classes': ('collapse',),
+                    (u'Opções Avançadas - Mostrar', {
+                        'classes': ('collapse closed',),
                         'fields': ('slug','meta_keywords', 'meta_description')
                     }),
                  )
@@ -135,6 +143,7 @@ class ArtistaContatoAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
 
 class ParceiroAdmin(admin.ModelAdmin):
     form =  ParceiroForm
@@ -143,6 +152,7 @@ class ParceiroAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
     
 class ContratanteAdmin(admin.ModelAdmin):
     form =  ContratantesForm
@@ -151,6 +161,7 @@ class ContratanteAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
 
 class CompositorAdmin(admin.ModelAdmin):
     form = CompositoresForm
@@ -159,6 +170,7 @@ class CompositorAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
 
 class RadialistaAdmin(admin.ModelAdmin):
     form = RadialistaForm
@@ -167,6 +179,8 @@ class RadialistaAdmin(admin.ModelAdmin):
     list_filter = ('nome_radio', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome_radio',]
+    search_fields_verbose = ['Nome_Radio']
+    
     
 class ContatoAdmin(admin.ModelAdmin):
     date_hierarchy = 'criado_em'
@@ -174,6 +188,7 @@ class ContatoAdmin(admin.ModelAdmin):
     list_filter = ('nome', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
     
 class MusicaAdmin(admin.ModelAdmin):
     date_hierarchy = 'criado_em'
@@ -181,6 +196,7 @@ class MusicaAdmin(admin.ModelAdmin):
     list_filter = ('nome','disponivel', 'atualizado_em')
     list_per_page = 10
     search_fields = ['nome',]
+    search_fields_verbose = ['Nome']
 
 
     

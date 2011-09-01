@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}Noticia - {{ noticia.titulo }}{% endblock %}
+{% block titulo %}Empresa - {% endblock %}
 
 {% block extralinks %}
 	{{ block.super }}
@@ -13,12 +13,10 @@
 	{{ block.super }}
 {% endblock %}
 
-{% block js_ready %}	        
-	  
-		        
+{% block js_ready %}		        
        {{ block.super }}
-        {{ block.super }}
- 		$('body').addClass("empresa");
+         
+
         
           $('h2.assesoria_img').click(function(){
 		      		$(this).parent().find('div.assesoria_img').slideToggle("slow");
@@ -43,12 +41,15 @@
 		        	});
 		          $('h2.presenca').click(function(){
 		      		$(this).parent().find('div.presenca').slideToggle("slow");
-		      		});  
+		      		}); 
+	
+	 $('body').addClass("paginas"); 
 {% endblock js_ready %}
  
 			             
 {% block extrajs %}
 	{{ block.super }}
+	
 {% endblock extrajs %}
 
 

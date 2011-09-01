@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block titulo %}Obrigado Pelo Contato - {% endblock %}
+
+{% block extralinks %}
+	{{ block.super }}
+{% endblock %}
+{% block extracss %}
+	{{ block.super }}
+
+{% endblock %}
+
+{% block extrascripts %}
+	{{ block.super }}
+{% endblock %}
+
+{% block js_ready %}		        
+       {{ block.super }}
+    
+	 $('body').addClass("paginas"); 
+{% endblock js_ready %}
+ 
+			             
+{% block extrajs %}
+	{{ block.super }}
+	
+{% endblock extrajs %}
+
+
+{% block conteudo %}
+ 	{% block topo %}
+           {% include "includes/topo.html" %}
+    {% endblock topo %}
+    
+<div id="obrigado_box" class="obrigado_box">
+	<h1>Obrigado pelo contato, em breve retornaremos</h1>
+</div>  
+{% endblock conteudo %}	
