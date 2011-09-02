@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load artistas %}
 
 <div id="cabecalho_inferior" class="cabecalho_inferior">
 	
@@ -16,26 +17,15 @@
 	                <table><tr><td>	
 	           <![endif]-->
                    		 <ul>
-	                    		<div id="separador_menu" class="separador_menu">
-									<img src="/media/images/cabecalho/itens_menu.png"  />
-								</div>
-	                        <li><a href="../teste" title="teste"><p class="texto_item_submenu">zero dollars</p></a></li>
-	                        	<div id="separador_menu" class="separador_menu">
-									<img src="/media/images/cabecalho/itens_menu.png"  />
-								</div>
-	                        <li><a href="../teste" title="teste"><p class="texto_item_submenu">wrapping text</p></a></li>
-	                        	<div id="separador_menu" class="separador_menu">
-									<img src="/media/images/cabecalho/itens_menu.png"  />
-								</div>
-							<li><a href="../teste" title="teste"><p class="texto_item_submenu">wrapping text</p></a></li>
-	                        	<div id="separador_menu" class="separador_menu">
-									<img src="/media/images/cabecalho/itens_menu.png"  />
-								</div>
-	                         <li>
+                   		 	
+                   		{% lista_artista %}
+                   		
+	                    		
 	                         	<a href="/beta/vcnasonorah" title="VCNASONORAH"> 
 	                         		<p class="vcnasonorah"><img src="/media/images/cabecalho/estrela.png" align="bottom"/> Você na Sonorah</p>
 	                         	</a>
 	                         </li>
+	                         
 	                        	
 	                        	<div id="separador_menu" class="separador_menu">
 									<img src="/media/images/cabecalho/itens_menu.png"  />

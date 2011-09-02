@@ -118,7 +118,9 @@
         </div>
 			
 		<div id="noticias_home_box" class="noticias_home_box">
+		   
 		     {% for noticia in noticias %}
+		     
 		    	<div id="item_home_noticia" class="item_home_noticia">
 		       
 		            <a class="noticia_home_link" href="/noticias/{{ noticia.slug }}">
@@ -128,7 +130,8 @@
                             <p>{{ noticia.titulo }}</p>
                         </div>
                         
-		            </a>	
+		            </a>
+		            	
 		        </div>
                 <div id="separador" class="separador">
                  		<img src="/media/images/home/separador.png" />
@@ -144,9 +147,10 @@
         </div>
 	</div>
 	
- 	
+ 
     
 	<div id="twitter" class="twitter">
+			
 		<h2 id="twitter_titulo" class="twitter_titulo">Sonorah no Twitter</h2>
      </div>
       <div id="separador_twitter_topo" class="separador_twitter_topo">

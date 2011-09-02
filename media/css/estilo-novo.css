@@ -461,10 +461,10 @@ div.presenca{ display: none; }
 	float:left;
 	width: 460px;
 	padding-left: 30px;
+	padding-bottom: 30px;
 }
 
 /*ARTISTAS*/
-
 .artista_box{
 	position: relative;
 	float:left;

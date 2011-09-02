@@ -75,13 +75,12 @@
 			{% for fe in fotos_extras %}
 				<!---<p>{{ fe.tipo }}</p>-->
 				<div id="fotos_extras" class="fotos_extras">
-				<a href="/media/{{ fe.foto.image }}">	
-					<img src="/media/{{ fe.foto.image }}" width="460px"/ height="209">
-				</a>
+					<a href="/media/{{ fe.foto.image }}">	
+						<img src="/media/{{ fe.foto.image }}" width="460px"/ height="209">
+					</a>
 				</div>
-				<div id="separador_portfolio" class="separador_portfolio">
-			<img src="/media/images/separador_portfolio.png" align="left"/>
-		</div>
+				
+				
 				{% endfor %}
 		
 	
